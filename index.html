@@ -90,15 +90,459 @@
 </head>
 <body>
 <div class="container">
-    <h2>Scegli il dipartimento</h2>
-    <button onclick="">DEI</button>
-    <img src="logo.svg" alt="Logo UDU Hub" style="margin-top: 2em; max-width: 20%; height: auto; align-self: center;"/>
+    <h2 id="title">Scegli il dipartimento</h2>
+
+    <div id="actions" style="display:flex; flex-direction:column; gap:0.75em;"></div>
+
+    <div id="formArea" style="display:none; margin-top: 0.5em; text-align:left;">
+        <label for="course" style="display:block; margin: 0.75em 0 0.25em;">Corso di laurea *</label>
+        <select id="course" name="course" style="width:100%; padding:0.8em; border:1px solid #333; border-radius:0.5em;">
+            <option value="">Seleziona Corso</option>
+        </select>
+
+        <div id="yearWrap">
+            <label id="yearLabel" for="year" style="display:block; margin: 0.75em 0 0.25em;">Anno *</label>
+            <select id="year" name="year" style="width:100%; padding:0.8em; border:1px solid #333; border-radius:0.5em;">
+                <option value="">Seleziona Anno</option>
+            </select>
+        </div>
+
+        <button id="continueBtn" style="margin-top: 1em;">Continua</button>
+        <button id="backBtn" style="margin-top: 0.5em; background:#333;">Indietro</button>
+    </div>
+
+    <div id="pageArea" style="display:none; margin-top: 0.75em; text-align:left;"></div>
+
+    <img src="logo.svg" alt="Logo UDU Hub"
+         style="margin-top: 2em; max-width: 20%; height: auto; align-self: center;"/>
 </div>
 
 <script>
-    const corsi = ""
+    const state = {
+        data: null,
+        deptKey: null,
+        mode: null, // null | "ORARI" | "GRUPPI"
+        selectedCourse: null,
+        selectedYearObj: null,
+    };
 
+    const el = {
+        title: document.getElementById('title'),
+        actions: document.getElementById('actions'),
+        formArea: document.getElementById('formArea'),
+        course: document.getElementById('course'),
+        year: document.getElementById('year'),
+        yearWrap: document.getElementById('yearWrap'),
+        continueBtn: document.getElementById('continueBtn'),
+        backBtn: document.getElementById('backBtn'),
+        pageArea: document.getElementById('pageArea'),
+    };
 
+    function clear(node) {
+        while (node.firstChild) node.removeChild(node.firstChild);
+    }
+
+    function makeButton(label, onClick) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = label;
+        b.addEventListener('click', onClick);
+        return b;
+    }
+
+    function getDepartmentsMap() {
+        // Supporta:
+        // 1) { data: { "DIP": ... } }
+        // 2) { data: [ { "DIP": ... } ] }
+        if (!state.data) return {};
+        const d = state.data.data;
+
+        if (d && typeof d === 'object' && !Array.isArray(d)) return d;
+        if (Array.isArray(d)) return d[0] || {};
+
+        return {};
+    }
+
+    function getDeptObj(deptKey) {
+        const map = getDepartmentsMap();
+        const v = map[deptKey];
+
+        // Variante: "DIP": [ {id,name,years}, ... ]
+        if (Array.isArray(v)) {
+            return { drive: "", courses: v, whatsapp_groups: [] };
+        }
+
+        // Variante: "DIP": { drive, courses, whatsapp_groups }
+        if (v && typeof v === 'object') {
+            return {
+                drive: typeof v.drive === 'string' ? v.drive : "",
+                courses: Array.isArray(v.courses) ? v.courses : [],
+                whatsapp_groups: Array.isArray(v.whatsapp_groups) ? v.whatsapp_groups : [],
+            };
+        }
+
+        return { drive: "", courses: [], whatsapp_groups: [] };
+    }
+
+    function renderDeptButtons() {
+        state.deptKey = null;
+        state.mode = null;
+
+        el.title.textContent = 'Scegli il dipartimento';
+        el.formArea.style.display = 'none';
+        el.pageArea.style.display = 'none';
+        clear(el.pageArea);
+
+        clear(el.actions);
+
+        const map = getDepartmentsMap();
+        const deptKeys = Object.keys(map);
+
+        deptKeys.sort((a, b) => a.localeCompare(b, 'it'));
+
+        deptKeys.forEach((deptKey) => {
+            el.actions.appendChild(makeButton(deptKey, () => renderDeptActions(deptKey)));
+        });
+    }
+
+    function renderDeptActions(deptKey) {
+        state.deptKey = deptKey;
+        state.mode = null;
+
+        el.title.textContent = deptKey;
+        el.formArea.style.display = 'none';
+        el.pageArea.style.display = 'none';
+        clear(el.pageArea);
+
+        clear(el.actions);
+
+        const dept = getDeptObj(deptKey);
+
+        // DRIVE
+        el.actions.appendChild(makeButton('DRIVE', () => {
+            if (dept.drive && dept.drive.trim()) {
+                window.location.href = dept.drive;
+                return;
+            }
+            alert('Link DRIVE non impostato per questo dipartimento.');
+        }));
+
+        // ORARI
+        el.actions.appendChild(makeButton('ORARI', () => {
+            state.mode = 'ORARI';
+            renderCourseYearForm();
+        }));
+
+        // GRUPPI WZ
+        el.actions.appendChild(makeButton('GRUPPI WZ', () => {
+            state.mode = 'GRUPPI';
+            renderCourseYearForm();
+        }));
+
+        // INDIETRO
+        el.actions.appendChild(makeButton('INDIETRO', () => renderDeptButtons()));
+    }
+
+    function renderCourseYearForm() {
+        state.selectedCourse = null;
+        state.selectedYearObj = null;
+
+        el.formArea.style.display = 'block';
+        el.pageArea.style.display = 'none';
+        clear(el.pageArea);
+
+        // Nascondo tutti i pulsanti "azioni"
+        clear(el.actions);
+
+        el.title.textContent = `${state.deptKey} · ${state.mode === 'ORARI' ? 'Orari' : 'Gruppi WZ'}`;
+
+        const deptUpper = String(state.deptKey).trim().toUpperCase();
+        const isCorsiComuni = deptUpper === 'CORSI COMUNI';
+        const isArcod = deptUpper === 'ARCOD';
+
+        // Serve scegliere l'anno?
+        // - CORSI COMUNI: mai (sempre 1)
+        // - ARCOD: se siamo su ORARI, non chiediamo l'anno
+        const needsYear = !(isCorsiComuni || (isArcod && state.mode === 'ORARI'));
+
+        el.yearWrap.style.display = needsYear ? 'block' : 'none';
+
+        // Popola select corsi
+        const dept = getDeptObj(state.deptKey);
+        const courses = Array.isArray(dept.courses) ? dept.courses : [];
+
+        // reset
+        el.course.innerHTML = `<option value="">Seleziona Corso</option>`;
+        el.year.innerHTML = `<option value="">Seleziona Anno</option>`;
+
+        if (!needsYear) {
+            // Per CORSI COMUNI l'anno è sempre 1.
+            // Per ARCOD->ORARI l'anno non serve: mettiamo un placeholder.
+            el.year.innerHTML = `<option value="1" selected>1</option>`;
+            state.selectedYearObj = { id: '1', groups: [] };
+        }
+
+        courses.forEach((c) => {
+            const opt = document.createElement('option');
+            opt.value = c.id ?? '';
+            opt.textContent = c.name ?? '';
+            el.course.appendChild(opt);
+        });
+
+        function fillYearsFromCourse(courseObj) {
+            el.year.innerHTML = `<option value="">Seleziona Anno</option>`;
+            state.selectedYearObj = null;
+
+            // New schema: years is an array of objects [{id, whatsapp_groups:[...]}, ...]
+            if (Array.isArray(courseObj?.years)) {
+                // Sort numeric if possible (1,2,3...) but keep stable otherwise
+                const yearsList = [...courseObj.years].sort((a, b) => {
+                    const ai = parseInt(String(a?.id ?? ''), 10);
+                    const bi = parseInt(String(b?.id ?? ''), 10);
+                    if (Number.isFinite(ai) && Number.isFinite(bi)) return ai - bi;
+                    return String(a?.id ?? '').localeCompare(String(b?.id ?? ''), 'it');
+                });
+
+                yearsList.forEach((yObj) => {
+                    const opt = document.createElement('option');
+                    opt.value = String(yObj?.id ?? '');
+                    opt.textContent = String(yObj?.id ?? '');
+                    el.year.appendChild(opt);
+                });
+                return;
+            }
+
+            // Backward compatibility: years is an integer max (1..N)
+            const maxYears = parseInt(String(courseObj?.years ?? 3), 10);
+            const safeMax = Number.isFinite(maxYears) && maxYears > 0 ? maxYears : 3;
+            for (let i = 1; i <= safeMax; i++) {
+                const y = document.createElement('option');
+                y.value = String(i);
+                y.textContent = String(i);
+                el.year.appendChild(y);
+            }
+        }
+
+        el.course.onchange = () => {
+            const courseId = el.course.value;
+            state.selectedCourse = courses.find((c) => (c?.id ?? '') === courseId) || null;
+
+            if (!needsYear) {
+                // Non chiediamo anno (CORSI COMUNI o ARCOD->ORARI): forziamo placeholder
+                state.selectedYearObj = { id: '1', groups: [] };
+                return;
+            }
+
+            if (!state.selectedCourse) {
+                el.year.innerHTML = `<option value="">Seleziona Anno</option>`;
+                state.selectedYearObj = null;
+                return;
+            }
+
+            fillYearsFromCourse(state.selectedCourse);
+        };
+
+        el.year.onchange = () => {
+            if (!needsYear) return;
+
+            const yearId = el.year.value;
+            const courseObj = state.selectedCourse;
+
+            if (!courseObj) {
+                state.selectedYearObj = null;
+                return;
+            }
+
+            if (Array.isArray(courseObj.years)) {
+                state.selectedYearObj = courseObj.years.find((y) => String(y?.id ?? '') === String(yearId)) || null;
+            } else {
+                // fallback
+                state.selectedYearObj = { id: String(yearId), groups: [] };
+            }
+        };
+
+        el.continueBtn.onclick = (e) => {
+            e.preventDefault();
+
+            const courseId = el.course.value;
+            const courseName = el.course.selectedOptions[0]?.textContent || '';
+            const yearId = needsYear ? el.year.value : '1';
+
+            if (!courseId) {
+                alert('Seleziona un corso.');
+                return;
+            }
+            if (needsYear && !yearId) {
+                alert('Seleziona un anno.');
+                return;
+            }
+
+            // Assicuro selezione corso/anno nello state
+            if (!state.selectedCourse) {
+                state.selectedCourse = courses.find((c) => (c?.id ?? '') === courseId) || null;
+            }
+            if (needsYear && !state.selectedYearObj) {
+                const cObj = state.selectedCourse;
+                if (cObj && Array.isArray(cObj.years)) {
+                    state.selectedYearObj = cObj.years.find((y) => String(y?.id ?? '') === String(yearId)) || null;
+                } else {
+                    state.selectedYearObj = { id: String(yearId), groups: [] };
+                }
+            }
+
+            const payload = {
+                courseId,
+                courseName,
+                year: String(yearId),
+                yearObj: state.selectedYearObj || { id: String(yearId), groups: [] },
+            };
+
+            if (state.mode === 'ORARI') {
+                if (isArcod) {
+                    const tt = state.selectedCourse?.time_table;
+                    if (typeof tt === 'string' && tt.trim()) {
+                        window.location.href = tt;
+                        return;
+                    }
+                    alert('Link orari (time_table) non impostato per questo corso.');
+                    return;
+                }
+
+                renderOrariPage(payload);
+            } else {
+                renderGruppiPage(payload);
+            }
+        };
+
+        el.backBtn.onclick = (e) => {
+            e.preventDefault();
+            renderDeptActions(state.deptKey);
+        };
+    }
+
+    function renderOrariPage({ courseId, courseName, year, yearObj }) {
+        el.formArea.style.display = 'none';
+        el.pageArea.style.display = 'block';
+        clear(el.pageArea);
+
+        el.title.textContent = `${state.deptKey} · Orari`;
+
+        const p = document.createElement('div');
+        p.innerHTML = `
+            <div><strong>Corso:</strong> ${escapeHtml(courseName)}</div>
+            <div><strong>Anno:</strong> ${escapeHtml(String(year))}</div>
+            <div style="margin-top:0.75em;">
+                Pagina orari: <em>da implementare</em>.
+            </div>
+        `;
+        el.pageArea.appendChild(p);
+
+        const back = makeButton('INDIETRO', () => renderCourseYearForm());
+        back.style.marginTop = '1em';
+        el.pageArea.appendChild(back);
+    }
+
+    function renderGruppiPage({ courseId, courseName, year, yearObj }) {
+        el.formArea.style.display = 'none';
+        el.pageArea.style.display = 'block';
+        clear(el.pageArea);
+
+        el.title.textContent = `${state.deptKey} · Gruppi WZ`;
+
+        const dept = getDeptObj(state.deptKey);
+
+        // New schema: groups inside selected year object as:
+        // { id: "1", groups: [ {name, link}, ... ] }
+        const fromYear = Array.isArray(yearObj?.groups) ? yearObj.groups : [];
+
+        // Optional fallback: department-level whatsapp_groups (se vuoi continuare a usarli)
+        // Supporta stringhe o oggetti {name,url} (vecchio formato)
+        const fromDept = Array.isArray(dept.whatsapp_groups) ? dept.whatsapp_groups : [];
+
+        const groups = fromYear.length > 0 ? fromYear : fromDept;
+
+        const wrap = document.createElement('div');
+        wrap.innerHTML = `
+            <div><strong>Corso:</strong> ${escapeHtml(courseName)}</div>
+            <div><strong>Anno:</strong> ${escapeHtml(String(year))}</div>
+        `;
+        el.pageArea.appendChild(wrap);
+
+        if (!groups || groups.length === 0) {
+            const info = document.createElement('div');
+            info.style.marginTop = '0.75em';
+            info.innerHTML = `Lista gruppi WhatsApp: <em>da implementare</em>.`;
+            el.pageArea.appendChild(info);
+        } else {
+            const ul = document.createElement('ul');
+            ul.style.marginTop = '0.75em';
+
+            groups.forEach((g) => {
+                const li = document.createElement('li');
+
+                // Nuovo formato: {name, link}
+                if (g && typeof g === 'object' && ('link' in g || 'name' in g)) {
+                    const a = document.createElement('a');
+                    a.href = g.link || '#';
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    a.textContent = g.name || g.link || 'Gruppo';
+                    li.appendChild(a);
+                }
+                // Vecchio fallback: stringa
+                else if (typeof g === 'string') {
+                    li.textContent = g;
+                }
+                // Vecchio fallback: {name,url}
+                else {
+                    const a = document.createElement('a');
+                    a.href = g?.url || '#';
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    a.textContent = g?.name || g?.url || 'Gruppo';
+                    li.appendChild(a);
+                }
+
+                ul.appendChild(li);
+            });
+
+            el.pageArea.appendChild(ul);
+        }
+
+        const back = makeButton('INDIETRO', () => renderCourseYearForm());
+        back.style.marginTop = '1em';
+        el.pageArea.appendChild(back);
+    }
+
+    function escapeHtml(s) {
+        return String(s)
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('\"', '&quot;')
+            .replaceAll("'", '&#039;');
+    }
+
+    async function init() {
+        try {
+            const res = await fetch('./info.json', { cache: 'no-store' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            state.data = await res.json();
+            renderDeptButtons();
+        } catch (err) {
+            console.error(err);
+            el.title.textContent = 'Errore';
+            clear(el.actions);
+            el.actions.appendChild(makeButton('Riprova', () => init()));
+            const msg = document.createElement('div');
+            msg.style.marginTop = '0.75em';
+            msg.style.color = '#333';
+            msg.textContent = 'Impossibile caricare info.json. Controlla che il file esista e sia valido.';
+            el.actions.appendChild(msg);
+        }
+    }
+
+    init();
 </script>
 </body>
 </html>
