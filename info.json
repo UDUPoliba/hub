@@ -1,251 +1,316 @@
 {
   "data": {
-    "CORSI COMUNI": [
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseA",
-        "name": "Ins.COMUNI ClasseA",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseB",
-        "name": "Ins.COMUNI ClasseB",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseC",
-        "name": "Ins.COMUNI ClasseC",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseD",
-        "name": "Ins.COMUNI ClasseD",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseE",
-        "name": "Ins.COMUNI ClasseE",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseG",
-        "name": "Ins.COMUNI ClasseG",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseH",
-        "name": "Ins.COMUNI ClasseH",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseI",
-        "name": "Ins.COMUNI ClasseI",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseL",
-        "name": "Ins.COMUNI ClasseL",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseM",
-        "name": "Ins.COMUNI ClasseM",
-        "years": 1
-      },
-      {
-        "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseN",
-        "name": "Ins.COMUNI ClasseN",
-        "years": 1
-      }
-    ],
-    "DEI": [
-      {
-        "id": "1S_LT17-R_LT Ing. Informatica e Automazione",
-        "name": "LT Ing. Informatica e Automazione",
-        "years": 3
-      },
-      {
-        "id": "1S_LT18-R_LT Ing. Elettronica e Tec. Internet",
-        "name": "LT Ing. Elettronica e Tec. Internet",
-        "years": 3
-      },
-      {
-        "id": "1S_LT05-R_LT Ing. Energia Elettrica",
-        "name": "LT Ing. Energia Elettrica",
-        "years": 3
-      },
-      {
-        "id": "1S_LT60_LT Ing. Sistemi Medicali",
-        "name": "LT Ing. Sistemi Medicali",
-        "years": 3
-      },
-      {
-        "id": "1S_LM06.7_LM Automation and Robotics Eng.",
-        "name": "LM Automation and Robotics Eng.",
-        "years": 2
-      },
-      {
-        "id": "1S_LM17_LM Computer Science Eng.",
-        "name": "LM Computer Science Eng.",
-        "years": 2
-      },
-      {
-        "id": "1S_LM04.8_LM Electronics Eng.",
-        "name": "LM Electronics Eng.",
-        "years": 2
-      },
-      {
-        "id": "1S_LM05_LM Ing. Elettrica",
-        "name": "LM Ing. Elettrica",
-        "years": 2
-      },
-      {
-        "id": "1S_LM60_LM Ing. Sistemi Medicali",
-        "name": "LM Ing. Sistemi Medicali",
-        "years": 2
-      },
-      {
-        "id": "1S_LM14.15_LM Telecommunications and Internet Tech. Eng.",
-        "name": "LM Telecommunications and Internet Tech. Eng.",
-        "years": 2
-      },
-      {
-        "id": "1S_LM20_LM Trasformazione Digitale",
-        "name": "LM Trasformazione Digitale",
-        "years": 2
-      }
-    ],
-    "DICATECH": [
-      {
-        "id": "1S_LM01_LM Ing. Civile",
-        "name": "LM Ing. Civile",
-        "years": 2
-      },
-      {
-        "id": "1S_LM02_LM Ing. Sistemi Edilizi",
-        "name": "LM Ing. Sistemi Edilizi",
-        "years": 2
-      },
-      {
-        "id": "1S_LM63_LM Ing. Ambiente & Territorio",
-        "name": "LM Ing. Ambiente & Territorio",
-        "years": 2
-      },
-      {
-        "id": "1S_LM40_LM Ing. della Mobilità Sostenibile",
-        "name": "LM Ing. della Mobilità Sostenibile",
-        "years": 2
-      },
-      {
-        "id": "1S_LM70_LM Ing. Gestione Infrastr. Civili",
-        "name": "LM Ing. Gestione Infrastr. Civili",
-        "years": 2
-      },
-      {
-        "id": "1S_LM70_LM Ing Gestione Infrastr. Civili",
-        "name": "LM Ing Gestione Infrastr. Civili",
-        "years": 2
-      },
-      {
-        "id": "1S_LP16_LP Costr. & Gestione Ambientale & Territoriale",
-        "name": "LP Costr. & Gestione Ambientale & Territoriale",
-        "years": 3
-      },
-      {
-        "id": "1S_LT02_LT Ing. Edile",
-        "name": "LT Ing. Edile",
-        "years": 3
-      },
-      {
-        "id": "1S_LT16_LT Ing. Civile & Ambientale",
-        "name": "LT Ing. Civile & Ambientale",
-        "years": 3
-      }
-    ],
-    "DMMM": [
-      {
-        "id": "1S_LM10_LM Ing. Energetica",
-        "name": "LM Ing. Energetica",
-        "years": 2
-      },
-      {
-        "id": "1S_LM10_LM Ing. Energetica - Unisa",
-        "name": "LM Ing. Energetica - Unisa",
-        "years": 2
-      },
-      {
-        "id": "1S_LM13_LM Ing. Gestionale",
-        "name": "LM Ing. Gestionale",
-        "years": 2
-      },
-      {
-        "id": "1S_LM30_LM Ing. Meccanica",
-        "name": "LM Ing. Meccanica",
-        "years": 2
-      },
-      {
-        "id": "1S_LM31_LM Mechanical Engineering",
-        "name": "LM Mechanical Engineering",
-        "years": 2
-      },
-      {
-        "id": "1S_LT03_LT Ing. Gestionale",
-        "name": "LT Ing. Gestionale",
-        "years": 3
-      },
-      {
-        "id": "1S_LT31_LT Ing. Meccanica",
-        "name": "LT Ing. Meccanica",
-        "years": 3
-      }
-    ],
-    "TARANTO": [
-      {
-        "id": "1S_LT16_LT Ing. Civile e Ambientale",
-        "name": "LT Ing. Civile e Ambientale",
-        "years": 3
-      },
-      {
-        "id": "1S_LT17_LT Ing. Informatica e Automazione",
-        "name": "LT Ing. Informatica e Automazione",
-        "years": 3
-      },
-      {
-        "id": "1S_LT41_LT Ing. Sistemi Aerospaziali",
-        "name": "LT Ing. Sistemi Aerospaziali",
-        "years": 3
-      },
-      {
-        "id": "1S_LT80_LT Ing. Industriale e Sistemi Navali",
-        "name": "LT Ing. Industriale e Sistemi Navali",
-        "years": 3
-      },
-      {
-        "id": "1S_LM20-R_LM Ing. Aerospaziale - Unisa",
-        "name": "LM Ing. Aerospaziale - Unisa",
-        "years": 2
-      },
-      {
-        "id": "1S_LM30_LM Ing. Meccanica",
-        "name": "LM Ing. Meccanica",
-        "years": 2
-      },
-      {
-        "id": "1S_LM63_LM Ing. Ambiente e Territorio",
-        "name": "LM Ing. Ambiente e Territorio",
-        "years": 2
-      }
-    ],
-    "ARCOD": [
-      {
-        "id": "Architettura",
-        "name": "Architettura",
-        "orario_link": ""
-      },
-      {
-        "id": "Disegno Industriale",
+    "CORSI COMUNI": {
+      "courses": [
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseA",
+          "name": "Ins.COMUNI ClasseA",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseB",
+          "name": "Ins.COMUNI ClasseB",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseC",
+          "name": "Ins.COMUNI ClasseC",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseD",
+          "name": "Ins.COMUNI ClasseD",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseE",
+          "name": "Ins.COMUNI ClasseE",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseG",
+          "name": "Ins.COMUNI ClasseG",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseH",
+          "name": "Ins.COMUNI ClasseH",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseI",
+          "name": "Ins.COMUNI ClasseI",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseL",
+          "name": "Ins.COMUNI ClasseL",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseM",
+          "name": "Ins.COMUNI ClasseM",
+          "years": 1
+        },
+        {
+          "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseN",
+          "name": "Ins.COMUNI ClasseN",
+          "years": 1
+        }
+      ]
+    },
+      "drive": "https://drive.google.com/drive/folders/1RCixdxaGIFZFyML_bSTHayuxkOm0iNpq?usp=drive_link"
+  },
+    "DEI": {
+      "courses": [
+        {
+          "id": "1S_LT17-R_LT Ing. Informatica e Automazione",
+          "name": "LT Ing. Informatica e Automazione",
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "A-L",
+                  "link": ""
+                },
+                {
+                  "name": "M-Z",
+                  "link": ""
+                }
+              ]
+            },
+            {
+              "id": "2", 
+              "groups": [
+                {
+                  "name": "A-L",
+                  "link": ""
+                },
+                {
+                  "name": "M-Z",
+                  "link": ""
+                }
+              ]
+            },
+            {
+              "id": "3", 
+              "groups": [
+                {
+                  "name": "A-L",
+                  "link": ""
+                },
+                {
+                  "name": "M-Z",
+                  "link": ""
+                },
+                {
+                  "name": "Sistemi e Applicazioni Informatiche",
+                  "link": ""
+                },
+                {
+                  "name": "Automazione",
+                  "link": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1S_LT18-R_LT Ing. Elettronica e Tec. Internet",
+          "name": "LT Ing. Elettronica e Tec. Internet",
+          "years": 3
+        },
+        {
+          "id": "1S_LT05-R_LT Ing. Energia Elettrica",
+          "name": "LT Ing. Energia Elettrica",
+          "years": 3
+        },
+        {
+          "id": "1S_LT60_LT Ing. Sistemi Medicali",
+          "name": "LT Ing. Sistemi Medicali",
+          "years": 3
+        },
+        {
+          "id": "1S_LM06.7_LM Automation and Robotics Eng.",
+          "name": "LM Automation and Robotics Eng.",
+          "years": 2
+        },
+        {
+          "id": "1S_LM17_LM Computer Science Eng.",
+          "name": "LM Computer Science Eng.",
+          "years": 2
+        },
+        {
+          "id": "1S_LM04.8_LM Electronics Eng.",
+          "name": "LM Electronics Eng.",
+          "years": 2
+        },
+        {
+          "id": "1S_LM05_LM Ing. Elettrica",
+          "name": "LM Ing. Elettrica",
+          "years": 2
+        },
+        {
+          "id": "1S_LM60_LM Ing. Sistemi Medicali",
+          "name": "LM Ing. Sistemi Medicali",
+          "years": 2
+        },
+        {
+          "id": "1S_LM14.15_LM Telecommunications and Internet Tech. Eng.",
+          "name": "LM Telecommunications and Internet Tech. Eng.",
+          "years": 2
+        },
+        {
+          "id": "1S_LM20_LM Trasformazione Digitale",
+          "name": "LM Trasformazione Digitale",
+          "years": 2
+        }
+      ],
+      "drive": "https://drive.google.com/drive/folders/1aDdO0CNq3wJbDU_c3y0I5N4FAJL2RirD?usp=drive_link"
+    },
+    "DICATECH": {
+      "courses": [
+        {
+          "id": "1S_LM01_LM Ing. Civile",
+          "name": "LM Ing. Civile",
+          "years": 2
+        },
+        {
+          "id": "1S_LM02_LM Ing. Sistemi Edilizi",
+          "name": "LM Ing. Sistemi Edilizi",
+          "years": 2
+        },
+        {
+          "id": "1S_LM63_LM Ing. Ambiente & Territorio",
+          "name": "LM Ing. Ambiente & Territorio",
+          "years": 2
+        },
+        {
+          "id": "1S_LM40_LM Ing. della Mobilità Sostenibile",
+          "name": "LM Ing. della Mobilità Sostenibile",
+          "years": 2
+        },
+        {
+          "id": "1S_LM70_LM Ing. Gestione Infrastr. Civili",
+          "name": "LM Ing. Gestione Infrastr. Civili",
+          "years": 2
+        },
+        {
+          "id": "1S_LM70_LM Ing Gestione Infrastr. Civili",
+          "name": "LM Ing Gestione Infrastr. Civili",
+          "years": 2
+        },
+        {
+          "id": "1S_LP16_LP Costr. & Gestione Ambientale & Territoriale",
+          "name": "LP Costr. & Gestione Ambientale & Territoriale",
+          "years": 3
+        },
+        {
+          "id": "1S_LT02_LT Ing. Edile",
+          "name": "LT Ing. Edile",
+          "years": 3
+        },
+        {
+          "id": "1S_LT16_LT Ing. Civile & Ambientale",
+          "name": "LT Ing. Civile & Ambientale",
+          "years": 3
+        }
+      ],
+      "drive": "https://drive.google.com/drive/folders/1QQ1letAOedq3DFyD4i6K_8rZlM-QbUtL?usp=drive_link"
+    },
+    "DMMM": {
+      "courses": [
+        {
+          "id": "1S_LM10_LM Ing. Energetica",
+          "name": "LM Ing. Energetica",
+          "years": 2
+        },
+        {
+          "id": "1S_LM10_LM Ing. Energetica - Unisa",
+          "name": "LM Ing. Energetica - Unisa",
+          "years": 2
+        },
+        {
+          "id": "1S_LM13_LM Ing. Gestionale",
+          "name": "LM Ing. Gestionale",
+          "years": 2
+        },
+        {
+          "id": "1S_LM30_LM Ing. Meccanica",
+          "name": "LM Ing. Meccanica",
+          "years": 2
+        },
+        {
+          "id": "1S_LM31_LM Mechanical Engineering",
+          "name": "LM Mechanical Engineering",
+          "years": 2
+        },
+        {
+          "id": "1S_LT03_LT Ing. Gestionale",
+          "name": "LT Ing. Gestionale",
+          "years": 3
+        },
+        {
+          "id": "1S_LT31_LT Ing. Meccanica",
+          "name": "LT Ing. Meccanica",
+          "years": 3
+        }
+      ],
+      "drive": "https://drive.google.com/drive/folders/1B0zUr5d4QFZ0q-UcD6z4h5YcAeWSxL3G?usp=drive_link"
+    },
+    "TARANTO": {
+      "courses": [
+        {
+          "id": "1S_LT16_LT Ing. Civile e Ambientale",
+          "name": "LT Ing. Civile e Ambientale",
+          "years": 3
+        },
+        {
+          "id": "1S_LT17_LT Ing. Informatica e Automazione",
+          "name": "LT Ing. Informatica e Automazione",
+          "years": 3
+        },
+        {
+          "id": "1S_LT41_LT Ing. Sistemi Aerospaziali",
+          "name": "LT Ing. Sistemi Aerospaziali",
+          "years": 3
+        },
+        {
+          "id": "1S_LT80_LT Ing. Industriale e Sistemi Navali",
+          "name": "LT Ing. Industriale e Sistemi Navali",
+          "years": 3
+        },
+        {
+          "id": "1S_LM20-R_LM Ing. Aerospaziale - Unisa",
+          "name": "LM Ing. Aerospaziale - Unisa",
+          "years": 2
+        },
+        {
+          "id": "1S_LM30_LM Ing. Meccanica",
+          "name": "LM Ing. Meccanica",
+          "years": 2
+        },
+        {
+          "id": "1S_LM63_LM Ing. Ambiente e Territorio",
+          "name": "LM Ing. Ambiente e Territorio",
+          "years": 2
+        }
+      ]
+    },
+    "ARCOD": {
+      "courses": [
+        {
+          "id": "Architettura",
+          "name": "Architettura",
+          "orario_link": ""
+        },
+        {
+          "id": "Disegno Industriale",
         "name": "Disegno Industriale",
-        "orario_link": ""
-      }
-    ]
-  }
+          "orario_link": ""
+        }
+      ],
+      "drive": "https://drive.google.com/drive/folders/1zpRYi_4NNPi-cCH7Lp9xRT0CDTaPL8Y3?usp=drive_link"
+    }
 }
