@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "DEI": [
+        "LT Ing. Informatica e Automazione",
+        "LT Ing. Elettronica e Tec. Internet",
+        "LT Ing. Energia Elettrica",
+        "LT Ing. Sistemi Medicali",
+        "LM Automation and Robotics Eng.",
+        "LM Computer Science Eng.",
+        "LM Electronics Eng.",
+        "LM Ing. Elettrica",
+        "LM Ing. Sistemi Medicali",
+        "LM Telecommunications and Internet Tech. Eng.",
+        "LM Trasformazione Digitale"
+      ],
+      "DICATECH": [
+        "LM Ing. Civile",
+        "LM Ing. Sistemi Edilizi",
+        "LM Ing. Ambiente & Territorio",
+        "LM Ing. della Mobilità Sostenibile",
+        "LM Ing. Gestione Infrastr. Civili",
+        "LM Ing Gestione Infrastr. Civili",
+        "LP Costr. & Gestione Ambientale & Territoriale",
+        "LT Ing. Edile",
+        "LT Ing. Civile & Ambientale"
+      ],
+      "DMMM": [
+        "LM Ing. Energetica",
+        "LM Ing. Energetica - Unisa",
+        "LM Ing. Gestionale",
+        "LM Ing. Meccanica",
+        "LM Mechanical Engineering",
+        "LT Ing. Gestionale",
+        "LT Ing. Meccanica"
+      ]
+    }
+  ]
+}
