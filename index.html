@@ -77,6 +77,14 @@
             background-color: #b8211d;
         }
 
+        .btn-back {
+            background: #333;
+        }
+
+        .btn-back:hover {
+            background: #111;
+        }
+
         strong {
             color: #d92d28;
         }
@@ -150,6 +158,20 @@
         return b;
     }
 
+    function makeBackButton(onClick) {
+        const b = makeButton('Indietro', onClick);
+        b.classList.add('btn-back');
+        return b;
+    }
+
+    function makeDriveButton(onClick) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.addEventListener('click', onClick);
+        b.innerHTML = `DRIVE <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
+        return b;
+    }
+
     function getDepartmentsMap() {
         // Supporta:
         // 1) { data: { "DIP": ... } }
@@ -219,7 +241,7 @@
         const dept = getDeptObj(deptKey);
 
         // DRIVE
-        el.actions.appendChild(makeButton('DRIVE', () => {
+        el.actions.appendChild(makeDriveButton(() => {
             if (dept.drive && dept.drive.trim()) {
                 window.location.href = dept.drive;
                 return;
@@ -240,7 +262,7 @@
         }));
 
         // INDIETRO
-        el.actions.appendChild(makeButton('INDIETRO', () => renderDeptButtons()));
+        el.actions.appendChild(makeBackButton(() => renderDeptButtons()));
     }
 
     function renderCourseYearForm() {
@@ -437,7 +459,7 @@
         `;
         el.pageArea.appendChild(p);
 
-        const back = makeButton('INDIETRO', () => renderCourseYearForm());
+        const back = makeBackButton(() => renderCourseYearForm());
         back.style.marginTop = '1em';
         el.pageArea.appendChild(back);
     }
@@ -509,7 +531,7 @@
             el.pageArea.appendChild(ul);
         }
 
-        const back = makeButton('INDIETRO', () => renderCourseYearForm());
+        const back = makeBackButton(() => renderCourseYearForm());
         back.style.marginTop = '1em';
         el.pageArea.appendChild(back);
     }
