@@ -5,61 +5,171 @@
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseA",
           "name": "Ins.COMUNI ClasseA",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "A",
+                  "link": "https://chat.whatsapp.com/CJildVyRWcRI9oBfxikUO0"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseB",
           "name": "Ins.COMUNI ClasseB",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "B",
+                  "link": "https://chat.whatsapp.com/I7PavEMNHiF2U2Gkw22nYg"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseC",
           "name": "Ins.COMUNI ClasseC",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "C",
+                  "link": "https://chat.whatsapp.com/LZiD2SuaxrdDTEQG6xu49g"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseD",
           "name": "Ins.COMUNI ClasseD",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "D",
+                  "link": "https://chat.whatsapp.com/KwhedGFmg8V41FkfwvHADE"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseE",
           "name": "Ins.COMUNI ClasseE",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "E",
+                  "link": "https://chat.whatsapp.com/IXTBm28kRjmAPwYF3860a4"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseG",
           "name": "Ins.COMUNI ClasseG",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "G",
+                  "link": "https://chat.whatsapp.com/LnCfOuzqmXWGkFw9uS2GRB"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseH",
           "name": "Ins.COMUNI ClasseH",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "H",
+                  "link": "https://chat.whatsapp.com/LV8fNzpbtRG86hKzOHF4H2"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseI",
           "name": "Ins.COMUNI ClasseI",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "I",
+                  "link": "https://chat.whatsapp.com/HiMPxiw7UB5CYNrb1piVH1"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseL",
           "name": "Ins.COMUNI ClasseL",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "L",
+                  "link": "https://chat.whatsapp.com/FbMWG76rRUv5g7lre614EF"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseM",
           "name": "Ins.COMUNI ClasseM",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "M",
+                  "link": "https://chat.whatsapp.com/D8GdMa4CLC9BrUp7RYk24V"
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "1S_Ins.COMUNI_Ins.COMUNI ClasseN",
           "name": "Ins.COMUNI ClasseN",
-          "years": 1
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "N",
+                  "link": "https://chat.whatsapp.com/BodSiCfCs3g7MKLi2RWxc6"
+                }
+              ]
+            }
+          ]
         }
-      ]
-    },
+      ],
       "drive": "https://drive.google.com/drive/folders/1RCixdxaGIFZFyML_bSTHayuxkOm0iNpq?usp=drive_link"
+    }
   },
     "DEI": {
       "courses": [
