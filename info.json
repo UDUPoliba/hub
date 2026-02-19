@@ -168,7 +168,7 @@
           ]
         }
       ],
-      "drive": "https://drive.google.com/drive/folders/1RCixdxaGIFZFyML_bSTHayuxkOm0iNpq?usp=drive_link"
+      "drive": "https://drive.google.com/drive/folders/1RCixdxaGIFZFyML_bSTHayuxkOm0iNpq"
     },
     "DEI": {
       "courses": [
@@ -276,7 +276,7 @@
           "years": 2
         }
       ],
-      "drive": "https://drive.google.com/drive/folders/1aDdO0CNq3wJbDU_c3y0I5N4FAJL2RirD?usp=drive_link"
+      "drive": "https://drive.google.com/drive/folders/1aDdO0CNq3wJbDU_c3y0I5N4FAJL2RirD"
     },
     "DICATECH": {
       "courses": [
@@ -326,7 +326,7 @@
           "years": 3
         }
       ],
-      "drive": "https://drive.google.com/drive/folders/1QQ1letAOedq3DFyD4i6K_8rZlM-QbUtL?usp=drive_link"
+      "drive": "https://drive.google.com/drive/folders/1QQ1letAOedq3DFyD4i6K_8rZlM-QbUtL"
     },
     "DMMM": {
       "courses": [
@@ -366,7 +366,7 @@
           "years": 3
         }
       ],
-      "drive": "https://drive.google.com/drive/folders/1B0zUr5d4QFZ0q-UcD6z4h5YcAeWSxL3G?usp=drive_link"
+      "drive": "https://drive.google.com/drive/folders/1B0zUr5d4QFZ0q-UcD6z4h5YcAeWSxL3G"
     },
     "TARANTO": {
       "courses": [
@@ -412,15 +412,141 @@
         {
           "id": "Architettura",
           "name": "Architettura",
-          "orario_link": ""
+          "time_table": "https://drive.google.com/file/d/1EYra1o13E9uaH7MDAlz0yahp-biHanjN/view",
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "Architettura 1",
+                  "link": "https://chat.whatsapp.com/LfaFYeYJymV4DfygyvJ0Al"
+                }
+              ]
+            },
+            {
+              "id": "2", 
+              "groups": [
+                {
+                  "name": "Architettura 2",
+                  "link": "https://chat.whatsapp.com/IdTpsWiG4xl6q3XSH4xo0a"
+                },
+                {
+                  "name": "Architettura 2A",
+                  "link": "https://chat.whatsapp.com/Lcw9IF30AeWHbE9NDd8sNg"
+                },
+                {
+                  "name": "Architettura 2B",
+                  "link": "https://chat.whatsapp.com/EU8IhMjBB6d9AgY55bNx1p"
+                },
+                {
+                  "name": "Architettura 2 LAB A",
+                  "link": "https://chat.whatsapp.com/InVKVA5rbfgGrVBWhu2LPL"
+                },
+                {
+                  "name": "Architettura 2 LAB B",
+                  "link": "https://chat.whatsapp.com/JRngaQtO9um0kgUpB6iYv7"
+                },
+                {
+                  "name": "Architettura 2 LAB C",
+                  "link": "https://chat.whatsapp.com/CN6huOmfWbpGtgWUPudVgG"
+                }
+              ]
+            },
+            {
+              "id": "2", 
+              "groups": [
+                {
+                  "name": "Architettura 3",
+                  "link": "https://chat.whatsapp.com/L74DDTQlOeF8OzjgYb1XAV"
+                },
+                {
+                  "name": "Architettura 3A",
+                  "link": "https://chat.whatsapp.com/DwLFju4mQPf95SLBi5tnXg"
+                },
+                {
+                  "name": "Architettura 3B",
+                  "link": "https://chat.whatsapp.com/I4MVjgYRuGaIJcwWpKgx02"
+                },
+                {
+                  "name": "Architettura 3 LAB A",
+                  "link": "https://chat.whatsapp.com/GmvLL0IW5fECWABzPic5Sm"
+                },
+                {
+                  "name": "Architettura 3 LAB B",
+                  "link": "https://chat.whatsapp.com/COLv17YGuYTB0sYiCjx2hI"
+                },
+                {
+                  "name": "Architettura 3 LAB C",
+                  "link": "https://chat.whatsapp.com/DJEhFQALllz9t2GFX5Fyfm"
+                }
+              ]
+            },
+            {
+              "id": "4", 
+              "groups": [
+                {
+                  "name": "Architettura 4",
+                  "link": "https://chat.whatsapp.com/GhWhNSs7o7YH5WPyU9tSOf"
+                }
+              ]
+            },
+            {
+              "id": "5", 
+              "groups": [
+                {
+                  "name": "Archtettura 5",
+                  "link": "https://chat.whatsapp.com/EXz1kpahP1K6LDOUunaEWh"
+                }
+              ]
+            }
+          ]
         },
         {
-          "id": "Disegno Industriale",
-        "name": "Disegno Industriale",
-          "orario_link": ""
+          "id": "Design",
+          "name": "Design",
+          "time_table": "https://drive.google.com/file/d/1GpsUn65hK0-raTTIPc4Y6a1pPurAb2Av/view",
+          "years": [
+            {
+              "id": "1", 
+              "groups": [
+                {
+                  "name": "Design 1",
+                  "link": "https://chat.whatsapp.com/HpSNocOTKqPHs42GMtj7JN"
+                }
+              ]
+            },
+            {
+              "id": "2", 
+              "groups": [
+                {
+                  "name": "Design 2",
+                  "link": "https://chat.whatsapp.com/FmIE9tST7bH4EhgB7V0d90"
+                }
+              ]
+            },
+            {
+              "id": "3", 
+              "groups": [
+                {
+                  "name": "Design 3",
+                  "link": "https://chat.whatsapp.com/Ht5mskFVifY4ilnxEKe53O"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Industrial Design",
+          "name": "Industrial Design",
+          "time_table": "https://drive.google.com/file/d/14reHpfTYN0VUrUFcQGYDyjSnhjr-xpdd/view"
+        },
+        {
+          "id": "Architecture Science for Heritage",
+          "name": "Architecture Science for Heritage",
+          "time_table": "https://drive.google.com/file/d/1tO5uTxW9-qDe2qHEG6dT6KPRlMCbCOP_/view"
         }
       ],
-      "drive": "https://drive.google.com/drive/folders/1zpRYi_4NNPi-cCH7Lp9xRT0CDTaPL8Y3?usp=drive_link"
+      "drive": "https://drive.google.com/drive/folders/1zpRYi_4NNPi-cCH7Lp9xRT0CDTaPL8Y3"
     }
   }
 }
