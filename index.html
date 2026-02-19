@@ -172,6 +172,20 @@
         return b;
     }
 
+    function makeLinkButton(label, href) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.addEventListener('click', () => {
+            if (href && String(href).trim()) {
+                window.location.href = href;
+                return;
+            }
+            alert('Link non disponibile.');
+        });
+        b.innerHTML = `${escapeHtml(label)} <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
+        return b;
+    }
+
     function getDepartmentsMap() {
         // Supporta:
         // 1) { data: { "DIP": ... } }
@@ -477,8 +491,7 @@
         // { id: "1", groups: [ {name, link}, ... ] }
         const fromYear = Array.isArray(yearObj?.groups) ? yearObj.groups : [];
 
-        // Optional fallback: department-level whatsapp_groups (se vuoi continuare a usarli)
-        // Supporta stringhe o oggetti {name,url} (vecchio formato)
+        // Optional fallback: department-level whatsapp_groups (vecchio formato)
         const fromDept = Array.isArray(dept.whatsapp_groups) ? dept.whatsapp_groups : [];
 
         const groups = fromYear.length > 0 ? fromYear : fromDept;
@@ -493,42 +506,37 @@
         if (!groups || groups.length === 0) {
             const info = document.createElement('div');
             info.style.marginTop = '0.75em';
-            info.innerHTML = `Lista gruppi WhatsApp: <em>da implementare</em>.`;
+            info.innerHTML = `Gruppi WhatsApp: <em>da implementare</em>.`;
             el.pageArea.appendChild(info);
         } else {
-            const ul = document.createElement('ul');
-            ul.style.marginTop = '0.75em';
+            const btnWrap = document.createElement('div');
+            btnWrap.style.marginTop = '0.75em';
+            btnWrap.style.display = 'flex';
+            btnWrap.style.flexDirection = 'column';
+            btnWrap.style.gap = '0.75em';
 
-            groups.forEach((g) => {
-                const li = document.createElement('li');
-
+            groups.forEach((g, idx) => {
                 // Nuovo formato: {name, link}
                 if (g && typeof g === 'object' && ('link' in g || 'name' in g)) {
-                    const a = document.createElement('a');
-                    a.href = g.link || '#';
-                    a.target = '_blank';
-                    a.rel = 'noopener noreferrer';
-                    a.textContent = g.name || g.link || 'Gruppo';
-                    li.appendChild(a);
-                }
-                // Vecchio fallback: stringa
-                else if (typeof g === 'string') {
-                    li.textContent = g;
-                }
-                // Vecchio fallback: {name,url}
-                else {
-                    const a = document.createElement('a');
-                    a.href = g?.url || '#';
-                    a.target = '_blank';
-                    a.rel = 'noopener noreferrer';
-                    a.textContent = g?.name || g?.url || 'Gruppo';
-                    li.appendChild(a);
+                    const label = g.name || `Gruppo ${idx + 1}`;
+                    btnWrap.appendChild(makeLinkButton(label, g.link));
+                    return;
                 }
 
-                ul.appendChild(li);
+                // Vecchio fallback: stringa (nessun link)
+                if (typeof g === 'string') {
+                    const b = makeButton(g, () => {});
+                    b.disabled = true;
+                    btnWrap.appendChild(b);
+                    return;
+                }
+
+                // Vecchio fallback: {name,url}
+                const label = g?.name || `Gruppo ${idx + 1}`;
+                btnWrap.appendChild(makeLinkButton(label, g?.url));
             });
 
-            el.pageArea.appendChild(ul);
+            el.pageArea.appendChild(btnWrap);
         }
 
         const back = makeBackButton(() => renderCourseYearForm());
