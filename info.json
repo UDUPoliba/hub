@@ -55,6 +55,10 @@
         { "id": "1S_LM20-R_LM Ing. Aerospaziale - Unisa", "name": "LM Ing. Aerospaziale - Unisa", "years": 2 },
         { "id": "1S_LM30_LM Ing. Meccanica", "name": "LM Ing. Meccanica", "years": 2 },
         { "id": "1S_LM63_LM Ing. Ambiente e Territorio", "name": "LM Ing. Ambiente e Territorio", "years": 2 }
+      ],
+      "ARCOD": [
+        {"id":"Architettura", "name": "Architettura", "orario_link": ""},
+        {"id":"Disegno Industriale", "name": "Disegno Industriale", "orario_link": ""},
       ]
     }
   ]
