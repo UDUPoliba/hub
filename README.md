@@ -22,15 +22,22 @@ Il sistema si basa su 5 file principali suddivisi tra dati e logica di automazio
 ```bash
 python3 scraperPoliba.py
 ```
+
+Durante l'esecuzione, il terminale andrà in pausa e ti farà una domanda: 
+`👉 Quale semestre vuoi aggiornare? (Inserisci 1 o 2): `
+
+Ti basterà digitare il numero corrispondente al semestre in corso e premere **Invio**. Lo script confermerà la scelta e concluderà l'operazione in automatico.
+
 ### Cosa succede tecnicamente
 
 Il processo di aggiornamento è automatizzato per garantire precisione e velocità. Ecco i passaggi eseguiti dal sistema:
 
-1.  **Connessione**: `ScraperPoliba.py` si connette all'URL ufficiale del Politecnico di Bari.
-2.  **Estrazione**: Lo script scansiona il codice sorgente HTML alla ricerca della variabile JavaScript `data` e ne estrae il contenuto.
-3.  **Caching**: I dati grezzi appena prelevati vengono salvati nel file locale `poliba.json`.
-4.  **Esecuzione a catena**: Se lo scraping ha successo, viene chiamato internamente il comando `python3 aggiornaOrari.py`.
-5.  **Merge Dati**: `aggiornaOrari.py` confronta `poliba.json` con `info.json` e sovrascrive **solo** i campi relativi ai link degli orari.
+1. **Connessione**: `scraperPoliba.py` si connette all'URL ufficiale del Politecnico di Bari.
+2. **Estrazione**: Lo script scansiona il codice sorgente HTML alla ricerca della variabile JavaScript `data` e ne estrae il contenuto.
+3. **Caching**: I dati grezzi appena prelevati vengono salvati nel file locale `poliba.json`.
+4. **Esecuzione a catena**: Se lo scraping ha successo, viene chiamato internamente il comando `python3 aggiornaOrari.py`.
+5. **Interazione**: L'esecuzione si mette in pausa chiedendo all'operatore di selezionare il semestre da filtrare (1S o 2S).
+6. **Merge Dati**: `aggiornaOrari.py` confronta `poliba.json` con `info.json`, filtra i corsi in base al semestre scelto e sovrascrive **solo** i campi relativi ai link degli orari.
 
 ### Esito e Risultati
 
