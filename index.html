@@ -19,6 +19,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
@@ -35,6 +36,14 @@
             min-height: 300px;
             display: flex;
             flex-direction: column;
+        }
+
+        h1 {
+            margin: 0 0 0.75em;
+            color: #333;
+            font-size: 2em;
+            line-height: 1;
+            text-align: center;
         }
 
         h2 {
@@ -97,6 +106,7 @@
     </style>
 </head>
 <body>
+<h1 id="mainHeader">DRIVE MATERIALI, ORARI E GRUPPI WHATSAPP by UDU ☀️</h1>
 <div class="container">
     <h2 id="title">Scegli il dipartimento</h2>
 
@@ -144,10 +154,20 @@
         continueBtn: document.getElementById('continueBtn'),
         backBtn: document.getElementById('backBtn'),
         pageArea: document.getElementById('pageArea'),
+        mainHeader: document.getElementById('mainHeader'),
     };
 
     function clear(node) {
         while (node.firstChild) node.removeChild(node.firstChild);
+    }
+
+    function showMainHeader(show) {
+        if (!el.mainHeader) return;
+        el.mainHeader.style.display = show ? '' : 'none';
+    }
+
+    function showTopLogo(show) {
+        // optional helper reserved for future; no-op for now
     }
 
     function makeButton(label, onClick) {
@@ -203,26 +223,26 @@
         const map = getDepartmentsMap();
         const v = map[deptKey];
 
-        // Variante: "DIP": [ {id,name,years}, ... ]
-        if (Array.isArray(v)) {
-            return { drive: "", courses: v, whatsapp_groups: [] };
-        }
-
-        // Variante: "DIP": { drive, courses, whatsapp_groups }
-        if (v && typeof v === 'object') {
+        // Support: "DIP": { drive, courses }
+        if (v && typeof v === 'object' && !Array.isArray(v)) {
             return {
                 drive: typeof v.drive === 'string' ? v.drive : "",
                 courses: Array.isArray(v.courses) ? v.courses : [],
-                whatsapp_groups: Array.isArray(v.whatsapp_groups) ? v.whatsapp_groups : [],
             };
         }
 
-        return { drive: "", courses: [], whatsapp_groups: [] };
+        // Legacy support: "DIP": [ {id,name,years}, ... ]
+        if (Array.isArray(v)) {
+            return { drive: "", courses: v };
+        }
+
+        return { drive: "", courses: [] };
     }
 
     function renderDeptButtons() {
         state.deptKey = null;
         state.mode = null;
+        showMainHeader(true);
 
         el.title.textContent = 'Scegli il dipartimento';
         el.formArea.style.display = 'none';
@@ -244,6 +264,7 @@
     function renderDeptActions(deptKey) {
         state.deptKey = deptKey;
         state.mode = null;
+        showMainHeader(false);
 
         el.title.textContent = deptKey;
         el.formArea.style.display = 'none';
@@ -270,7 +291,7 @@
         }));
 
         // GRUPPI WZ
-        el.actions.appendChild(makeButton('GRUPPI WZ', () => {
+        el.actions.appendChild(makeButton('GRUPPI WHATSAPP', () => {
             state.mode = 'GRUPPI';
             renderCourseYearForm();
         }));
@@ -282,6 +303,7 @@
     function renderCourseYearForm() {
         state.selectedCourse = null;
         state.selectedYearObj = null;
+        showMainHeader(false);
 
         el.formArea.style.display = 'block';
         el.pageArea.style.display = 'none';
@@ -293,13 +315,12 @@
         el.title.textContent = `${state.deptKey} · ${state.mode === 'ORARI' ? 'Orari' : 'Gruppi WZ'}`;
 
         const deptUpper = String(state.deptKey).trim().toUpperCase();
-        const isCorsiComuni = deptUpper === 'CORSI COMUNI';
         const isArcod = deptUpper === 'ARCOD';
 
-        // Serve scegliere l'anno?
-        // - CORSI COMUNI: mai (sempre 1)
-        // - ARCOD: se siamo su ORARI, non chiediamo l'anno
-        const needsYear = !(isCorsiComuni || (isArcod && state.mode === 'ORARI'));
+        // Schema richiesto:
+        // - ORARI: solo ARCOD NON chiede l'anno (redirect diretto su time_table)
+        // - GRUPPI WZ: TUTTI i corsi chiedono l'anno
+        const needsYear = !(isArcod && state.mode === 'ORARI');
 
         el.yearWrap.style.display = needsYear ? 'block' : 'none';
 
@@ -311,12 +332,6 @@
         el.course.innerHTML = `<option value="">Seleziona Corso</option>`;
         el.year.innerHTML = `<option value="">Seleziona Anno</option>`;
 
-        if (!needsYear) {
-            // Per CORSI COMUNI l'anno è sempre 1.
-            // Per ARCOD->ORARI l'anno non serve: mettiamo un placeholder.
-            el.year.innerHTML = `<option value="1" selected>1</option>`;
-            state.selectedYearObj = { id: '1', groups: [] };
-        }
 
         courses.forEach((c) => {
             const opt = document.createElement('option');
@@ -329,7 +344,7 @@
             el.year.innerHTML = `<option value="">Seleziona Anno</option>`;
             state.selectedYearObj = null;
 
-            // New schema: years is an array of objects [{id, whatsapp_groups:[...]}, ...]
+            // New schema: years is an array of objects [{id, groups:[{name,link}, ...]}, ...]
             if (Array.isArray(courseObj?.years)) {
                 // Sort numeric if possible (1,2,3...) but keep stable otherwise
                 const yearsList = [...courseObj.years].sort((a, b) => {
@@ -364,22 +379,38 @@
             state.selectedCourse = courses.find((c) => (c?.id ?? '') === courseId) || null;
 
             if (!needsYear) {
-                // Non chiediamo anno (CORSI COMUNI o ARCOD->ORARI): forziamo placeholder
-                state.selectedYearObj = { id: '1', groups: [] };
+                // ORARI + ARCOD: non serve l'anno
+                state.selectedYearObj = null;
                 return;
             }
 
             if (!state.selectedCourse) {
                 el.year.innerHTML = `<option value="">Seleziona Anno</option>`;
                 state.selectedYearObj = null;
+                el.yearWrap.style.display = 'block';
                 return;
             }
 
+            // Se il corso ha un solo anno disponibile, lo selezioniamo automaticamente e nascondiamo la select.
+            const yearsArr = Array.isArray(state.selectedCourse.years) ? state.selectedCourse.years : [];
+            if (yearsArr.length === 1) {
+                state.selectedYearObj = yearsArr[0] || null;
+
+                // Imposta la select (anche se poi la nascondiamo) per coerenza.
+                el.year.innerHTML = `<option value="${escapeHtml(String(state.selectedYearObj?.id ?? ''))}" selected>${escapeHtml(String(state.selectedYearObj?.id ?? ''))}</option>`;
+
+                el.yearWrap.style.display = 'none';
+                return;
+            }
+
+            // Altrimenti mostriamo la select e popoliamo tutti gli anni.
+            el.yearWrap.style.display = 'block';
             fillYearsFromCourse(state.selectedCourse);
         };
 
         el.year.onchange = () => {
             if (!needsYear) return;
+            el.yearWrap.style.display = 'block';
 
             const yearId = el.year.value;
             const courseObj = state.selectedCourse;
@@ -402,7 +433,9 @@
 
             const courseId = el.course.value;
             const courseName = el.course.selectedOptions[0]?.textContent || '';
-            const yearId = needsYear ? el.year.value : '1';
+            const yearId = needsYear
+                ? (state.selectedYearObj?.id ? String(state.selectedYearObj.id) : el.year.value)
+                : '';
 
             if (!courseId) {
                 alert('Seleziona un corso.');
@@ -418,6 +451,12 @@
                 state.selectedCourse = courses.find((c) => (c?.id ?? '') === courseId) || null;
             }
             if (needsYear && !state.selectedYearObj) {
+                const yearsArr = Array.isArray(state.selectedCourse?.years) ? state.selectedCourse.years : [];
+                if (yearsArr.length === 1) {
+                    state.selectedYearObj = yearsArr[0] || null;
+                }
+            }
+            if (needsYear && !state.selectedYearObj) {
                 const cObj = state.selectedCourse;
                 if (cObj && Array.isArray(cObj.years)) {
                     state.selectedYearObj = cObj.years.find((y) => String(y?.id ?? '') === String(yearId)) || null;
@@ -429,8 +468,8 @@
             const payload = {
                 courseId,
                 courseName,
-                year: String(yearId),
-                yearObj: state.selectedYearObj || { id: String(yearId), groups: [] },
+                year: yearId ? String(yearId) : "",
+                yearObj: state.selectedYearObj,
             };
 
             if (state.mode === 'ORARI') {
@@ -444,10 +483,13 @@
                     return;
                 }
 
+                // Per ora: per tutti gli altri, non facciamo nulla (placeholder)
                 renderOrariPage(payload);
-            } else {
-                renderGruppiPage(payload);
+                return;
             }
+
+            // GRUPPI WZ: sempre con anno selezionato
+            renderGruppiPage(payload);
         };
 
         el.backBtn.onclick = (e) => {
@@ -457,6 +499,7 @@
     }
 
     function renderOrariPage({ courseId, courseName, year, yearObj }) {
+        showMainHeader(false);
         el.formArea.style.display = 'none';
         el.pageArea.style.display = 'block';
         clear(el.pageArea);
@@ -479,22 +522,14 @@
     }
 
     function renderGruppiPage({ courseId, courseName, year, yearObj }) {
+        showMainHeader(false);
         el.formArea.style.display = 'none';
         el.pageArea.style.display = 'block';
         clear(el.pageArea);
 
         el.title.textContent = `${state.deptKey} · Gruppi WZ`;
 
-        const dept = getDeptObj(state.deptKey);
-
-        // New schema: groups inside selected year object as:
-        // { id: "1", groups: [ {name, link}, ... ] }
-        const fromYear = Array.isArray(yearObj?.groups) ? yearObj.groups : [];
-
-        // Optional fallback: department-level whatsapp_groups (vecchio formato)
-        const fromDept = Array.isArray(dept.whatsapp_groups) ? dept.whatsapp_groups : [];
-
-        const groups = fromYear.length > 0 ? fromYear : fromDept;
+        const groups = Array.isArray(yearObj?.groups) ? yearObj.groups : [];
 
         const wrap = document.createElement('div');
         wrap.innerHTML = `
@@ -506,7 +541,7 @@
         if (!groups || groups.length === 0) {
             const info = document.createElement('div');
             info.style.marginTop = '0.75em';
-            info.innerHTML = `Gruppi WhatsApp: <em>da implementare</em>.`;
+            info.innerHTML = `Gruppi WhatsApp: <em>non disponibili</em>.`;
             el.pageArea.appendChild(info);
         } else {
             const btnWrap = document.createElement('div');
@@ -516,24 +551,8 @@
             btnWrap.style.gap = '0.75em';
 
             groups.forEach((g, idx) => {
-                // Nuovo formato: {name, link}
-                if (g && typeof g === 'object' && ('link' in g || 'name' in g)) {
-                    const label = g.name || `Gruppo ${idx + 1}`;
-                    btnWrap.appendChild(makeLinkButton(label, g.link));
-                    return;
-                }
-
-                // Vecchio fallback: stringa (nessun link)
-                if (typeof g === 'string') {
-                    const b = makeButton(g, () => {});
-                    b.disabled = true;
-                    btnWrap.appendChild(b);
-                    return;
-                }
-
-                // Vecchio fallback: {name,url}
                 const label = g?.name || `Gruppo ${idx + 1}`;
-                btnWrap.appendChild(makeLinkButton(label, g?.url));
+                btnWrap.appendChild(makeLinkButton(label, g?.link));
             });
 
             el.pageArea.appendChild(btnWrap);

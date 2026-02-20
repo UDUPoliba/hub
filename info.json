@@ -7,7 +7,7 @@
           "name": "Ins.COMUNI ClasseA",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "A",
@@ -22,7 +22,7 @@
           "name": "Ins.COMUNI ClasseB",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "B",
@@ -37,7 +37,7 @@
           "name": "Ins.COMUNI ClasseC",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "C",
@@ -52,7 +52,7 @@
           "name": "Ins.COMUNI ClasseD",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "D",
@@ -67,7 +67,7 @@
           "name": "Ins.COMUNI ClasseE",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "E",
@@ -82,7 +82,7 @@
           "name": "Ins.COMUNI ClasseG",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "G",
@@ -97,7 +97,7 @@
           "name": "Ins.COMUNI ClasseH",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "H",
@@ -112,7 +112,7 @@
           "name": "Ins.COMUNI ClasseI",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "I",
@@ -127,7 +127,7 @@
           "name": "Ins.COMUNI ClasseL",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "L",
@@ -142,7 +142,7 @@
           "name": "Ins.COMUNI ClasseM",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "M",
@@ -157,7 +157,7 @@
           "name": "Ins.COMUNI ClasseN",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "N",
@@ -177,7 +177,7 @@
           "name": "LT Ing. Informatica e Automazione",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "A-L",
@@ -190,7 +190,7 @@
               ]
             },
             {
-              "id": "2", 
+              "id": "2",
               "groups": [
                 {
                   "name": "A-L",
@@ -203,7 +203,7 @@
               ]
             },
             {
-              "id": "3", 
+              "id": "3",
               "groups": [
                 {
                   "name": "A-L",
@@ -228,52 +228,154 @@
         {
           "id": "1S_LT18-R_LT Ing. Elettronica e Tec. Internet",
           "name": "LT Ing. Elettronica e Tec. Internet",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT05-R_LT Ing. Energia Elettrica",
           "name": "LT Ing. Energia Elettrica",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT60_LT Ing. Sistemi Medicali",
           "name": "LT Ing. Sistemi Medicali",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM06.7_LM Automation and Robotics Eng.",
           "name": "LM Automation and Robotics Eng.",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM17_LM Computer Science Eng.",
           "name": "LM Computer Science Eng.",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM04.8_LM Electronics Eng.",
           "name": "LM Electronics Eng.",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM05_LM Ing. Elettrica",
           "name": "LM Ing. Elettrica",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM60_LM Ing. Sistemi Medicali",
           "name": "LM Ing. Sistemi Medicali",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM14.15_LM Telecommunications and Internet Tech. Eng.",
           "name": "LM Telecommunications and Internet Tech. Eng.",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM20_LM Trasformazione Digitale",
           "name": "LM Trasformazione Digitale",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         }
       ],
       "drive": "https://drive.google.com/drive/folders/1aDdO0CNq3wJbDU_c3y0I5N4FAJL2RirD"
@@ -283,47 +385,140 @@
         {
           "id": "1S_LM01_LM Ing. Civile",
           "name": "LM Ing. Civile",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM02_LM Ing. Sistemi Edilizi",
           "name": "LM Ing. Sistemi Edilizi",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM63_LM Ing. Ambiente & Territorio",
           "name": "LM Ing. Ambiente & Territorio",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM40_LM Ing. della Mobilità Sostenibile",
           "name": "LM Ing. della Mobilità Sostenibile",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM70_LM Ing. Gestione Infrastr. Civili",
           "name": "LM Ing. Gestione Infrastr. Civili",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM70_LM Ing Gestione Infrastr. Civili",
           "name": "LM Ing Gestione Infrastr. Civili",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LP16_LP Costr. & Gestione Ambientale & Territoriale",
           "name": "LP Costr. & Gestione Ambientale & Territoriale",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT02_LT Ing. Edile",
           "name": "LT Ing. Edile",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT16_LT Ing. Civile & Ambientale",
           "name": "LT Ing. Civile & Ambientale",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         }
       ],
       "drive": "https://drive.google.com/drive/folders/1QQ1letAOedq3DFyD4i6K_8rZlM-QbUtL"
@@ -333,37 +528,108 @@
         {
           "id": "1S_LM10_LM Ing. Energetica",
           "name": "LM Ing. Energetica",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM10_LM Ing. Energetica - Unisa",
           "name": "LM Ing. Energetica - Unisa",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM13_LM Ing. Gestionale",
           "name": "LM Ing. Gestionale",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM30_LM Ing. Meccanica",
           "name": "LM Ing. Meccanica",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM31_LM Mechanical Engineering",
           "name": "LM Mechanical Engineering",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT03_LT Ing. Gestionale",
           "name": "LT Ing. Gestionale",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT31_LT Ing. Meccanica",
           "name": "LT Ing. Meccanica",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         }
       ],
       "drive": "https://drive.google.com/drive/folders/1B0zUr5d4QFZ0q-UcD6z4h5YcAeWSxL3G"
@@ -373,37 +639,116 @@
         {
           "id": "1S_LT16_LT Ing. Civile e Ambientale",
           "name": "LT Ing. Civile e Ambientale",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT17_LT Ing. Informatica e Automazione",
           "name": "LT Ing. Informatica e Automazione",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT41_LT Ing. Sistemi Aerospaziali",
           "name": "LT Ing. Sistemi Aerospaziali",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LT80_LT Ing. Industriale e Sistemi Navali",
           "name": "LT Ing. Industriale e Sistemi Navali",
-          "years": 3
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            },
+            {
+              "id": "3",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM20-R_LM Ing. Aerospaziale - Unisa",
           "name": "LM Ing. Aerospaziale - Unisa",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM30_LM Ing. Meccanica",
           "name": "LM Ing. Meccanica",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         },
         {
           "id": "1S_LM63_LM Ing. Ambiente e Territorio",
           "name": "LM Ing. Ambiente e Territorio",
-          "years": 2
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ]
         }
       ]
     },
@@ -415,7 +760,7 @@
           "time_table": "https://drive.google.com/file/d/1EYra1o13E9uaH7MDAlz0yahp-biHanjN/view",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "Architettura 1",
@@ -424,7 +769,7 @@
               ]
             },
             {
-              "id": "2", 
+              "id": "2",
               "groups": [
                 {
                   "name": "Architettura 2",
@@ -453,7 +798,7 @@
               ]
             },
             {
-              "id": "2", 
+              "id": "3",
               "groups": [
                 {
                   "name": "Architettura 3",
@@ -482,7 +827,7 @@
               ]
             },
             {
-              "id": "4", 
+              "id": "4",
               "groups": [
                 {
                   "name": "Architettura 4",
@@ -491,7 +836,7 @@
               ]
             },
             {
-              "id": "5", 
+              "id": "5",
               "groups": [
                 {
                   "name": "Archtettura 5",
@@ -502,12 +847,12 @@
           ]
         },
         {
-          "id": "Design",
-          "name": "Design",
+          "id": "Disegno industriale",
+          "name": "Disegno industriale",
           "time_table": "https://drive.google.com/file/d/1GpsUn65hK0-raTTIPc4Y6a1pPurAb2Av/view",
           "years": [
             {
-              "id": "1", 
+              "id": "1",
               "groups": [
                 {
                   "name": "Design 1",
@@ -516,7 +861,7 @@
               ]
             },
             {
-              "id": "2", 
+              "id": "2",
               "groups": [
                 {
                   "name": "Design 2",
@@ -525,7 +870,7 @@
               ]
             },
             {
-              "id": "3", 
+              "id": "3",
               "groups": [
                 {
                   "name": "Design 3",
@@ -538,12 +883,28 @@
         {
           "id": "Industrial Design",
           "name": "Industrial Design",
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            },
+            {
+              "id": "2",
+              "groups": []
+            }
+          ],
           "time_table": "https://drive.google.com/file/d/14reHpfTYN0VUrUFcQGYDyjSnhjr-xpdd/view"
         },
         {
           "id": "Architecture Science for Heritage",
           "name": "Architecture Science for Heritage",
-          "time_table": "https://drive.google.com/file/d/1tO5uTxW9-qDe2qHEG6dT6KPRlMCbCOP_/view"
+          "time_table": "https://drive.google.com/file/d/1tO5uTxW9-qDe2qHEG6dT6KPRlMCbCOP_/view",
+          "years": [
+            {
+              "id": "1",
+              "groups": []
+            }
+          ]
         }
       ],
       "drive": "https://drive.google.com/drive/folders/1zpRYi_4NNPi-cCH7Lp9xRT0CDTaPL8Y3"

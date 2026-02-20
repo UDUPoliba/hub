@@ -7,6 +7,7 @@
     <list default="true" id="6cf3d502-d555-4965-b0df-880c38182798" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="39t6ZQCAMbrWQkG3gKFtTr2TK0e" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +27,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JavaScript Debug.index.html.executor": "Debug",
+    "JavaScript Debug.index.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -57,41 +58,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1771503074821</updated>
-      <workItem from="1771503076188" duration="9061000" />
+      <workItem from="1771503076188" duration="10535000" />
+      <workItem from="1771615474593" duration="2522000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html</url>
-          <line>517</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html</url>
-          <line>505</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html</url>
-          <line>487</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html</url>
-          <line>491</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
