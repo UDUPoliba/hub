@@ -473,6 +473,7 @@
             };
 
             if (state.mode === 'ORARI') {
+                // ARCOD: orario a livello corso (nessuna scelta anno)
                 if (isArcod) {
                     const tt = state.selectedCourse?.time_table;
                     if (typeof tt === 'string' && tt.trim()) {
@@ -483,7 +484,7 @@
                     return;
                 }
 
-                // Per ora: per tutti gli altri, non facciamo nulla (placeholder)
+                // Tutti gli altri dipartimenti: orario a livello anno (yearObj.time_table)
                 renderOrariPage(payload);
                 return;
             }
@@ -506,15 +507,62 @@
 
         el.title.textContent = `${state.deptKey} · Orari`;
 
-        const p = document.createElement('div');
-        p.innerHTML = `
+        const header = document.createElement('div');
+        header.innerHTML = `
             <div><strong>Corso:</strong> ${escapeHtml(courseName)}</div>
             <div><strong>Anno:</strong> ${escapeHtml(String(year))}</div>
-            <div style="margin-top:0.75em;">
-                Pagina orari: <em>da implementare</em>.
-            </div>
         `;
-        el.pageArea.appendChild(p);
+        el.pageArea.appendChild(header);
+
+        const tt = yearObj?.time_table;
+
+        // 1) Se è una stringa: redirect diretto
+        if (typeof tt === 'string' && tt.trim()) {
+            window.location.href = tt;
+            return;
+        }
+
+        // 2) Se è un oggetto: mostra pulsanti di scelta
+        if (tt && typeof tt === 'object' && !Array.isArray(tt)) {
+            const keys = Object.keys(tt);
+
+            if (keys.length === 0) {
+                const info = document.createElement('div');
+                info.style.marginTop = '0.75em';
+                info.innerHTML = `Orari: <em>non disponibili</em>.`;
+                el.pageArea.appendChild(info);
+            } else {
+                const info = document.createElement('div');
+                info.style.marginTop = '0.75em';
+                info.textContent = 'Seleziona il tuo gruppo/percorso:';
+                el.pageArea.appendChild(info);
+
+                const btnWrap = document.createElement('div');
+                btnWrap.style.marginTop = '0.75em';
+                btnWrap.style.display = 'flex';
+                btnWrap.style.flexDirection = 'column';
+                btnWrap.style.gap = '0.75em';
+
+                keys.sort((a, b) => String(a).localeCompare(String(b), 'it'));
+
+                keys.forEach((k) => {
+                    btnWrap.appendChild(makeLinkButton(k, tt[k]));
+                });
+
+                el.pageArea.appendChild(btnWrap);
+            }
+
+            const back = makeBackButton(() => renderCourseYearForm());
+            back.style.marginTop = '1em';
+            el.pageArea.appendChild(back);
+            return;
+        }
+
+        // 3) Nessun time_table trovato
+        const info = document.createElement('div');
+        info.style.marginTop = '0.75em';
+        info.innerHTML = `Orari: <em>non disponibili</em>.`;
+        el.pageArea.appendChild(info);
 
         const back = makeBackButton(() => renderCourseYearForm());
         back.style.marginTop = '1em';
