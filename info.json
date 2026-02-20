@@ -212,7 +212,11 @@
                   "name": "M-Z",
                   "link": ""
                 }
-              ]
+              ],
+              "time_table": {
+                "2° - Cognome AL": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b063b8dfe6dd001e941214",
+                "2° - Cognome MZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b06435f58ed5001e312d15"
+              }
             },
             {
               "id": "3",
@@ -233,7 +237,11 @@
                   "name": "Automazione",
                   "link": ""
                 }
-              ]
+              ],
+              "time_table": {
+                "3° - Percorso Automazione": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cad943400b650073c2fad9",
+                "3° - Percorso Sist. e App. informatiche": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b064afdd664700189b17e8"
+              }
             }
           ]
         },
@@ -248,11 +256,13 @@
             },
             {
               "id": "2",
-              "groups": []
+              "groups": [],
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b162dafc488a0019357d01"
             },
             {
               "id": "3",
-              "groups": []
+              "groups": [],
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b18d77bffbb1001e867dd1"
             }
           ]
         },
@@ -267,11 +277,13 @@
             },
             {
               "id": "2",
-              "groups": []
+              "groups": [],
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bab1e753c39e001a1ee408"
             },
             {
               "id": "3",
-              "groups": []
+              "groups": [],
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68babc5a2b78f7001e4dae76"
             }
           ]
         },
@@ -310,7 +322,8 @@
             },
             {
               "id": "2",
-              "groups": []
+              "groups": [],
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6cee98a0d600019c89e83"
             }
           ]
         },
@@ -341,7 +354,8 @@
             },
             {
               "id": "2",
-              "groups": []
+              "groups": [],
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68be88e4d8f8f30018999679"
             }
           ]
         },
@@ -388,7 +402,8 @@
             },
             {
               "id": "2",
-              "groups": []
+              "groups": [],
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bfda06f2f5db0019ba6c1c"
             }
           ]
         },
