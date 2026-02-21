@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.svg">
     <title>UDU Hub</title>
 
     <style>
@@ -22,7 +23,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            min-height: 100svh;
+            overflow-x: hidden;
         }
 
         .container {
@@ -50,6 +52,14 @@
             margin-bottom: 1em;
             color: #333;
             font-size: 1.5em;
+        }
+
+        img.logoUdu{
+            margin-top: 2em; 
+            max-width: 20%; 
+            min-width: 5em; 
+            height: auto; 
+            align-self: center;
         }
 
         input {
@@ -131,8 +141,7 @@
 
     <div id="pageArea" style="display:none; margin-top: 0.75em; text-align:left;"></div>
 
-    <img src="logo.svg" alt="Logo UDU Hub"
-         style="margin-top: 2em; max-width: 20%; height: auto; align-self: center;"/>
+    <img src="logo.svg" class="logoUdu" alt="Logo UDU Hub"/>
 </div>
 
 <script>
