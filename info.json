@@ -59,7 +59,7 @@
               "groups": [
                 {
                   "name": "D",
-                  "link": "https://chat.whatsapp.com/KwhedGFmg8V41FkfwvHADE"
+                  "link": "https://chat.whatsapp.com/EoKgFlK6gy53AFBCYFCC9P"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ac5685c1b260001ea91d81"
@@ -139,7 +139,7 @@
               "groups": [
                 {
                   "name": "L",
-                  "link": "https://chat.whatsapp.com/FbMWG76rRUv5g7lre614EF"
+                  "link": "https://chat.whatsapp.com/L1yUeqh0gpOAFimSFA7zKY"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd300bd90a8a001a8fac58"
@@ -191,12 +191,12 @@
               "id": "1",
               "groups": [
                 {
-                  "name": "A-L",
-                  "link": ""
+                  "name": "1° AL",
+                  "link": "https://chat.whatsapp.com/FL9glIGS40kDuBUXwNXovv"
                 },
                 {
-                  "name": "M-Z",
-                  "link": ""
+                  "name": "1° MZ",
+                  "link": "https://chat.whatsapp.com/ByniV3Q4htOEGiwfBV2Njq"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68af26e6dfe6dd001e93feb0"
@@ -205,12 +205,12 @@
               "id": "2",
               "groups": [
                 {
-                  "name": "A-L",
-                  "link": ""
+                  "name": "2° AL",
+                  "link": "https://chat.whatsapp.com/BcjdoW4XxfbIoaQ3MXwbQr"
                 },
                 {
-                  "name": "M-Z",
-                  "link": ""
+                  "name": "2° MZ",
+                  "link": "https://chat.whatsapp.com/Eq0KWE7PDweHXYmVdZtYKZ"
                 }
               ],
               "time_table": {
@@ -222,20 +222,20 @@
               "id": "3",
               "groups": [
                 {
-                  "name": "A-L",
-                  "link": ""
+                  "name": "3° AL",
+                  "link": "https://chat.whatsapp.com/IbA4tlJHzwU9hS3vsL96mR"
                 },
                 {
-                  "name": "M-Z",
-                  "link": ""
+                  "name": "3° MZ",
+                  "link": "https://chat.whatsapp.com/BnRqf8Vo2lQA44lGfLOfrK"
                 },
                 {
-                  "name": "Sistemi e Applicazioni Informatiche",
-                  "link": ""
+                  "name": "FC AL",
+                  "link": "https://chat.whatsapp.com/IRPM6WUqlxAHKG6lNJKUsW"
                 },
                 {
-                  "name": "Automazione",
-                  "link": ""
+                  "name": "FC MZ",
+                  "link": "https://chat.whatsapp.com/BdMwG3Xjwo1JyOajIyDF8j"
                 }
               ],
               "time_table": {
@@ -251,17 +251,48 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° Anno",
+                  "link": "https://chat.whatsapp.com/F2OQGetkucM8QmMFZajHyL"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b0704bdfe6dd001e9412c7"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° Anno",
+                  "link": "https://chat.whatsapp.com/FGoXivkLxtkGfCOSwwkyKk"
+                },
+                {
+                  "name": "FC (25/26)",
+                  "link": "https://chat.whatsapp.com/GD3xXtKsYZG9YGMJZ3tJ9r"
+                },
+                {
+                  "name": "FC (24/25)",
+                  "link": "https://chat.whatsapp.com/LD0O4QlFMd72B9jVNrE8oG"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b162dafc488a0019357d01"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "3° Anno",
+                  "link": "https://chat.whatsapp.com/Eq0TGrWCtzc0fSl9ZtugFv"
+                },
+                {
+                  "name": "FC (25/26)",
+                  "link": "https://chat.whatsapp.com/GD3xXtKsYZG9YGMJZ3tJ9r"
+                },
+                {
+                  "name": "FC (24/25)",
+                  "link": "https://chat.whatsapp.com/LD0O4QlFMd72B9jVNrE8oG"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b18d77bffbb1001e867dd1"
             }
           ]
@@ -272,17 +303,48 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° Anno",
+                  "link": "https://chat.whatsapp.com/Bt8QMovTOtgCKyQw2Y1xUh"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ba9d8f61e5c5001fe61151"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° Anno",
+                  "link": "https://chat.whatsapp.com/CXjJOa2LWf4GMAWHtKfgOl"
+                },
+                {
+                  "name": "FC (25/26)",
+                  "link": "https://chat.whatsapp.com/LDQxUotpYTI0enJ8J0n9Ti"
+                },
+                {
+                  "name": "FC (24/25)",
+                  "link": "https://chat.whatsapp.com/IAIZ4wLxpvfLIojMTPUGiQ"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bab1e753c39e001a1ee408"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "3° Anno",
+                  "link": "https://chat.whatsapp.com/CwL3dMWMFLV48FjNeOUgXX"
+                },
+                {
+                  "name": "FC (25/26)",
+                  "link": "https://chat.whatsapp.com/LDQxUotpYTI0enJ8J0n9Ti"
+                },
+                {
+                  "name": "FC (24/25)",
+                  "link": "https://chat.whatsapp.com/IAIZ4wLxpvfLIojMTPUGiQ"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68babc5a2b78f7001e4dae76"
             }
           ]
@@ -293,12 +355,34 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° AL",
+                  "link": "https://chat.whatsapp.com/FwmmraW2SYe4Fl5f9nWaxk"
+                },
+                {
+                  "name": "1° MZ",
+                  "link": "https://chat.whatsapp.com/GC4QqAxoBX83JcQBkT9b3I"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b188f5dfe6dd001e941c96"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° Anno",
+                  "link": "https://chat.whatsapp.com/FGRGp4Edo7z7mYXKy5sPOV"
+                },
+                {
+                  "name": "2° AL",
+                  "link": "https://chat.whatsapp.com/HltRNKtiP4sBYhvU8B6EoT"
+                },
+                {
+                  "name": "2° MZ",
+                  "link": "https://chat.whatsapp.com/GOJRX6BbcPBFr68K9qu2yM"
+                }
+              ],
               "time_table": {
                 "2° - Cognome AK": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6a421f58ed5001e31ac2d",
                 "2° - Cognome LZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6af08aa83ee001d1357de"
@@ -306,7 +390,32 @@
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "3° Anno",
+                  "link": "https://chat.whatsapp.com/EGCG2xihnCAH5GnzDyjQxi"
+                },
+                {
+                  "name": "3° AL",
+                  "link": "https://chat.whatsapp.com/I8b1rxJJBnb0cE0DKvc7C1"
+                },
+                {
+                  "name": "3° MZ",
+                  "link": "https://chat.whatsapp.com/B4rQSeh71Kc0Dw4sJJbcy9"
+                },
+                {
+                  "name": "FC",
+                  "link": "https://chat.whatsapp.com/K4ZnuH7qXbd4ooViiP8EUu"
+                },
+                {
+                  "name": "FC AL",
+                  "link": "https://chat.whatsapp.com/IUsxFtis9e3Co3dJWDfJBA"
+                },
+                {
+                  "name": "FC MZ",
+                  "link": "https://chat.whatsapp.com/CMNDhfE51a0AzuAkXeDuMg"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6b1c16408ef001987665e"
             }
           ]
@@ -333,12 +442,46 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "LM 1",
+                  "link": "https://chat.whatsapp.com/CJDmZA7sAmnFuftfy4ZU0S"
+                },
+                {
+                  "name": "AI 1",
+                  "link": "https://chat.whatsapp.com/HdBW5CZMUxf6WEqCj3LkMe"
+                },
+                {
+                  "name": "Cybersecurity 1",
+                  "link": "https://chat.whatsapp.com/Bx2Xz57JsHPHvpDKblNx6n"
+                },
+                {
+                  "name": "Cyberphysical 1",
+                  "link": "https://chat.whatsapp.com/I7MPKuK5PvOFRtXjVYQ0nI"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6e5397025e8001951d3bd"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "LM 2",
+                  "link": "https://chat.whatsapp.com/D5xnXCz2O8OJHPOgJMbecr"
+                },
+                {
+                  "name": "AI 2",
+                  "link": "https://chat.whatsapp.com/LfcxjhyKGwoELBl0FUrT2j"
+                },
+                {
+                  "name": "Cybersecurity 2",
+                  "link": "https://chat.whatsapp.com/HtsKGa6DvAlIg3obufW0w7"
+                },
+                {
+                  "name": "Cyberphysical 2",
+                  "link": "https://chat.whatsapp.com/CmORGeEoppG1hjdCA4VgiZ"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6e9bfe15e57002086ced1"
             }
           ]
@@ -381,12 +524,30 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° Generale",
+                  "link": "https://chat.whatsapp.com/DQkDyVwGdVpDwk8OqQ8H0b"
+                },
+                {
+                  "name": "1° Comunicazioni",
+                  "link": "https://chat.whatsapp.com/DRGprUAwU3AEI6RjdRWe1l"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c837d6f7386f008799529f"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° Generale",
+                  "link": "https://chat.whatsapp.com/CFpCcegwrqt95ljtPrtDSQ"
+                },
+                {
+                  "name": "2° Comunicazioni",
+                  "link": "https://chat.whatsapp.com/DX24JKwrvuZ0OtrhE7K7qN"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bed3278ccabe00197bd65a"
             }
           ]
@@ -413,7 +574,12 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Creatività Digitale 1",
+                  "link": "https://chat.whatsapp.com/Js6E1tJgsztDqy2Mo9Wz4h"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b97c542477eb001e8efbc1"
             },
             {
@@ -527,12 +693,22 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° Anno",
+                  "link": "https://chat.whatsapp.com/LTDe5DeSY8yBarI6F4XS5q"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd361bd8cd9e001ebbc86d"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° Anno",
+                  "link": "https://chat.whatsapp.com/CjVdd72uwlz4kNAERfQ2zl"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd372745511e0019ba71a7"
             },
             {
@@ -548,17 +724,36 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° Anno",
+                  "link": "https://chat.whatsapp.com/BSc0SKtEucm6GKR3NgE35O"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd61b2e7d7590019605034"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° Anno",
+                  "link": "https://chat.whatsapp.com/KcsrpVQuYme8ao0nbZ4srC"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd62175fc852001f70bed6"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "3° Anno",
+                  "link": "https://chat.whatsapp.com/JK5pk0GLLIN7S7vmLUPnZN"
+                },
+                {
+                  "name": "FC",
+                  "link": "https://chat.whatsapp.com/JiObFlmQczz3SQkki27yD4"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd623fe7d7590019605125"
             }
           ]
@@ -569,17 +764,76 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Civile 1",
+                  "link": "https://chat.whatsapp.com/H6rt4FfURK7LceuhRtiMIP"
+                },
+                {
+                  "name": "Ambientale 1",
+                  "link": "https://chat.whatsapp.com/CZPVL1HnPcN6FS7Zj1Uaag"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c92db1f3e94100914b4131"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Civile 2",
+                  "link": "https://chat.whatsapp.com/Kr9YO8rlDOPIp4Y54hXrda"
+                },
+                {
+                  "name": "Civile FC (25/26)",
+                  "link": "https://chat.whatsapp.com/GB6xDgSZkpgAkSFEafLxNO"
+                },
+                {
+                  "name": "Civile FC (24/25)",
+                  "link": "https://chat.whatsapp.com/C4VoW0Xck5hCnq7yh0e5ib"
+                },
+                {
+                  "name": "Ambientale 2",
+                  "link": "https://chat.whatsapp.com/Gq8mZO7FKMc55b8wpT1k6a"
+                },
+                {
+                  "name": "Ambientale FC (25/26)",
+                  "link": "https://chat.whatsapp.com/CQnYE3cdnDSAPNoNv8QRns"
+                },
+                {
+                  "name": "Ambientale FC (24/25)",
+                  "link": "https://chat.whatsapp.com/CX2dSNatPA2HTW5YAyrwP0"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c947cae3e17a0069c50673"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Civile 3",
+                  "link": "https://chat.whatsapp.com/LQ3O3ksPZ5G6CNeYAq9EIH"
+                },
+                {
+                  "name": "Civile FC (25/26)",
+                  "link": "https://chat.whatsapp.com/GB6xDgSZkpgAkSFEafLxNO"
+                },
+                {
+                  "name": "Civile FC (24/25)",
+                  "link": "https://chat.whatsapp.com/C4VoW0Xck5hCnq7yh0e5ib"
+                },
+                {
+                  "name": "Ambientale 3",
+                  "link": "https://chat.whatsapp.com/HFwEHsOKhZo7aquwGa99Px"
+                },
+                {
+                  "name": "Ambientale FC (25/26)",
+                  "link": "https://chat.whatsapp.com/CQnYE3cdnDSAPNoNv8QRns"
+                },
+                {
+                  "name": "Ambientale FC (24/25)",
+                  "link": "https://chat.whatsapp.com/CX2dSNatPA2HTW5YAyrwP0"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c94b5e400b650073c2b9a7"
             }
           ]
@@ -675,17 +929,84 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° AK",
+                  "link": "https://chat.whatsapp.com/DCs3uqpEz63A9p31nxCJnh"
+                },
+                {
+                  "name": "1° LZ",
+                  "link": "https://chat.whatsapp.com/J9LZ0immAEXKPqT2ynJ9GA"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3dc335194e0037d9ba20"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° AK",
+                  "link": "https://chat.whatsapp.com/KNPP8gLYgVq3V3RF6McAPy"
+                },
+                {
+                  "name": "2° LZ",
+                  "link": "https://chat.whatsapp.com/BDbxXZ6BSr9334g7RRhq4X"
+                },
+                {
+                  "name": "2° CV Info",
+                  "link": "https://chat.whatsapp.com/LnfpZShfYHmHjlXJ900N6v"
+                },
+                {
+                  "name": "2° CV Ind",
+                  "link": "https://chat.whatsapp.com/JVI1aTKRxDgJTTAMXln0hI"
+                },
+                {
+                  "name": "2° CV Infra",
+                  "link": "https://chat.whatsapp.com/Bfa9zJmrHp602co3L1d7hB"
+                },
+                {
+                  "name": "FC (25/26)",
+                  "link": "https://chat.whatsapp.com/IocSbZtp6wSGikm7i3gJqQ"
+                },
+                {
+                  "name": "FC (24/25)",
+                  "link": "https://chat.whatsapp.com/F2X96CSXzSBFKbCyJwZLAi"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3e8c35194e0037d9ba38"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "3° AK",
+                  "link": "https://chat.whatsapp.com/LsgdFBKpR1a2OtUeRGIZx3"
+                },
+                {
+                  "name": "3° LZ",
+                  "link": "https://chat.whatsapp.com/CvXrKn0pkKrAYtPHzmj4JT"
+                },
+                {
+                  "name": "3° CV Info",
+                  "link": "https://chat.whatsapp.com/BaavYD9c0vCCbxAfWyCmkb"
+                },
+                {
+                  "name": "3° CV Ind",
+                  "link": "https://chat.whatsapp.com/GGVtgLZFtvyHqcoFX0WTDb"
+                },
+                {
+                  "name": "3° CV Infra",
+                  "link": "https://chat.whatsapp.com/HX8zjyYLNg72tnYnajlSKW"
+                },
+                {
+                  "name": "FC (25/26)",
+                  "link": "https://chat.whatsapp.com/IocSbZtp6wSGikm7i3gJqQ"
+                },
+                {
+                  "name": "FC (24/25)",
+                  "link": "https://chat.whatsapp.com/F2X96CSXzSBFKbCyJwZLAi"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3ee8d90a8a001a8fb083"
             }
           ]
@@ -696,17 +1017,52 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° AK",
+                  "link": "https://chat.whatsapp.com/Crk5AuxLBd98jxKcKIbJTM"
+                },
+                {
+                  "name": "1° LZ",
+                  "link": "https://chat.whatsapp.com/GUeddTOZYZt5SWcLUIlSfF"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3f9e04ce59001efaa628"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° AK",
+                  "link": "https://chat.whatsapp.com/LoipPDk6fl9AEJ1y7lkght"
+                },
+                {
+                  "name": "2° LZ",
+                  "link": "https://chat.whatsapp.com/KsmYhhWBZa47SuX2NHHaur"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd400cd90a8a001a8fb0b2"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "3° AK",
+                  "link": "https://chat.whatsapp.com/GxaVe9ggZbsEIrNA07SZot"
+                },
+                {
+                  "name": "3° LZ",
+                  "link": "https://chat.whatsapp.com/D1fy9AqYMgF2sBhRtuAeCE"
+                },
+                {
+                  "name": "FC AK",
+                  "link": "https://chat.whatsapp.com/GdZw7nJZejOIkRAZF5d52c"
+                },
+                {
+                  "name": "FC LZ",
+                  "link": "https://chat.whatsapp.com/Fzr8i97PjOSL8CkdTFDWgM"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd406435194e0037d9bd14"
             }
           ]
@@ -722,17 +1078,32 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Civile e Ambientale (TA) 25/26",
+                  "link": "https://chat.whatsapp.com/E6dkHXYJyMv4DYeiQL4aNe"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=6926cdf8fff872001965c98f"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Civile e Ambientale (TA) 25/26",
+                  "link": "https://chat.whatsapp.com/E6dkHXYJyMv4DYeiQL4aNe"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=6926cedc3d83e0001ede46cd"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Civile e Ambientale (TA) 25/26",
+                  "link": "https://chat.whatsapp.com/E6dkHXYJyMv4DYeiQL4aNe"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=6926d08cfff872001965c9eb"
             }
           ]
@@ -743,17 +1114,56 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "PTECH 25/26",
+                  "link": "https://chat.whatsapp.com/LTsyKuZHDxAHmmz8rmuuPy"
+                },
+                {
+                  "name": "PTECH 24/25",
+                  "link": "https://chat.whatsapp.com/BYbhb8X3dqhG5bRvCwYiO9"
+                },
+                {
+                  "name": "PTECH 23/24",
+                  "link": "https://chat.whatsapp.com/FBflVS4ifjIAjYcwJSVwR9"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=69399be9f69e560019dec5ca"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "PTECH 25/26",
+                  "link": "https://chat.whatsapp.com/LTsyKuZHDxAHmmz8rmuuPy"
+                },
+                {
+                  "name": "PTECH 24/25",
+                  "link": "https://chat.whatsapp.com/BYbhb8X3dqhG5bRvCwYiO9"
+                },
+                {
+                  "name": "PTECH 23/24",
+                  "link": "https://chat.whatsapp.com/FBflVS4ifjIAjYcwJSVwR9"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=690753a2aebd1d004b2402b2"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "PTECH 25/26",
+                  "link": "https://chat.whatsapp.com/LTsyKuZHDxAHmmz8rmuuPy"
+                },
+                {
+                  "name": "PTECH 24/25",
+                  "link": "https://chat.whatsapp.com/BYbhb8X3dqhG5bRvCwYiO9"
+                },
+                {
+                  "name": "PTECH 23/24",
+                  "link": "https://chat.whatsapp.com/FBflVS4ifjIAjYcwJSVwR9"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=690753f7d3a5600055bdefe0"
             }
           ]
@@ -764,17 +1174,32 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Sistemi Aerospaziali 1",
+                  "link": "https://chat.whatsapp.com/HAndPkbbZ43Hum6KUjXbvM"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=6907546f899b8b0069591dee"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Sistemi Aerospaziali 2",
+                  "link": "https://chat.whatsapp.com/BVMFWBmr4ywIH2WkwnNjbF"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=690764ebc7f6f3005f1e298a"
             },
             {
               "id": "3",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "Sistemi Aerospaziali 3",
+                  "link": "https://chat.whatsapp.com/KZk1NnkPeq5J8yQbqOXP6P"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=6907653382725a005fdb0539"
             }
           ]
@@ -785,12 +1210,22 @@
           "years": [
             {
               "id": "1",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "1° Anno",
+                  "link": "https://chat.whatsapp.com/ClCO6iNu9d3KGpK7bRB27V"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=693acc097010c7002dbbcef5"
             },
             {
               "id": "2",
-              "groups": [],
+              "groups": [
+                {
+                  "name": "2° Anno",
+                  "link": "https://chat.whatsapp.com/Ix9hdl0yYdBLPTGhm42JhO"
+                }
+              ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=693acc909f3841002d033042"
             },
             {
@@ -860,7 +1295,7 @@
               "id": "1",
               "groups": [
                 {
-                  "name": "Architettura 1",
+                  "name": "1° Anno",
                   "link": "https://chat.whatsapp.com/LfaFYeYJymV4DfygyvJ0Al"
                 }
               ]
@@ -869,28 +1304,32 @@
               "id": "2",
               "groups": [
                 {
-                  "name": "Architettura 2",
+                  "name": "2° Anno",
                   "link": "https://chat.whatsapp.com/IdTpsWiG4xl6q3XSH4xo0a"
                 },
                 {
-                  "name": "Architettura 2A",
+                  "name": "2° Corso A",
                   "link": "https://chat.whatsapp.com/Lcw9IF30AeWHbE9NDd8sNg"
                 },
                 {
-                  "name": "Architettura 2B",
+                  "name": "2° Corso B",
                   "link": "https://chat.whatsapp.com/EU8IhMjBB6d9AgY55bNx1p"
                 },
                 {
-                  "name": "Architettura 2 LAB A",
+                  "name": "2° Lab A",
                   "link": "https://chat.whatsapp.com/InVKVA5rbfgGrVBWhu2LPL"
                 },
                 {
-                  "name": "Architettura 2 LAB B",
+                  "name": "2° Lab B",
                   "link": "https://chat.whatsapp.com/JRngaQtO9um0kgUpB6iYv7"
                 },
                 {
-                  "name": "Architettura 2 LAB C",
+                  "name": "2° Lab C",
                   "link": "https://chat.whatsapp.com/CN6huOmfWbpGtgWUPudVgG"
+                },
+                {
+                  "name": "4° Anno (24/25)",
+                  "link": "https://chat.whatsapp.com/GhWhNSs7o7YH5WPyU9tSOf"
                 }
               ]
             },
@@ -898,27 +1337,27 @@
               "id": "3",
               "groups": [
                 {
-                  "name": "Architettura 3",
+                  "name": "3° Anno",
                   "link": "https://chat.whatsapp.com/L74DDTQlOeF8OzjgYb1XAV"
                 },
                 {
-                  "name": "Architettura 3A",
+                  "name": "3° Corso A",
                   "link": "https://chat.whatsapp.com/DwLFju4mQPf95SLBi5tnXg"
                 },
                 {
-                  "name": "Architettura 3B",
+                  "name": "3° Corso B",
                   "link": "https://chat.whatsapp.com/I4MVjgYRuGaIJcwWpKgx02"
                 },
                 {
-                  "name": "Architettura 3 LAB A",
+                  "name": "3° Lab A",
                   "link": "https://chat.whatsapp.com/GmvLL0IW5fECWABzPic5Sm"
                 },
                 {
-                  "name": "Architettura 3 LAB B",
+                  "name": "3° Lab B",
                   "link": "https://chat.whatsapp.com/COLv17YGuYTB0sYiCjx2hI"
                 },
                 {
-                  "name": "Architettura 3 LAB C",
+                  "name": "3° Lab C",
                   "link": "https://chat.whatsapp.com/DJEhFQALllz9t2GFX5Fyfm"
                 }
               ]
@@ -927,7 +1366,7 @@
               "id": "4",
               "groups": [
                 {
-                  "name": "Architettura 4",
+                  "name": "4° Anno (24/25)",
                   "link": "https://chat.whatsapp.com/GhWhNSs7o7YH5WPyU9tSOf"
                 }
               ]
@@ -936,7 +1375,11 @@
               "id": "5",
               "groups": [
                 {
-                  "name": "Archtettura 5",
+                  "name": "4° Anno (24/25)",
+                  "link": "https://chat.whatsapp.com/GhWhNSs7o7YH5WPyU9tSOf"
+                },
+                {
+                  "name": "5° Anno",
                   "link": "https://chat.whatsapp.com/EXz1kpahP1K6LDOUunaEWh"
                 }
               ]
@@ -972,6 +1415,10 @@
                 {
                   "name": "Design 3",
                   "link": "https://chat.whatsapp.com/Ht5mskFVifY4ilnxEKe53O"
+                },
+                {
+                  "name": "Design FC",
+                  "link": "https://chat.whatsapp.com/F56jsdRBIeE76pKdz1f9Qo"
                 }
               ]
             }
