@@ -20,7 +20,7 @@ def aggiorna_orari_udu():
         with open('poliba.json', 'r', encoding='utf-8') as f:
             poliba = json.load(f)
             
-        with open('info.json', 'r', encoding='utf-8') as f:
+        with open('../info.json', 'r', encoding='utf-8') as f:
             udu = json.load(f)
     except FileNotFoundError:
         print("❌ Errore: Assicurati di avere i file 'poliba.json' e 'info.json' nella cartella.")
@@ -64,7 +64,7 @@ def aggiorna_orari_udu():
                     anno_udu['time_table'] = dict_orari
 
     # 3. Salva il nuovo file aggiornato
-    with open('info.json', 'w', encoding='utf-8') as f:
+    with open('../info.json', 'w', encoding='utf-8') as f:
         json.dump(udu, f, indent=2, ensure_ascii=False)
 
     print(f"🎉 Aggiornamento completato! Esci dall’ombra, scegli il sole!☀️")
