@@ -193,17 +193,27 @@
     }
 
     function makeLinkButton(label, href) {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.addEventListener('click', () => {
-            if (href && String(href).trim()) {
-                window.location.href = href;
-                return;
-            }
-            alert('Link non disponibile.');
-        });
-        b.innerHTML = `${escapeHtml(label)} <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
-        return b;
+        if (href && String(href).trim()) {
+            const a = document.createElement('a');
+            a.href = href;
+            a.target = '_blank';
+            a.style.textDecoration = 'none';
+            a.style.display = 'block';
+            
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.style.width = '100%';
+            b.innerHTML = `${escapeHtml(label)} <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
+            
+            a.appendChild(b);
+            return a;
+        } else {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.addEventListener('click', () => alert('Link non disponibile.'));
+            b.innerHTML = `${escapeHtml(label)} <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
+            return b;
+        }
     }
 
     function getDepartmentsMap() {
@@ -477,7 +487,8 @@
                 if (isArcod) {
                     const tt = state.selectedCourse?.time_table;
                     if (typeof tt === 'string' && tt.trim()) {
-                        window.location.href = tt;
+                        // Passiamo la palla alla funzione renderOrariPage che gestirà il popup e l'interfaccia
+                        renderOrariPage({ courseId, courseName, year: "Unico", yearObj: { time_table: tt } });
                         return;
                     }
                     alert('Link orari (time_table) non impostato per questo corso.');
@@ -518,7 +529,19 @@
 
         // 1) Se è una stringa: redirect diretto
         if (typeof tt === 'string' && tt.trim()) {
-            window.location.href = tt;
+            // Apre AUTOMATICAMENTE il link in una nuova scheda
+            window.open(tt, '_blank');
+
+            // Disegna l'interfaccia nella scheda attuale per non farti rimanere bloccato
+            const info = document.createElement('div');
+            info.style.marginTop = '0.75em';
+            info.innerHTML = `L'orario è stato aperto in una nuova scheda. <br><br>Se il tuo telefono o browser lo ha bloccato, <a href="${escapeHtml(tt)}" target="_blank" style="color:#d92d28; font-weight:bold;">clicca qui per aprirlo</a>.`;
+            el.pageArea.appendChild(info);
+
+            // Aggiunge il tasto nero "Indietro"
+            const back = makeBackButton(() => renderCourseYearForm());
+            back.style.marginTop = '1em';
+            el.pageArea.appendChild(back);
             return;
         }
 
