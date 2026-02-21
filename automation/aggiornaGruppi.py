@@ -47,15 +47,10 @@ def aggiorna_gruppi():
                 if chiave_ricerca in database_wz:
                     lista_gruppi_totale = database_wz[chiave_ricerca]
                     
-                    # TROVIAMO DOVE INSERIRE I FUORI CORSO:
-                    # Estrae tutti i numeri degli anni presenti per questo corso
+                    # TROVIAMO GLI ANNI TARGET
                     anni_numerici = [int(a['id']) for a in corso.get('years', []) if str(a['id']).isdigit()]
-                    # Trova l'ultimo anno assoluto (es. "2" per le LM, "3" per LT, "5" per Architettura)
                     ultimo_anno = str(max(anni_numerici)) if anni_numerici else "3"
-                    # Controlla se esiste esplicitamente l'anno "FC" creato a mano
                     ha_anno_fc = any(str(a.get('id')) == "FC" for a in corso.get('years', []))
-                    
-                    # Decidiamo il target: se esiste la voce FC vanno lì, altrimenti nell'ultimo anno
                     target_fc = "FC" if ha_anno_fc else ultimo_anno
                     
                     for anno_udu in corso.get('years', []):
@@ -68,23 +63,33 @@ def aggiorna_gruppi():
                             # Rimuoviamo l'anno accademico (es. 25/26) per non confondere la lettura dei numeri
                             nome_pulito = re.sub(r'\d{2}/\d{2}', '', nome_g)
                             
-                            # A) LOGICA FUORI CORSO: Se il nome contiene "FC"
-                            if "FC" in nome_g:
+                            # Identikit del gruppo
+                            is_fc = "FC" in nome_g
+                            has_number = any(str(num) in nome_pulito for num in range(1, 7))
+                            is_taranto_special = (dip_name == "TARANTO" and ("PTECH" in nome_g or "TA" in nome_g))
+                            
+                            # A) LOGICA FUORI CORSO
+                            if is_fc:
                                 if id_anno == target_fc:
                                     if g not in gruppi_pertinenti:
                                         gruppi_pertinenti.append(g)
                             
-                            # B) LOGICA ANNI NORMALI: Se NON è Fuori Corso
-                            else:
+                            # B) LOGICA ANNI NORMALI
+                            elif has_number:
                                 if id_anno.isdigit() and id_anno in nome_pulito:
                                     if g not in gruppi_pertinenti:
                                         gruppi_pertinenti.append(g)
                             
-                            # C) LOGICA SPECIALE TARANTO (I gruppi PTECH e TA si spalmano su tutti gli anni)
-                            if dip_name == "TARANTO":
-                                if "PTECH" in nome_g or "TA" in nome_g:
+                            # C) LOGICA "CV/SENZA NOME" (Senza numero e senza FC -> Curriculum/Indirizzo)
+                            elif not is_taranto_special:
+                                if id_anno == ultimo_anno:
                                     if g not in gruppi_pertinenti:
                                         gruppi_pertinenti.append(g)
+                            
+                            # D) LOGICA SPECIALE TARANTO (PTECH e TA si spalmano su tutti gli anni)
+                            if is_taranto_special:
+                                if g not in gruppi_pertinenti:
+                                    gruppi_pertinenti.append(g)
 
                         # Sovrascrive i gruppi di quell'anno pulendo quelli vecchi/sbagliati
                         anno_udu['groups'] = gruppi_pertinenti
