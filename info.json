@@ -265,14 +265,6 @@
                 {
                   "name": "2° Anno",
                   "link": "https://chat.whatsapp.com/FGoXivkLxtkGfCOSwwkyKk"
-                },
-                {
-                  "name": "FC (25/26)",
-                  "link": "https://chat.whatsapp.com/GD3xXtKsYZG9YGMJZ3tJ9r"
-                },
-                {
-                  "name": "FC (24/25)",
-                  "link": "https://chat.whatsapp.com/LD0O4QlFMd72B9jVNrE8oG"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b162dafc488a0019357d01"
@@ -317,14 +309,6 @@
                 {
                   "name": "2° Anno",
                   "link": "https://chat.whatsapp.com/CXjJOa2LWf4GMAWHtKfgOl"
-                },
-                {
-                  "name": "FC (25/26)",
-                  "link": "https://chat.whatsapp.com/LDQxUotpYTI0enJ8J0n9Ti"
-                },
-                {
-                  "name": "FC (24/25)",
-                  "link": "https://chat.whatsapp.com/IAIZ4wLxpvfLIojMTPUGiQ"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bab1e753c39e001a1ee408"
@@ -480,6 +464,22 @@
                 {
                   "name": "Cyberphysical 2",
                   "link": "https://chat.whatsapp.com/CmORGeEoppG1hjdCA4VgiZ"
+                },
+                {
+                  "name": "LM FC",
+                  "link": "https://chat.whatsapp.com/HMi2Qgb6uK87nOFWAt604j"
+                },
+                {
+                  "name": "AI FC",
+                  "link": "https://chat.whatsapp.com/FyOhsQsDX861fapg6yVaLp"
+                },
+                {
+                  "name": "Cybersecurity FC",
+                  "link": "https://chat.whatsapp.com/KyTFQirglQrH8ttYfbttfp"
+                },
+                {
+                  "name": "Cyberphysical FC",
+                  "link": "https://chat.whatsapp.com/EETTjOhoqS9LeJfjt4l3ND"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6e9bfe15e57002086ced1"
@@ -546,6 +546,10 @@
                 {
                   "name": "2° Comunicazioni",
                   "link": "https://chat.whatsapp.com/DX24JKwrvuZ0OtrhE7K7qN"
+                },
+                {
+                  "name": "FC",
+                  "link": "https://chat.whatsapp.com/L42rKVsQlbUCgd7nYOu9Ul"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bed3278ccabe00197bd65a"
@@ -784,24 +788,8 @@
                   "link": "https://chat.whatsapp.com/Kr9YO8rlDOPIp4Y54hXrda"
                 },
                 {
-                  "name": "Civile FC (25/26)",
-                  "link": "https://chat.whatsapp.com/GB6xDgSZkpgAkSFEafLxNO"
-                },
-                {
-                  "name": "Civile FC (24/25)",
-                  "link": "https://chat.whatsapp.com/C4VoW0Xck5hCnq7yh0e5ib"
-                },
-                {
                   "name": "Ambientale 2",
                   "link": "https://chat.whatsapp.com/Gq8mZO7FKMc55b8wpT1k6a"
-                },
-                {
-                  "name": "Ambientale FC (25/26)",
-                  "link": "https://chat.whatsapp.com/CQnYE3cdnDSAPNoNv8QRns"
-                },
-                {
-                  "name": "Ambientale FC (24/25)",
-                  "link": "https://chat.whatsapp.com/CX2dSNatPA2HTW5YAyrwP0"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c947cae3e17a0069c50673"
@@ -963,14 +951,6 @@
                 {
                   "name": "2° CV Infra",
                   "link": "https://chat.whatsapp.com/Bfa9zJmrHp602co3L1d7hB"
-                },
-                {
-                  "name": "FC (25/26)",
-                  "link": "https://chat.whatsapp.com/IocSbZtp6wSGikm7i3gJqQ"
-                },
-                {
-                  "name": "FC (24/25)",
-                  "link": "https://chat.whatsapp.com/F2X96CSXzSBFKbCyJwZLAi"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3e8c35194e0037d9ba38"
@@ -1326,10 +1306,6 @@
                 {
                   "name": "2° Lab C",
                   "link": "https://chat.whatsapp.com/CN6huOmfWbpGtgWUPudVgG"
-                },
-                {
-                  "name": "4° Anno (24/25)",
-                  "link": "https://chat.whatsapp.com/GhWhNSs7o7YH5WPyU9tSOf"
                 }
               ]
             },
@@ -1374,10 +1350,6 @@
             {
               "id": "5",
               "groups": [
-                {
-                  "name": "4° Anno (24/25)",
-                  "link": "https://chat.whatsapp.com/GhWhNSs7o7YH5WPyU9tSOf"
-                },
                 {
                   "name": "5° Anno",
                   "link": "https://chat.whatsapp.com/EXz1kpahP1K6LDOUunaEWh"

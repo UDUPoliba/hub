@@ -1,5 +1,6 @@
 import json
 import sys
+import re
 
 def aggiorna_gruppi():
     print("🚀 Aggiornamento gruppi WhatsApp in corso...")
@@ -34,10 +35,9 @@ def aggiorna_gruppi():
 
             # --- 2. LOGICA CORSI STANDARD ---
             else:
-                # Gestione specifica per Taranto per evitare conflitti con Bari
                 chiave_ricerca = nome_corso
+                # Separazione Taranto-Bari per evitare omonimie
                 if dip_name == "TARANTO":
-                    # Mappatura nomi info.json -> chiavi gruppi.json specifiche per TA
                     mapping_taranto = {
                         "LT Ing. Informatica e Automazione": "LT Ing. Informatica e Automazione (TA)",
                         "LT Ing. Civile e Ambientale": "LT Ing. Civile e Ambientale (TA)"
@@ -47,36 +47,53 @@ def aggiorna_gruppi():
                 if chiave_ricerca in database_wz:
                     lista_gruppi_totale = database_wz[chiave_ricerca]
                     
+                    # TROVIAMO DOVE INSERIRE I FUORI CORSO:
+                    # Estrae tutti i numeri degli anni presenti per questo corso
+                    anni_numerici = [int(a['id']) for a in corso.get('years', []) if str(a['id']).isdigit()]
+                    # Trova l'ultimo anno assoluto (es. "2" per le LM, "3" per LT, "5" per Architettura)
+                    ultimo_anno = str(max(anni_numerici)) if anni_numerici else "3"
+                    # Controlla se esiste esplicitamente l'anno "FC" creato a mano
+                    ha_anno_fc = any(str(a.get('id')) == "FC" for a in corso.get('years', []))
+                    
+                    # Decidiamo il target: se esiste la voce FC vanno lì, altrimenti nell'ultimo anno
+                    target_fc = "FC" if ha_anno_fc else ultimo_anno
+                    
                     for anno_udu in corso.get('years', []):
-                        id_anno = str(anno_udu.get('id')) # "1", "2", "3" o "FC"
+                        id_anno = str(anno_udu.get('id'))
                         gruppi_pertinenti = []
                         
                         for g in lista_gruppi_totale:
                             nome_g = g['name']
                             
-                            # Filtro per Anno (es. "1" in "1° AK" o "Design 1")
-                            if id_anno.isdigit() and id_anno in nome_g:
-                                gruppi_pertinenti.append(g)
+                            # Rimuoviamo l'anno accademico (es. 25/26) per non confondere la lettura dei numeri
+                            nome_pulito = re.sub(r'\d{2}/\d{2}', '', nome_g)
                             
-                            # Logica Fuori Corso (FC) -> Inseriti anche al 3° anno
-                            if (id_anno == "3" or id_anno == "FC") and "FC" in nome_g:
-                                gruppi_pertinenti.append(g)
+                            # A) LOGICA FUORI CORSO: Se il nome contiene "FC"
+                            if "FC" in nome_g:
+                                if id_anno == target_fc:
+                                    if g not in gruppi_pertinenti:
+                                        gruppi_pertinenti.append(g)
                             
-                            # Logica Speciale Taranto (PTECH e link TA generici)
+                            # B) LOGICA ANNI NORMALI: Se NON è Fuori Corso
+                            else:
+                                if id_anno.isdigit() and id_anno in nome_pulito:
+                                    if g not in gruppi_pertinenti:
+                                        gruppi_pertinenti.append(g)
+                            
+                            # C) LOGICA SPECIALE TARANTO (I gruppi PTECH e TA si spalmano su tutti gli anni)
                             if dip_name == "TARANTO":
                                 if "PTECH" in nome_g or "TA" in nome_g:
-                                    # Evitiamo duplicati se già aggiunti dal filtro anno
                                     if g not in gruppi_pertinenti:
                                         gruppi_pertinenti.append(g)
 
-                        if gruppi_pertinenti:
-                            anno_udu['groups'] = gruppi_pertinenti
+                        # Sovrascrive i gruppi di quell'anno pulendo quelli vecchi/sbagliati
+                        anno_udu['groups'] = gruppi_pertinenti
 
     # Salvataggio finale
     try:
         with open('../info.json', 'w', encoding='utf-8') as f:
             json.dump(info, f, indent=2, ensure_ascii=False)
-        print("✅ info.json aggiornato con successo!")
+        print("✅ info.json aggiornato con successo! I gruppi sono al loro posto.")
     except Exception as e:
         print(f"❌ Errore nel salvataggio: {e}")
         sys.exit(1)
