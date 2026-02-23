@@ -336,7 +336,10 @@
         // ORARI
         const deptUpper = String(deptKey).trim().toUpperCase();
         const isArcodDept = deptUpper === 'ARCOD';
-        const orariLabel = isArcodDept ? 'ORARI' : 'ORARI (I Semestre)';
+        
+        // Cerca il semestre in info.json, se non lo trova mette "I" di default
+        const semestreAttivo = state.data.semestre_attivo || 'I';
+        const orariLabel = isArcodDept ? 'ORARI' : `ORARI (${semestreAttivo} Semestre)`;
 
         el.actions.appendChild(makeButton(orariLabel, () => {
             state.mode = 'ORARI';

@@ -37,13 +37,13 @@ def aggiorna_orari_udu():
             nome_corso = corso_udu.get('name')
 
             for anno_udu in corso_udu.get('years', []):
-                id_anno = anno_udu.get('id')
+                id_anno = str(anno_udu.get('id'))
                 
                 # Cerchiamo le corrispondenze usando il semestre scelto dall'utente!
                 match_trovati = [
                     p for p in lista_corsi_poliba 
                     if p['name'] == nome_corso 
-                    and p['year'].startswith(f"{id_anno}°")
+                    and str(p['year']).startswith(f"{id_anno}°")
                     and p.get('semester') == semestre_scelto
                 ]
 
@@ -62,6 +62,10 @@ def aggiorna_orari_udu():
                         dict_orari[match['year']] = match['link']
                     
                     anno_udu['time_table'] = dict_orari
+
+    # ---Iniettiamo il semestre attivo per index.html ---
+    # Se hai digitato '1' imposta 'I', altrimenti 'II'
+    udu['semestre_attivo'] = "I" if scelta == "1" else "II"
 
     # 3. Salva il nuovo file aggiornato
     with open('../info.json', 'w', encoding='utf-8') as f:
