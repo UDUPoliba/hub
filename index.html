@@ -325,7 +325,11 @@
         }));
 
         // ORARI
-        el.actions.appendChild(makeButton('ORARI', () => {
+        const deptUpper = String(deptKey).trim().toUpperCase();
+        const isArcodDept = deptUpper === 'ARCOD';
+        const orariLabel = isArcodDept ? 'ORARI' : 'ORARI (I Semestre)';
+
+        el.actions.appendChild(makeButton(orariLabel, () => {
             state.mode = 'ORARI';
             renderCourseYearForm();
         }));
