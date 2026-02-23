@@ -14,11 +14,15 @@
             font-style: normal;
         }
 
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Argentum Sans', sans-serif;
-            background: #f9f9f9;
+            background: #ffffff;
             margin: 0;
-            padding: 0;
+            padding: 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,7 +46,7 @@
         h1 {
             margin: 0 0 0.75em;
             color: #333;
-            font-size: 2em;
+            font-size: 1.75em;
             line-height: 1;
             text-align: center;
         }
@@ -50,14 +54,14 @@
         h2 {
             margin-bottom: 1em;
             color: #333;
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
 
         img.logoUdu{
-            margin-top: 2em; 
-            max-width: 20%; 
-            min-width: 5em; 
-            height: auto; 
+            margin-top: 2em;
+            max-width: 20%;
+            min-width: 5em;
+            height: auto;
             align-self: center;
         }
 
@@ -124,10 +128,15 @@
             color: #666;
             margin-top: 0.3em;
         }
+        @media (min-width: 420px) {
+            body {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-<h1 id="mainHeader">DRIVE MATERIALI, ORARI E GRUPPI WHATSAPP<br>by UDU ☀️</h1>
+<h1 id="mainHeader">DRIVE, ORARI E GRUPPI<br>by UDU ☀️</h1>
 <div class="container">
     <h2 id="title">Scegli il dipartimento</h2>
 
