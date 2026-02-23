@@ -95,6 +95,18 @@
             background-color: #b8211d;
         }
 
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1DA851;
+        }
+
+        .btn-link {
+            width: 100%;
+        }
+
         .btn-back {
             background: #333;
         }
@@ -115,7 +127,7 @@
     </style>
 </head>
 <body>
-<h1 id="mainHeader">DRIVE MATERIALI, ORARI E GRUPPI WHATSAPP by UDU ☀️</h1>
+<h1 id="mainHeader">DRIVE MATERIALI, ORARI E GRUPPI WHATSAPP<br>by UDU ☀️</h1>
 <div class="container">
     <h2 id="title">Scegli il dipartimento</h2>
 
@@ -200,26 +212,36 @@
         return b;
     }
 
-    function makeLinkButton(label, href) {
+    function makeLinkButton(label, href, opts = {}) {
+        const variant = opts?.variant || 'default';
+
+        const makeBtn = () => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.classList.add('btn-link');
+
+            if (variant === 'whatsapp') {
+                b.classList.add('btn-whatsapp');
+            }
+
+            // Icona consistente per tutti i pulsanti che portano a un link
+            b.innerHTML = `${escapeHtml(label)} <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
+            return b;
+        };
+
         if (href && String(href).trim()) {
             const a = document.createElement('a');
             a.href = href;
             a.target = '_blank';
             a.style.textDecoration = 'none';
             a.style.display = 'block';
-            
-            const b = document.createElement('button');
-            b.type = 'button';
-            b.style.width = '100%';
-            b.innerHTML = `${escapeHtml(label)} <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
-            
+
+            const b = makeBtn();
             a.appendChild(b);
             return a;
         } else {
-            const b = document.createElement('button');
-            b.type = 'button';
+            const b = makeBtn();
             b.addEventListener('click', () => alert('Link non disponibile.'));
-            b.innerHTML = `${escapeHtml(label)} <span aria-hidden="true" style="margin-left:0.5em;">🔗</span>`;
             return b;
         }
     }
@@ -631,7 +653,7 @@
 
             groups.forEach((g, idx) => {
                 const label = g?.name || `Gruppo ${idx + 1}`;
-                btnWrap.appendChild(makeLinkButton(label, g?.link));
+                btnWrap.appendChild(makeLinkButton(label, g?.link, { variant: 'whatsapp' }));
             });
 
             el.pageArea.appendChild(btnWrap);
