@@ -201,7 +201,7 @@
               ],
               "time_table": {
                 "1° - Cognome AL": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa13aef2df56001e8a192a",
-                "1° - Cognome LZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa1429ba97090019a6376a"
+                "1° - Cognome MZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa1429ba97090019a6376a"
               }
             },
             {
@@ -665,10 +665,6 @@
               "id": "1",
               "groups": [],
               "time_table": "https://poliba.prod.up.cineca.it:443/calendarioPubblico/linkCalendarioId=69a0c6d3b4a11f002d25f59b"
-            },
-            {
-              "id": "2",
-              "groups": []
             }
           ]
         },
@@ -680,10 +676,6 @@
               "id": "1",
               "groups": [],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60eaed1571c001964427d"
-            },
-            {
-              "id": "2",
-              "groups": []
             }
           ]
         },
