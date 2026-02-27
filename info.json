@@ -14,7 +14,7 @@
                   "link": "https://chat.whatsapp.com/CJildVyRWcRI9oBfxikUO0"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ac476dc1b260001ea91c35"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61aefa3752a001f612b72"
             }
           ]
         },
@@ -30,7 +30,7 @@
                   "link": "https://chat.whatsapp.com/I7PavEMNHiF2U2Gkw22nYg"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ac5507c1b260001ea91d67"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61bed5142e1001e3df32b"
             }
           ]
         },
@@ -46,7 +46,7 @@
                   "link": "https://chat.whatsapp.com/LZiD2SuaxrdDTEQG6xu49g"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ac561390508d001f6d414c"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61bb6401eb7001f74430d"
             }
           ]
         },
@@ -62,7 +62,7 @@
                   "link": "https://chat.whatsapp.com/KwhedGFmg8V41FkfwvHADE"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ac5685c1b260001ea91d81"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61b864528520019ab8e05"
             }
           ]
         },
@@ -78,7 +78,7 @@
                   "link": "https://chat.whatsapp.com/IXTBm28kRjmAPwYF3860a4"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ac56f4bc0011001973b388"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61b48401eb7001f744307"
             }
           ]
         },
@@ -94,7 +94,7 @@
                   "link": "https://chat.whatsapp.com/LnCfOuzqmXWGkFw9uS2GRB"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ac575deacfe10019814eee"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61bcc5142e1001e3df329"
             }
           ]
         },
@@ -110,7 +110,7 @@
                   "link": "https://chat.whatsapp.com/LV8fNzpbtRG86hKzOHF4H2"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd2dcc272009002e24bf7d"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61c900ea091001a463b98"
             }
           ]
         },
@@ -126,7 +126,7 @@
                   "link": "https://chat.whatsapp.com/HiMPxiw7UB5CYNrb1piVH1"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd2f0435194e0037d9b418"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61cce66358c0019df2bde"
             }
           ]
         },
@@ -142,7 +142,7 @@
                   "link": "https://chat.whatsapp.com/FbMWG76rRUv5g7lre614EF"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd300bd90a8a001a8fac58"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61d05348409001a1ab78f"
             }
           ]
         },
@@ -158,7 +158,7 @@
                   "link": "https://chat.whatsapp.com/D8GdMa4CLC9BrUp7RYk24V"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd30695fc852001f70b4e8"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61d33d1571c001964439b"
             }
           ]
         },
@@ -174,7 +174,7 @@
                   "link": "https://chat.whatsapp.com/BodSiCfCs3g7MKLi2RWxc6"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ccf87ae7d7590019602b58"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a61d5e66358c0019df2be1"
             }
           ]
         }
@@ -199,7 +199,10 @@
                   "link": "https://chat.whatsapp.com/ByniV3Q4htOEGiwfBV2Njq"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68af26e6dfe6dd001e93feb0"
+              "time_table": {
+                "1° - Cognome AL": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa13aef2df56001e8a192a",
+                "1° - Cognome LZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa1429ba97090019a6376a"
+              }
             },
             {
               "id": "2",
@@ -214,8 +217,8 @@
                 }
               ],
               "time_table": {
-                "2° - Cognome AL": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b063b8dfe6dd001e941214",
-                "2° - Cognome MZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b06435f58ed5001e312d15"
+                "2° - Cognome AL": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa149563fdea001e21c4ab",
+                "2° - Cognome MZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa14e365777100192f23a2"
               }
             },
             {
@@ -247,8 +250,8 @@
                 }
               ],
               "time_table": {
-                "3° - Percorso Automazione": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cad943400b650073c2fad9",
-                "3° - Percorso Sist. e App. informatiche": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b064afdd664700189b17e8"
+                "3° - Percorso Automazione": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa158a63fdea001e21c4bb",
+                "3° - Percorso Sist. e App. informatiche": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67aa1674caca4800193454e1"
               }
             }
           ]
@@ -265,7 +268,7 @@
                   "link": "https://chat.whatsapp.com/F2OQGetkucM8QmMFZajHyL"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b0704bdfe6dd001e9412c7"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a09af8401eb7001f739066"
             },
             {
               "id": "2",
@@ -275,7 +278,7 @@
                   "link": "https://chat.whatsapp.com/IuKWJd324jBArW6S27fRBV"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b162dafc488a0019357d01"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a0a06a5142e1001e3d4f7d"
             },
             {
               "id": "3",
@@ -293,7 +296,7 @@
                   "link": "https://chat.whatsapp.com/LD0O4QlFMd72B9jVNrE8oG"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b18d77bffbb1001e867dd1"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a0a71a4528520019aafccf"
             }
           ]
         },
@@ -309,7 +312,7 @@
                   "link": "https://chat.whatsapp.com/Bt8QMovTOtgCKyQw2Y1xUh"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ba9d8f61e5c5001fe61151"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=679c83474528520019aac347"
             },
             {
               "id": "2",
@@ -319,7 +322,7 @@
                   "link": "https://chat.whatsapp.com/HBozPVfI1Di5pvGOWnVeyc"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bab1e753c39e001a1ee408"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=679c824c66358c0019de4c2b"
             },
             {
               "id": "3",
@@ -337,7 +340,7 @@
                   "link": "https://chat.whatsapp.com/IAIZ4wLxpvfLIojMTPUGiQ"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68babc5a2b78f7001e4dae76"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=679c85d60ea091001a456a6a"
             }
           ]
         },
@@ -357,7 +360,7 @@
                   "link": "https://chat.whatsapp.com/GC4QqAxoBX83JcQBkT9b3I"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b188f5dfe6dd001e941c96"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a07d4a348409001a1a01e6"
             },
             {
               "id": "2",
@@ -376,8 +379,8 @@
                 }
               ],
               "time_table": {
-                "2° - Cognome AK": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6a421f58ed5001e31ac2d",
-                "2° - Cognome LZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6af08aa83ee001d1357de"
+                "2° - Cognome AK": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60eea5142e1001e3df22d",
+                "2° - Cognome LZ": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a07ed1a3752a001f6079e1"
               }
             },
             {
@@ -408,7 +411,7 @@
                   "link": "https://chat.whatsapp.com/Hp77binLxxUHbvSUJPvzNs"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6b1c16408ef001987665e"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a07f1266358c0019de7402"
             }
           ]
         },
@@ -419,12 +422,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6c1778a0d600019c8997c"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a0b47a3b2e8c001e24c020"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6cee98a0d600019c89e83"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a0b53f66358c0019de856c"
             }
           ]
         },
@@ -452,7 +455,7 @@
                   "link": "https://chat.whatsapp.com/DvYBDd96k7wAqSm51NMimB"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6e5397025e8001951d3bd"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60c68a3752a001f612acb"
             },
             {
               "id": "2",
@@ -490,7 +493,7 @@
                   "link": "https://chat.whatsapp.com/EETTjOhoqS9LeJfjt4l3ND"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6e9bfe15e57002086ced1"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60cd566358c0019df2acd"
             }
           ]
         },
@@ -501,12 +504,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68be83852477eb001e8f4383"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60af4401eb7001f74420c"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68be88e4d8f8f30018999679"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60b54a3752a001f612aa9"
             }
           ]
         },
@@ -517,12 +520,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b6f2b5f00207001e1f2d00"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a1d0d55142e1001e3d655a"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b964052b78f7001e4d8a98"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67ab0be5ba97090019a640cd"
             }
           ]
         },
@@ -542,7 +545,7 @@
                   "link": "https://chat.whatsapp.com/DRGprUAwU3AEI6RjdRWe1l"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c837d6f7386f008799529f"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a488980ea091001a46035c"
             },
             {
               "id": "2",
@@ -560,7 +563,7 @@
                   "link": "https://chat.whatsapp.com/L42rKVsQlbUCgd7nYOu9Ul"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bed3278ccabe00197bd65a"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60fe2401eb7001f744296"
             }
           ]
         },
@@ -571,12 +574,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bfd6aa8065e9001e817cea"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a1fce4d1571c001963bc2b"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68bfda06f2f5db0019ba6c1c"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a1eb9566358c0019de9e5b"
             }
           ]
         },
@@ -592,12 +595,12 @@
                   "link": "https://chat.whatsapp.com/Js6E1tJgsztDqy2Mo9Wz4h"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68b97c542477eb001e8efbc1"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60d55348409001a1ab6ca"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ba8af08ccabe00197b894d"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60db03b2e8c001e255be9"
             }
           ]
         }
@@ -613,12 +616,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68caef300c77c600aff588db"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60bee3b2e8c001e255bd9"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68caefffdc3079009b9dd38f"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60c560ea091001a463a1f"
             }
           ]
         },
@@ -629,12 +632,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd345cd8cd9e001ebbc7a0"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60b0666358c0019df2a8c"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd34f935194e0037d9b721"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60b383b2e8c001e255bc2"
             }
           ]
         },
@@ -645,12 +648,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ca71a9e2dfeb009bd40ad7"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60cd35142e1001e3df207"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68ca721400458400913e07b9"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60cfc0ea091001a463a50"
             }
           ]
         },
@@ -661,7 +664,7 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68cf09e7354de0002d5b4375"
+              "time_table": "https://poliba.prod.up.cineca.it:443/calendarioPubblico/linkCalendarioId=69a0c6d3b4a11f002d25f59b"
             },
             {
               "id": "2",
@@ -676,7 +679,7 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cade8789d025009b5559f8"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60eaed1571c001964427d"
             },
             {
               "id": "2",
@@ -695,7 +698,7 @@
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cadeffe5fe1100bf1311d5"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60eea7bd85500195bfcce"
             }
           ]
         },
@@ -711,7 +714,7 @@
                   "link": "https://chat.whatsapp.com/LTDe5DeSY8yBarI6F4XS5q"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd361bd8cd9e001ebbc86d"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60de1a3752a001f612ad1"
             },
             {
               "id": "2",
@@ -721,12 +724,12 @@
                   "link": "https://chat.whatsapp.com/CjVdd72uwlz4kNAERfQ2zl"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd372745511e0019ba71a7"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60e1266358c0019df2adb"
             },
             {
               "id": "3",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cae71dc1a84f009b9de0c0"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=69a09682aecfe700423f218d"
             }
           ]
         },
@@ -742,7 +745,7 @@
                   "link": "https://chat.whatsapp.com/BSc0SKtEucm6GKR3NgE35O"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd61b2e7d7590019605034"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a608b24528520019ab8c20"
             },
             {
               "id": "2",
@@ -752,7 +755,7 @@
                   "link": "https://chat.whatsapp.com/HYpk0YEl1NA2zG0W4TXW9z"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd62175fc852001f70bed6"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a6093366358c0019df2a51"
             },
             {
               "id": "3",
@@ -766,7 +769,7 @@
                   "link": "https://chat.whatsapp.com/JiObFlmQczz3SQkki27yD4"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd623fe7d7590019605125"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a6095f401eb7001f7441aa"
             }
           ]
         },
@@ -786,7 +789,7 @@
                   "link": "https://chat.whatsapp.com/CZPVL1HnPcN6FS7Zj1Uaag"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c92db1f3e94100914b4131"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60a2d5142e1001e3df15e"
             },
             {
               "id": "2",
@@ -800,7 +803,7 @@
                   "link": "https://chat.whatsapp.com/EBsUVeYCasY6vocoDEFUE6"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c947cae3e17a0069c50673"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60a6366358c0019df2a86"
             },
             {
               "id": "3",
@@ -830,7 +833,7 @@
                   "link": "https://chat.whatsapp.com/CX2dSNatPA2HTW5YAyrwP0"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68c94b5e400b650073c2b9a7"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60a9d66358c0019df2a8a"
             }
           ]
         }
@@ -846,12 +849,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd39e2354de0002d5b32d6"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a6035a66358c0019df29c6"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3a4945511e0019ba7246"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a6041ad1571c001964416e"
             }
           ]
         },
@@ -878,12 +881,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cb18008b544500a509d6ee"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60637d1571c00196441a9"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cb18f5c1a84f009b9de187"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a6068266358c0019df2a1d"
             }
           ]
         },
@@ -894,12 +897,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3ae435194e0037d9b9a3"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60584348409001a1ab5ec"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3b6304ce59001efaa566"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a605ce0ea091001a4638b7"
             }
           ]
         },
@@ -910,12 +913,12 @@
             {
               "id": "1",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3cb36fca320038785972"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a604987bd85500195bfb23"
             },
             {
               "id": "2",
               "groups": [],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3d29d8cd9e001ebbcaf5"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a605054528520019ab8bb1"
             }
           ]
         },
@@ -935,7 +938,7 @@
                   "link": "https://chat.whatsapp.com/J9LZ0immAEXKPqT2ynJ9GA"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3dc335194e0037d9ba20"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a606e2d1571c00196441b6"
             },
             {
               "id": "2",
@@ -949,7 +952,7 @@
                   "link": "https://chat.whatsapp.com/EgXeIk8BMLnGUY1HBzxO6L"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3e8c35194e0037d9ba38"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a607370ea091001a4638ca"
             },
             {
               "id": "3",
@@ -983,7 +986,7 @@
                   "link": "https://chat.whatsapp.com/F2X96CSXzSBFKbCyJwZLAi"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3ee8d90a8a001a8fb083"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a607fd4528520019ab8c0f"
             }
           ]
         },
@@ -1003,7 +1006,7 @@
                   "link": "https://chat.whatsapp.com/GUeddTOZYZt5SWcLUIlSfF"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd3f9e04ce59001efaa628"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a5d836401eb7001f7432fc"
             },
             {
               "id": "2",
@@ -1017,7 +1020,7 @@
                   "link": "https://chat.whatsapp.com/K0cnUZLFAMR4NK2HIQKAqG"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd400cd90a8a001a8fb0b2"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a5f775401eb7001f743f93"
             },
             {
               "id": "3",
@@ -1039,7 +1042,7 @@
                   "link": "https://chat.whatsapp.com/Fzr8i97PjOSL8CkdTFDWgM"
                 }
               ],
-              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=68cd406435194e0037d9bd14"
+              "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a6002ba3752a001f612955"
             }
           ]
         }
@@ -1422,5 +1425,5 @@
       "drive": "https://drive.google.com/drive/folders/1zpRYi_4NNPi-cCH7Lp9xRT0CDTaPL8Y3"
     }
   },
-  "semestre_attivo": "I"
+  "semestre_attivo": "II"
 }

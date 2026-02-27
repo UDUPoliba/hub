@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6cf3d502-d555-4965-b0df-880c38182798" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Università/UDULink/hub/hub/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <workItem from="1771503076188" duration="10535000" />
       <workItem from="1771615474593" duration="6308000" />
       <workItem from="1771825990181" duration="291000" />
-      <workItem from="1771826606500" duration="523000" />
+      <workItem from="1771826606500" duration="1657000" />
     </task>
     <servers />
   </component>
