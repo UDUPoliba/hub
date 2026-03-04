@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="UDU Hub" />
+    <meta property="og:image" content="https://udupoliba.github.io/hub/copertina.png" />
+    <meta property="og:url" content="https://udupoliba.github.io/hub/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../logo.svg">
+    <title>UDU Hub - Corso</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 id="mainHeader">Caricamento...</h1>
+
+<div class="container">
+    <div id="contentArea" style="display:flex; flex-direction:column; gap:0.75em; text-align: left;"></div>
+
+    <img src="../logo.svg" class="logoUdu" alt="Logo UDU Hub"/>
+</div>
+
+<script id="courseData" type="application/json">
+{
+    "courseName": "Nome Corso <br> PRIMO ANNO",
+    "representatives": [ 
+        {
+            "name": "Mario Rossi",
+            "phone": "+393339876543"
+        },
+        {
+            "name": "Giulia Bianchi",
+            "phone": "+393339876543"
+        }
+    ],
+    "teams": [
+        { "name": "Analisi (esempio)", "link": "https://teams.microsoft.com/..." },
+        { "name": "Fisica (esempio)", "link": "https://teams.microsoft.com/..." },
+        { "name": "Chimica (esempio)", "link": "https://teams.microsoft.com/..." }
+    ],
+    "materials": [
+        { "name": "Drive Corsi Comuni", "link": "https://drive.google.com/..." },
+        { "name": "Tutorial boh", "link": "https://..." }
+    ]
+}
+</script>
+
+<script src="logica.js"></script>
+
+</body>
+</html>

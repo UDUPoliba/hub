@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'Argentum Sans';
+    src: url('./fonts/ArgentumSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Argentum Sans', sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #efdd61;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0 0 0.75em;
+    color: #333;
+    font-size: 1.75em;
+    line-height: 1;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1em;
+    color: #333;
+    font-size: 1.3em;
+}
+
+img.logoUdu {
+    margin-top: 2em;
+    max-width: 20%;
+    min-width: 5em;
+    height: auto;
+    align-self: center;
+}
+
+input, select {
+    padding: 0.8em;
+    font-size: 1em;
+    width: 90%;
+    border: 1px solid #333;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    color: #333;
+    align-self: center;
+}
+
+input::placeholder {
+    color: #333;
+    opacity: 1;
+}
+
+button {
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    background-color: #d92d28;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #b8211d;
+}
+
+/* Stili specifici per i vari bottoni */
+.btn-whatsapp {
+    background-color: #10A350;
+}
+.btn-whatsapp:hover {
+    background-color: #0C8540;
+}
+
+.btn-teams {
+    background-color: #5B5FC7; /* Colore ufficiale Microsoft Teams */
+}
+.btn-teams:hover {
+    background-color: #4647BA;
+}
+
+.btn-link {
+    width: 100%;
+}
+
+.btn-back {
+    background: #333;
+}
+.btn-back:hover {
+    background: #111;
+}
+
+strong {
+    color: #d92d28;
+}
+
+small {
+    display: block;
+    color: #666;
+    margin-top: 0.3em;
+}
+
+@media (min-width: 420px) {
+    body {
+        padding: 20px;
+    }
+}
