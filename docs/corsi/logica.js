@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (reps.length > 0) {
         const repContainer = document.createElement('div');
         repContainer.style.textAlign = 'center';
-        // Margine inferiore quasi azzerato per avvicinarlo a "LINK TEAMS"
         repContainer.style.marginBottom = '0.2em'; 
         repContainer.style.fontSize = '1.1em';
         
@@ -70,19 +69,41 @@ document.addEventListener("DOMContentLoaded", () => {
         return a;
     }
 
-    // Helper per creare le etichette delle sezioni
+    // Helper per creare le etichette delle sezioni (LINK TEAMS, MATERIALE, ecc.)
     function createSectionLabel(text) {
         const label = document.createElement('h3');
         label.textContent = text;
         label.style.textAlign = "center";
         label.style.color = "#333";
         label.style.fontSize = "1.3em"; 
-        // Margine superiore dimezzato (da 1em a 0.5em) per ridurre il padding
         label.style.margin = "0.5em 0 0.5em 0";
         return label;
     }
 
-    // 2. Link Teams (1 a 1)
+    // 2. Testo extra, in un riquadro bianco
+    if (data.extra && data.extra.length > 0) {
+
+        const extraContainer = document.createElement('div');
+        extraContainer.style.background = "#fff";
+        extraContainer.style.border = "1px solid #333";
+        extraContainer.style.borderRadius = "0.5em";
+        extraContainer.style.padding = "1em";
+        extraContainer.style.fontSize = "0.95em";
+        extraContainer.style.lineHeight = "1.5";
+        extraContainer.style.color = "#333";
+        extraContainer.style.textAlign = "center";
+
+        data.extra.forEach((extrao, index) => {
+            const row = document.createElement('div');
+            row.style.marginBottom = index === data.extra.length - 1 ? "0" : "0.75em";
+            row.innerHTML = `<strong>${extrao.titoloExtra}</strong><br>${extrao.dettagli}`;
+            extraContainer.appendChild(row);
+        });
+
+        contentArea.appendChild(extraContainer);
+    }
+
+    // 3. Link Teams (1 a 1)
     if (data.teams && data.teams.length > 0) {
         contentArea.appendChild(createSectionLabel("LINK TEAMS"));
 
@@ -91,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. Materiali / Dispense (1 a 1)
+    // 4. Materiali / Dispense (1 a 1)
     if (data.materials && data.materials.length > 0) {
         contentArea.appendChild(createSectionLabel("MATERIALE DIDATTICO"));
 
@@ -100,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Pulsante per tornare all'indice principale
+    // 5. Pulsante per tornare all'indice principale (UDU Hub)
     const hr = document.createElement('hr');
     hr.style.width = "100%";
     hr.style.border = "none";
@@ -110,10 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
     contentArea.appendChild(hr);
 
     const homeBtn = document.createElement('button');
-    // Testo del pulsante modificato
     homeBtn.textContent = "Torna a UDU Hub"; 
     homeBtn.classList.add("btn-back");
     homeBtn.onclick = () => {
+        // Ritorna alla cartella superiore dove si trova l'index principale
         window.location.href = "../index.html";
     };
     contentArea.appendChild(homeBtn);
