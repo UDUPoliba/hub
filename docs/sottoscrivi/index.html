@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="it" prefix="og: https://ogp.me/ns#">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Sottoscrivi - UDU Politecnico</title>
-    <meta name="description" content="Sostieni UDU Politecnico alle elezioni studentesche. Scopri come sottoscrivere la nostra lista passo dopo passo." />
+    <meta name="description"
+        content="Sostieni UDU Politecnico alle elezioni studentesche. Scopri come sottoscrivere la nostra lista passo dopo passo." />
     <meta name="theme-color" content="#efdd61" />
-    
+
     <link rel="icon" href="../logo.svg" type="image/svg+xml">
 
     <style>
         @font-face {
             font-family: 'Argentum Sans';
-            src: url('../fonts/ArgentumSans-Regular.ttf') format('truetype'); /* Assicurati che il percorso dei font sia corretto rispetto a questa pagina */
+            src: url('../fonts/ArgentumSans-Regular.ttf') format('truetype');
+            /* Assicurati che il percorso dei font sia corretto rispetto a questa pagina */
             font-weight: normal;
             font-style: normal;
         }
 
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
 
@@ -34,7 +39,8 @@
         /* --- SEZIONE HERO --- */
         .hero {
             background-color: #efdd61;
-            padding: 3em 1.5em 2em; /* Spazi ridotti */
+            padding: 3em 1.5em 2em;
+            /* Spazi ridotti */
             text-align: center;
         }
 
@@ -62,7 +68,8 @@
         /* --- MISSION STATEMENT --- */
         .mission-statement {
             background-color: #ffffff;
-            padding: 2em 1.5em 0em; /* Spazi ridotti */
+            padding: 2em 1.5em 0em;
+            /* Spazi ridotti */
             text-align: center;
         }
 
@@ -91,7 +98,8 @@
 
         /* --- SEZIONE INTRO (Organi e Rappresentanza) --- */
         .intro-section {
-            padding: 1.5em 1.5em 2em; /* Spazi ridotti */
+            padding: 1.5em 1.5em 2em;
+            /* Spazi ridotti */
             background-color: #ffffff;
         }
 
@@ -111,7 +119,8 @@
         .lead-text {
             font-size: 1.1em;
             text-align: center;
-            margin-bottom: 2em; /* Spazio ridotto */
+            margin-bottom: 2em;
+            /* Spazio ridotto */
             color: #555;
         }
 
@@ -119,7 +128,8 @@
         .organs-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.5em; /* Spazio ridotto */
+            gap: 1.5em;
+            /* Spazio ridotto */
             margin-bottom: 1.5em;
         }
 
@@ -133,11 +143,13 @@
             background: #f9f9f9;
             padding: 1.5em;
             border-radius: 1em;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border-top: 4px solid #d92d28;
         }
 
-        .organ-card.central { border-color: #333; }
+        .organ-card.central {
+            border-color: #333;
+        }
 
         .organ-card h4 {
             margin-top: 0;
@@ -150,7 +162,9 @@
             margin: 0;
         }
 
-        .organ-card li { margin-bottom: 0.8em; }
+        .organ-card li {
+            margin-bottom: 0.8em;
+        }
 
         /* --- PULSANTI --- */
         .btn {
@@ -162,7 +176,7 @@
             text-decoration: none;
             border-radius: 0.5em;
             font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.2s ease, transform 0.1s ease;
             text-align: center;
         }
@@ -184,11 +198,14 @@
             color: white;
         }
 
-        .simpleLink, 
+        .simpleLink,
         .simpleLink:visited {
-            color: inherit;             /* Prende lo stesso colore del testo circostante */
-            text-decoration: underline; /* Mantiene la sottolineatura */
-            cursor: pointer;            /* Mostra la manina al passaggio del mouse */
+            color: inherit;
+            /* Prende lo stesso colore del testo circostante */
+            text-decoration: underline;
+            /* Mantiene la sottolineatura */
+            cursor: pointer;
+            /* Mostra la manina al passaggio del mouse */
         }
 
         .simpleLink:hover {
@@ -198,7 +215,8 @@
         /* --- SEZIONE STEPS --- */
         .steps-section {
             background-color: #f4f4f4;
-            padding: 2.5em 1.5em 3em; /* Spazi ridotti */
+            padding: 2.5em 1.5em 3em;
+            /* Spazi ridotti */
         }
 
         .steps-container {
@@ -206,14 +224,15 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 2.5em; /* Spazio ridotto tra le card */
+            gap: 2.5em;
+            /* Spazio ridotto tra le card */
         }
 
         .step-card {
             background: #ffffff;
             border-radius: 1em;
             overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
         }
@@ -224,19 +243,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2em; /* Spazio ridotto */
+            padding: 2em;
+            /* Spazio ridotto */
         }
 
         .step-image-container img {
             width: 100%;
-            max-width: 240px; /* Leggermente ridotto per essere più compatto */
+            max-width: 240px;
+            /* Leggermente ridotto per essere più compatto */
             height: auto;
             border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             border: 5px solid #222;
         }
 
-        .step-content { padding: 1.5em; }
+        .step-content {
+            padding: 1.5em;
+        }
 
         .step-badge {
             display: inline-block;
@@ -257,10 +280,24 @@
         }
 
         @media (min-width: 768px) {
-            .step-card { flex-direction: row; align-items: center; }
-            .step-card:nth-child(even) { flex-direction: row-reverse; }
-            .step-image-container { width: 45%; padding: 2em 0; }
-            .step-content { width: 55%; padding: 2.5em; }
+            .step-card {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .step-card:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .step-image-container {
+                width: 45%;
+                padding: 2em 0;
+            }
+
+            .step-content {
+                width: 55%;
+                padding: 2.5em;
+            }
         }
 
         /* --- FOOTER --- */
@@ -272,73 +309,99 @@
         }
     </style>
 </head>
+
 <body>
 
     <header class="hero">
-        <img src="../logo.svg" alt="UDU Politecnico Logo" class="logoUdu"> 
+        <img src="../logo.svg" alt="UDU Politecnico Logo" class="logoUdu">
         <h1>Il Poliba ha bisogno della tua voce.</h1>
         <h2>Sostieni UDU Politecnico. Sottoscrivi la nostra lista per darci la possibilità di rappresentarti.</h2>
-        
+
         <a href="#guida" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Leggi la guida 👇</a>
-        <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn" style="background-color: #333;">Vai alle Sottoscrizioni🔗</a>
+        <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn" style="background-color: #333;">Vai alle
+            Sottoscrizioni🔗</a>
     </header>
 
     <section class="mission-statement">
         <div class="mission-content">
             <h3>Sottoscrivere non significa votare. <br>Significa darci la possibilità di esistere.</h3>
-            <p>Prima ancora di arrivare alle urne, la legge ci impone uno scoglio importante: raccogliere un numero minimo di firme per poter presentare ufficialmente le nostre candidature.</p>
-            <p>La firma che ti chiediamo oggi <strong>non è un voto anticipato</strong>, ma è la chiave che ci permette di essere presenti sulla scheda elettorale domani. Senza questa partecipazione preliminare, le nostre liste non potranno nemmeno partecipare alle elezioni.</p>
+            <p>Prima ancora di arrivare alle urne, la legge ci impone uno scoglio importante: raccogliere un numero
+                minimo di firme per poter presentare ufficialmente le nostre candidature.</p>
+            <p>La firma che ti chiediamo oggi <strong>non è un voto anticipato</strong>, ma è la chiave che ci permette
+                di essere presenti sulla scheda elettorale domani. Senza questa partecipazione preliminare, le nostre
+                liste non potranno nemmeno partecipare alle elezioni.</p>
         </div>
     </section>
 
     <section class="intro-section">
         <div class="container-content">
-            
+
             <h3 class="section-title">A cosa serve la rappresentanza?</h3>
-            <p class="lead-text">L'università è una comunità. La rappresentanza è il ponte tra noi studenti e il corpo docente: serve a tutelare il diritto allo studio e influenzare attivamente le decisioni. Essere negli organi significa <strong>trasformare i problemi individuali in conquiste collettive</strong>.</p>
+            <p class="lead-text">L'università è una comunità. La rappresentanza è il ponte tra noi studenti e il corpo
+                docente: serve a tutelare il diritto allo studio e influenzare attivamente le decisioni. Essere negli
+                organi significa <strong>trasformare i problemi individuali in conquiste collettive</strong>.</p>
 
             <div class="organs-grid">
                 <div class="organ-card central">
                     <h4>🏛️ Organi Centrali</h4>
-                    <p>Hanno competenza su tutto l'Ateneo e definiscono le linee guida strategiche, interfacciandosi con Rettore e Amministrazione.</p>
+                    <p>Hanno competenza su tutto l'Ateneo e definiscono le linee guida strategiche, interfacciandosi con
+                        Rettore e Amministrazione.</p>
                     <ul>
-                        <li><strong>Senato Accademico:</strong> Programmazione didattica, ricerca e funzionamento generale.</li>
-                        <li><strong>CdA (Consiglio di Amministrazione):</strong> Gestione economica, tasse, investimenti, edilizia e spazi.</li>
+                        <li><strong>Senato Accademico:</strong> Programmazione didattica, ricerca e funzionamento
+                            generale.</li>
+                        <li><strong>CdA (Consiglio di Amministrazione):</strong> Gestione economica, tasse,
+                            investimenti, edilizia e spazi.</li>
                         <li><strong>CUS:</strong> Programmazione delle attività e delle strutture sportive.</li>
                     </ul>
                 </div>
 
                 <div class="organ-card">
                     <h4>📚 Organi Periferici</h4>
-                    <p>Agiscono direttamente sulla realtà del singolo corso di laurea o dipartimento, discutendo temi che impattano la tua quotidianità universitaria.</p>
+                    <p>Agiscono direttamente sulla realtà del singolo corso di laurea o dipartimento, discutendo temi
+                        che impattano la tua quotidianità universitaria.</p>
                     <ul>
-                        <li><strong>Consiglio di Dipartimento (CdD):</strong> Decide sull'attivazione dei corsi, i manifesti degli studi e i fondi dei laboratori. Qui lo studente eletto interviene per migliorare i piani di studio (es. inserimento di materie più coerenti) e garantire carichi di studio equi.</li>
-                        <li><strong>Consiglio degli Studenti (CS):</strong> L'organo politico formato 100% da studenti. Valuta fondi, diritto allo studio, trasporti e mense.</li>
+                        <li><strong>Consiglio di Dipartimento (CdD):</strong> Decide sull'attivazione dei corsi, i
+                            manifesti degli studi e i fondi dei laboratori. Qui lo studente eletto interviene per
+                            migliorare i piani di studio (es. inserimento di materie più coerenti) e garantire carichi
+                            di studio equi.</li>
+                        <li><strong>Consiglio degli Studenti (CS):</strong> L'organo politico formato 100% da studenti.
+                            Valuta fondi, diritto allo studio, trasporti e mense.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="organ-card" style="border-color: #10A350;"> <h4>💰 Diritto allo Studio</h4>
-        <p>Il vero <strong>diritto allo studio</strong> passa da qui. L'ADISU Puglia è l'<strong>ente regionale</strong> che fornisce gli strumenti concreti per permettere a chiunque di vivere l'università, indipendentemente dal proprio reddito.</p>
-    <ul>
-        <li><strong>Il CdA ADISU:</strong> È l'organo direttivo in cui si difende il nostro welfare. Qui si decidono i fondi e i criteri per le <strong>borse di studio</strong>, l'assegnazione dei posti letto negli <strong>alloggi</strong> e la gestione delle <strong>mense</strong>.
-        <br>Per garantire che le esigenze di tutti vengano ascoltate in Regione, il Politecnico elegge <strong>due rappresentanti</strong>: un seggio dedicato agli studenti di <strong>Bari</strong> e uno specifico per la sede di <strong>Taranto</strong>.</li>
-    </ul>
-</div>
+            <div class="organ-card" style="border-color: #10A350;">
+                <h4>💰 Diritto allo Studio</h4>
+                <p>Il vero <strong>diritto allo studio</strong> passa da qui. L'ADISU Puglia è l'<strong>ente
+                        regionale</strong> che fornisce gli strumenti concreti per permettere a chiunque di vivere
+                    l'università, indipendentemente dal proprio reddito.</p>
+                <ul>
+                    <li><strong>Il CdA ADISU:</strong> È l'organo direttivo in cui si difende il nostro welfare. Qui si
+                        decidono i fondi e i criteri per le <strong>borse di studio</strong>, l'assegnazione dei posti
+                        letto negli <strong>alloggi</strong> e la gestione delle <strong>mense</strong>.</li>
+                </ul>
+                <p>Per garantire che le esigenze di tutti vengano ascoltate in Regione, il Politecnico elegge
+                    <strong>due rappresentanti</strong>: un seggio dedicato agli studenti di <strong>Bari</strong> e uno
+                    specifico per la sede di <strong>Taranto</strong>.
+                </p>
+            </div>
 
         </div>
     </section>
 
     <section id="guida" class="steps-section">
         <h3 class="section-title" style="margin-bottom: 0.5em;">Come sottoscrivere in 6 passi</h3>
-        <p class="lead-text" style="max-width: 600px; margin: 0 auto 2.5em;">La procedura richiede due minuti e si fa online tramite credenziali ESSE3 o SPID.</p>
-        
+        <p class="lead-text" style="max-width: 600px; margin: 0 auto 2.5em;">La procedura richiede due minuti e si fa
+            online tramite credenziali ESSE3 o SPID.</p>
+
         <div id="stepsContainer" class="steps-container"></div>
     </section>
 
     <footer>
         <h2 style="margin-top:0;">Hai problemi con la procedura?</h2>
-        <p style="margin-bottom: 2em; color: #aaa;">Scrivici su <a href="https://www.instagram.com/udupoliba" class="simpleLink" target="_blank">Instagram</a> o chiedi supporto ai nostri rappresentanti nei gruppi WhatsApp.</p>
+        <p style="margin-bottom: 2em; color: #aaa;">Scrivici su <a href="https://www.instagram.com/udupoliba"
+                class="simpleLink" target="_blank">Instagram</a> o chiedi supporto ai nostri rappresentanti nei gruppi
+            WhatsApp.</p>
         <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
             <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn">Sottoscrivi adesso!</a>
             <a href="../" class="btn btn-outline" style="border-color: #fff; color: #fff;">Torna a UDU Hub</a>
@@ -350,7 +413,7 @@
             {
                 "id": 1,
                 "title": "Accedi al Portale Elettorale tramite Esse3",
-                "img": "sottoscrivi1.png", 
+                "img": "sottoscrivi1.png",
                 "desc": "Una volta effettuato il <a href=\"https://shorturl.at/Z4mlN\" class=\"simpleLink\" target=\"_blank\">login</a> ad Esse3 (da web), apri il menù a tendina in alto per poi cliccare su <strong>\"Elezioni: Liste e Candidature\"</strong>."
             },
             {
@@ -364,7 +427,7 @@
                 "title": "Scegli la lista UDU Politecnico",
                 "img": "sottoscrivi3.png",
                 "desc": "Scorri l'elenco delle liste candidate fino a trovare il nostro logo e la dicitura <strong>UDU Politecnico</strong>. Cliccaci sopra."
-                
+
             },
             {
                 "id": 4,
@@ -398,15 +461,15 @@
                 const img = document.createElement('img');
                 img.src = step.img;
                 img.alt = `Screenshot passaggio ${step.id}: ${step.title}`;
-                
-                img.onerror = function() {
+
+                img.onerror = function () {
                     this.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600"%3E%3Crect fill="%23d1d1d1" width="900" height="1600"/%3E%3Ctext fill="%23666" font-family="sans-serif" font-size="60" dy="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3E${step.img}%3C/text%3E%3C/svg%3E';
                 };
                 imgContainer.appendChild(img);
 
                 const contentContainer = document.createElement('div');
                 contentContainer.className = 'step-content';
-                
+
                 contentContainer.innerHTML = `
                     <span class="step-badge">Passo ${step.id} di ${stepsData.length}</span>
                     <h4>${step.title}</h4>
@@ -422,4 +485,5 @@
         document.addEventListener('DOMContentLoaded', renderSteps);
     </script>
 </body>
+
 </html>
