@@ -184,6 +184,17 @@
             color: white;
         }
 
+        .simpleLink, 
+        .simpleLink:visited {
+            color: inherit;             /* Prende lo stesso colore del testo circostante */
+            text-decoration: underline; /* Mantiene la sottolineatura */
+            cursor: pointer;            /* Mostra la manina al passaggio del mouse */
+        }
+
+        .simpleLink:hover {
+            opacity: 0.8;
+        }
+
         /* --- SEZIONE STEPS --- */
         .steps-section {
             background-color: #f4f4f4;
@@ -269,7 +280,7 @@
         <h2>Sostieni UDU Politecnico. Sottoscrivi la nostra lista per darci la possibilità di rappresentarti.</h2>
         
         <a href="#guida" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Leggi la guida 👇</a>
-        <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn" style="background-color: #333;">Vai al Portale 🔗</a>
+        <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn" style="background-color: #333;">Vai alle Sottoscrizioni🔗</a>
     </header>
 
     <section class="mission-statement">
@@ -308,11 +319,12 @@
             </div>
 
             <div class="organ-card" style="border-color: #10A350;"> <h4>💰 Diritto allo Studio</h4>
-        <p>Organi territoriali che gestiscono i servizi essenziali per la vita studentesca fuori dalla didattica.</p>
-        <ul>
-            <li><strong>CdA ADISU Puglia:</strong> È l'organo che decide sulla gestione delle <strong>borse di studio</strong>, sulla qualità delle <strong>mense</strong> e sulla disponibilità degli <strong>alloggi</strong> universitari.</li>
-        </ul>
-    </div>
+        <p>Il vero <strong>diritto allo studio</strong> passa da qui. L'ADISU Puglia è l'<strong>ente regionale</strong> che fornisce gli strumenti concreti per permettere a chiunque di vivere l'università, indipendentemente dal proprio reddito.</p>
+    <ul>
+        <li><strong>Il CdA ADISU:</strong> È l'organo direttivo in cui si difende il nostro welfare. Qui si decidono i fondi e i criteri per le <strong>borse di studio</strong>, l'assegnazione dei posti letto negli <strong>alloggi</strong> e la gestione delle <strong>mense</strong>.
+        <br>Per garantire che le esigenze di tutti vengano ascoltate in Regione, il Politecnico elegge <strong>due rappresentanti</strong>: un seggio dedicato agli studenti di <strong>Bari</strong> e uno specifico per la sede di <strong>Taranto</strong>.</li>
+    </ul>
+</div>
 
         </div>
     </section>
@@ -326,9 +338,9 @@
 
     <footer>
         <h2 style="margin-top:0;">Hai problemi con la procedura?</h2>
-        <p style="margin-bottom: 2em; color: #aaa;">Scrivici su Instagram o chiedi supporto ai nostri rappresentanti nei gruppi WhatsApp.</p>
+        <p style="margin-bottom: 2em; color: #aaa;">Scrivici su <a href="https://www.instagram.com/udupoliba" class="simpleLink">Instagram</a> o chiedi supporto ai nostri rappresentanti nei gruppi WhatsApp.</p>
         <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
-            <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn">Vai al Portale</a>
+            <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn">Sottoscrivi adesso!</a>
             <a href="../" class="btn btn-outline" style="border-color: #fff; color: #fff;">Torna a UDU Hub</a>
         </div>
     </footer>
@@ -339,7 +351,7 @@
                 "id": 1,
                 "title": "Accedi al Portale Elettorale tramite Esse3",
                 "img": "sottoscrivi1.png", 
-                "desc": "Una volta effettuato il login ad Esse3 (da web), apri il menù a tendina in alto per poi cliccare su <strong>\"Elezioni: Liste e Candidature\"</strong>."
+                "desc": "Una volta effettuato il <a href=\"https://shorturl.at/Z4mlN\" class=\"simpleLink\">login</a> ad Esse3 (da web), apri il menù a tendina in alto per poi cliccare su <strong>\"Elezioni: Liste e Candidature\"</strong>."
             },
             {
                 "id": 2,
