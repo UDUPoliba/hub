@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="it" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sottoscrivi - UDU Politecnico</title>
+    <meta name="description" content="Sostieni UDU Politecnico alle elezioni studentesche. Scopri come sottoscrivere la nostra lista passo dopo passo." />
+    <meta name="theme-color" content="#efdd61" />
+    
+    <link rel="icon" href="../logo.svg" type="image/svg+xml">
+
+    <style>
+        @font-face {
+            font-family: 'Argentum Sans';
+            src: url('../fonts/ArgentumSans-Regular.ttf') format('truetype'); /* Assicurati che il percorso dei font sia corretto rispetto a questa pagina */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Argentum Sans', sans-serif;
+            background: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- SEZIONE HERO --- */
+        .hero {
+            background-color: #efdd61;
+            padding: 3em 1.5em 2em; /* Spazi ridotti */
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0 0 0.2em;
+            line-height: 1.1;
+        }
+
+        .hero h2 {
+            font-size: 1.2em;
+            font-weight: normal;
+            margin: 0 0 1.5em;
+            color: #555;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logoUdu {
+            max-width: 120px;
+            margin-bottom: 1.5em;
+        }
+
+        /* --- MISSION STATEMENT --- */
+        .mission-statement {
+            background-color: #ffffff;
+            padding: 2em 1.5em 0em; /* Spazi ridotti */
+            text-align: center;
+        }
+
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mission-content h3 {
+            font-size: 2em;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+        }
+
+        .mission-content p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 1.5em;
+        }
+
+        .mission-content strong {
+            color: #d92d28;
+        }
+
+        /* --- SEZIONE INTRO (Organi e Rappresentanza) --- */
+        .intro-section {
+            padding: 1.5em 1.5em 2em; /* Spazi ridotti */
+            background-color: #ffffff;
+        }
+
+        .container-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #d92d28;
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            margin-top: 0.5em;
+            text-align: center;
+        }
+
+        .lead-text {
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: 2em; /* Spazio ridotto */
+            color: #555;
+        }
+
+        /* GRIGLIA ORGANI */
+        .organs-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5em; /* Spazio ridotto */
+            margin-bottom: 1.5em;
+        }
+
+        @media (min-width: 768px) {
+            .organs-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .organ-card {
+            background: #f9f9f9;
+            padding: 1.5em;
+            border-radius: 1em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #d92d28;
+        }
+
+        .organ-card.central { border-color: #333; }
+
+        .organ-card h4 {
+            margin-top: 0;
+            font-size: 1.3em;
+            margin-bottom: 1em;
+        }
+
+        .organ-card ul {
+            padding-left: 1.2em;
+            margin: 0;
+        }
+
+        .organ-card li { margin-bottom: 0.8em; }
+
+        /* --- PULSANTI --- */
+        .btn {
+            display: inline-block;
+            padding: 0.8em 1.8em;
+            font-size: 1.1em;
+            background-color: #d92d28;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #b8211d;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #333;
+            border: 2px solid #333;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* --- SEZIONE STEPS --- */
+        .steps-section {
+            background-color: #f4f4f4;
+            padding: 2.5em 1.5em 3em; /* Spazi ridotti */
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5em; /* Spazio ridotto tra le card */
+        }
+
+        .step-card {
+            background: #ffffff;
+            border-radius: 1em;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-image-container {
+            background-color: #e5e5e5;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2em; /* Spazio ridotto */
+        }
+
+        .step-image-container img {
+            width: 100%;
+            max-width: 240px; /* Leggermente ridotto per essere più compatto */
+            height: auto;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 5px solid #222;
+        }
+
+        .step-content { padding: 1.5em; }
+
+        .step-badge {
+            display: inline-block;
+            background: #efdd61;
+            color: #333;
+            font-weight: bold;
+            padding: 0.4em 1em;
+            border-radius: 2em;
+            font-size: 0.9em;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+
+        .step-content h4 {
+            margin: 0 0 0.5em;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        @media (min-width: 768px) {
+            .step-card { flex-direction: row; align-items: center; }
+            .step-card:nth-child(even) { flex-direction: row-reverse; }
+            .step-image-container { width: 45%; padding: 2em 0; }
+            .step-content { width: 55%; padding: 2.5em; }
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 3em 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <img src="../logo.svg" alt="UDU Politecnico Logo" class="logoUdu"> 
+        <h1>Il Poliba ha bisogno della tua voce.</h1>
+        <h2>Sostieni UDU Politecnico. Sottoscrivi la nostra lista per darci la possibilità di rappresentarti.</h2>
+        
+        <a href="#guida" class="btn" style="margin-right: 10px; margin-bottom: 10px;">Leggi la guida 👇</a>
+        <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn" style="background-color: #333;">Vai al Portale 🔗</a>
+    </header>
+
+    <section class="mission-statement">
+        <div class="mission-content">
+            <h3>Sottoscrivere non significa votare. <br>Significa darci la possibilità di esistere.</h3>
+            <p>Prima ancora di arrivare alle urne, la legge ci impone uno scoglio importante: raccogliere un numero minimo di firme per poter presentare ufficialmente le nostre candidature.</p>
+            <p>La firma che ti chiediamo oggi <strong>non è un voto anticipato</strong>, ma è la chiave che ci permette di essere presenti sulla scheda elettorale domani. Senza questa partecipazione preliminare, le nostre liste non potranno nemmeno partecipare alle elezioni.</p>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="container-content">
+            
+            <h3 class="section-title">A cosa serve la rappresentanza?</h3>
+            <p class="lead-text">L'università è una comunità. La rappresentanza è il ponte tra noi studenti e il corpo docente: serve a tutelare il diritto allo studio e influenzare attivamente le decisioni. Essere negli organi significa <strong>trasformare i problemi individuali in conquiste collettive</strong>.</p>
+
+            <div class="organs-grid">
+                <div class="organ-card central">
+                    <h4>🏛️ Organi Centrali</h4>
+                    <p>Hanno competenza su tutto l'Ateneo e definiscono le linee guida strategiche, interfacciandosi con Rettore e Amministrazione.</p>
+                    <ul>
+                        <li><strong>Senato Accademico:</strong> Programmazione didattica, ricerca e funzionamento generale.</li>
+                        <li><strong>CdA (Consiglio di Amministrazione):</strong> Gestione economica, tasse, investimenti, edilizia e spazi.</li>
+                        <li><strong>CUS:</strong> Programmazione delle attività e delle strutture sportive.</li>
+                    </ul>
+                </div>
+
+                <div class="organ-card">
+                    <h4>📚 Organi Periferici</h4>
+                    <p>Agiscono direttamente sulla realtà del singolo corso di laurea o dipartimento, discutendo temi che impattano la tua quotidianità universitaria.</p>
+                    <ul>
+                        <li><strong>Consiglio di Dipartimento (CdD):</strong> Decide sull'attivazione dei corsi, i manifesti degli studi e i fondi dei laboratori. Qui lo studente eletto interviene per migliorare i piani di studio (es. inserimento di materie più coerenti) e garantire carichi di studio equi.</li>
+                        <li><strong>Consiglio degli Studenti (CS):</strong> L'organo politico formato 100% da studenti. Valuta fondi, diritto allo studio, trasporti e mense.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="organ-card" style="border-color: #10A350;"> <h4>💰 Diritto allo Studio</h4>
+        <p>Organi territoriali che gestiscono i servizi essenziali per la vita studentesca fuori dalla didattica.</p>
+        <ul>
+            <li><strong>CdA ADISU Puglia:</strong> È l'organo che decide sulla gestione delle <strong>borse di studio</strong>, sulla qualità delle <strong>mense</strong> e sulla disponibilità degli <strong>alloggi</strong> universitari.</li>
+        </ul>
+    </div>
+
+        </div>
+    </section>
+
+    <section id="guida" class="steps-section">
+        <h3 class="section-title" style="margin-bottom: 0.5em;">Come sottoscrivere in 6 passi</h3>
+        <p class="lead-text" style="max-width: 600px; margin: 0 auto 2.5em;">La procedura richiede due minuti e si fa online tramite credenziali ESSE3 o SPID.</p>
+        
+        <div id="stepsContainer" class="steps-container"></div>
+    </section>
+
+    <footer>
+        <h2 style="margin-top:0;">Hai problemi con la procedura?</h2>
+        <p style="margin-bottom: 2em; color: #aaa;">Scrivici su Instagram o chiedi supporto ai nostri rappresentanti nei gruppi WhatsApp.</p>
+        <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
+            <a href="https://shorturl.at/Z4mlN" target="_blank" class="btn">Vai al Portale</a>
+            <a href="../" class="btn btn-outline" style="border-color: #fff; color: #fff;">Torna a UDU Hub</a>
+        </div>
+    </footer>
+
+    <script>
+        const stepsData = [
+            {
+                "id": 1,
+                "title": "Accedi al Portale Elettorale tramite Esse3",
+                "img": "sottoscrivi1.png", 
+                "desc": "Una volta effettuato il login ad Esse3 (da web), apri il menù a tendina in alto per poi cliccare su <strong>\"Elezioni: Liste e Candidature\"</strong>."
+            },
+            {
+                "id": 2,
+                "title": "Seleziona \"Sottoscrizioni\"",
+                "img": "sottoscrivi2.png",
+                "desc": "Una volta sul portale elettorale, cerca la voce <strong>\"Sottoscrizioni\"</strong> e cliccaci sopra."
+            },
+            {
+                "id": 3,
+                "title": "Scegli la lista UDU Politecnico",
+                "img": "sottoscrivi3.png",
+                "desc": "Scorri l'elenco delle liste candidate fino a trovare il nostro logo e la dicitura <strong>UDU Politecnico</strong>. Cliccaci sopra."
+                
+            },
+            {
+                "id": 4,
+                "title": "Seleziona tutti gli organi disponibili",
+                "img": "sottoscrivi4.png",
+                "desc": "Il sistema ti chiederà per quale organo vuoi firmare, spunta la casella \"<strong>Seleziona tutto</strong>\"."
+            },
+            {
+                "id": 5,
+                "title": "Clicca sul pulsante Sottoscrivi",
+                "img": "sottoscrivi5.png",
+                "desc": "Scorri la pagina fino a trovare il pulsante \"<strong>Sottoscrivi</strong>\" e cliccaci sopra."
+            },
+            {
+                "id": 6,
+                "title": "Conferma la sottoscrizione",
+                "img": "sottoscrivi6.png",
+                "desc": "Il sistema ti chiederà conferma della sottoscrizione, clicca sul pulsante \"<strong>Si</strong>\"."
+            }
+        ];
+
+        function renderSteps() {
+            const container = document.getElementById('stepsContainer');
+
+            stepsData.forEach((step) => {
+                const card = document.createElement('article');
+                card.className = 'step-card';
+
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'step-image-container';
+                const img = document.createElement('img');
+                img.src = step.img;
+                img.alt = `Screenshot passaggio ${step.id}: ${step.title}`;
+                
+                img.onerror = function() {
+                    this.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600"%3E%3Crect fill="%23d1d1d1" width="900" height="1600"/%3E%3Ctext fill="%23666" font-family="sans-serif" font-size="60" dy="20" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3E${step.img}%3C/text%3E%3C/svg%3E';
+                };
+                imgContainer.appendChild(img);
+
+                const contentContainer = document.createElement('div');
+                contentContainer.className = 'step-content';
+                
+                contentContainer.innerHTML = `
+                    <span class="step-badge">Passo ${step.id} di ${stepsData.length}</span>
+                    <h4>${step.title}</h4>
+                    <p>${step.desc}</p>
+                `;
+
+                card.appendChild(imgContainer);
+                card.appendChild(contentContainer);
+                container.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', renderSteps);
+    </script>
+</body>
+</html>
