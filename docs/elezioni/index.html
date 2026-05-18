@@ -297,6 +297,46 @@
             background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
         }
 
+        /* --- SEZIONE GUIDA AL VOTO --- */
+        .guida-voto-section {
+            background: #ffffff;
+            border: 3px solid #d92d28;
+            border-radius: 1em;
+            padding: 3em 2em;
+            max-width: 800px;
+            margin: 3em auto 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+        }
+
+        .guida-voto-section h3 {
+            background-color: #d92d28;
+            color: white;
+            display: inline-block;
+            padding: 0.3em 0.8em;
+            border-radius: 0.2em;
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .guida-voto-section p {
+            color: #333;
+            font-size: 1.15em;
+            margin-bottom: 1.2em;
+            text-align: left;
+        }
+
+        .testo-evidenziato {
+            background-color: #f8df60;
+            color: #333;
+            font-weight: bold;
+            padding: 0.2em 0.5em;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+
         /* --- FOOTER --- */
         footer {
             background-color: #1a1a1a;
@@ -422,6 +462,31 @@
             <a href="https://www.instagram.com/udupoliba" target="_blank" class="btn btn-instagram">
                 📱 Seguici su @udupoliba
             </a>
+        </section>
+
+        <section class="guida-voto-section text-center">
+            <div style="text-align: center;">
+                <h3>Guida al Voto</h3>
+            </div>
+            <div style="max-width: 650px; margin: 0 auto;">
+                <p>Si vota online:<br>
+                - il 20 maggio dalle <strong>9.00</strong> alle <strong>20.00</strong><br>
+                - il 21 maggio dalle <strong>9.00</strong> alle <strong>14.00</strong></p>
+
+                <p>Per votare, accedi all'area <strong>riservata di ESSE3</strong> e vai nella sezione <strong>ELEZIONI STUDENTESCHE</strong>. Conferma la tua identità sul portale UVote per proseguire con la votazione.</p>
+
+                <p>Scegli gli organi da votare, seleziona la <strong>lista UDU Politecnico</strong>.<br>
+                Clicca su Vai alle <strong>preferenze</strong> e scegli il candidato che vuoi votare.</p>
+
+                <p>Clicca su <strong>VOTA</strong> e poi inserisci scheda nell'urna. Dopo aver votato per un organo <strong>RIPETI questi semplici passaggi</strong> per tutti gli organi.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2.5em;">
+                <span class="testo-evidenziato">Clicca sul link per votare!</span><br><br>
+                <a href="https://uvote2.cineca.it/static/redir.html?idp=samlPoliba" target="_blank" class="btn" style="padding: 1em 2em; font-size: 1.1em;">
+                    🔗 Vai alla pagina del voto!
+                </a>
+            </div>
         </section>
 
     </main>
