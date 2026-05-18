@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Programma Elettorale - UDU Politecnico</title>
+    <meta name="description" content="Scopri il programma elettorale di UDU Politecnico. Vota il 20 e 21 Maggio per cambiare il nostro Politecnico." />
+    <meta name="theme-color" content="#c8242a" />
+    <meta property="og:image" content="https://udupoliba.github.io/hub/elezioni/copertinaElezioni.png" />
+    <meta property="og:url" content="https://udupoliba.github.io/hub/" />
+
+    <link rel="icon" href="logoElezioni.svg" type="image/svg+xml">
+
+    <style>
+        @font-face {
+            font-family: 'Argentum Sans';
+            src: url('../fonts/ArgentumSans-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Argentum Sans', sans-serif;
+            background: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- CLASSE GLOBALE PER LO SFONDO A QUADRETTI --- */
+        .grid-background {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, #e8e8e8 2px, transparent 2px),
+                linear-gradient(to bottom, #e8e8e8 2px, transparent 2px);
+            background-color: #fdfdfd;
+        }
+
+        /* --- HEADER / GRAFICA RESPONSIVE --- */
+        .campaign-banner-container {
+            padding: 3em 1.5em;
+            display: flex;
+            justify-content: center;
+        }
+
+        .campaign-banner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            align-items: stretch;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .color-boxes {
+            display: flex;
+            gap: 12px;
+            flex: 1 1 45%;
+            min-width: 250px;
+        }
+
+        .color-box {
+            flex: 1 1 0;
+            min-height: 70px;
+        }
+
+        .box-blue { background-color: #8fd4f2; }
+        .box-green { background-color: #1ac07c; }
+        .box-yellow { background-color: #f8df60; }
+        .box-orange { background-color: #ffb350; }
+        .box-pink { background-color: #ffa5a0; }
+        .box-purple { background-color: #c378e5; }
+
+        .slogan-box {
+            background-color: #c8242a;
+            color: white;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex: 1 1 45%;
+            min-width: 300px;
+            overflow: hidden;
+        }
+
+        .slogan-text {
+            font-family: 'Arial Black', impact, sans-serif;
+            font-size: 1.6rem;
+            line-height: 1;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            letter-spacing: -0.5px;
+            padding-right: 80px;
+        }
+
+        .slogan-text span {
+            font-size: 2.2rem;
+        }
+
+        .slogan-logo {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: auto;
+            z-index: 1;
+        }
+
+        /* --- DOWNLOADS HEADER (GIALLO) --- */
+        .download-header {
+            text-align: center;
+            padding: 3em 1.5em;
+            background-color: #efdd61;
+        }
+
+        .download-header h1 {
+            font-size: 2.2em;
+            margin: 0 0 0.2em;
+            color: #333;
+        }
+
+        .download-header p {
+            font-size: 1.1em;
+            color: #444;
+            max-width: 650px;
+            margin: 0 auto 1.5em;
+        }
+
+        /* --- SEZIONI CONTENUTO --- */
+        .program-section {
+            padding: 3em 1.5em 1em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #d92d28;
+            font-size: 2em;
+            margin-bottom: 1em;
+            text-align: center;
+            border-bottom: 3px solid #efdd61;
+            display: inline-block;
+            padding-bottom: 0.2em;
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5em;
+            margin-bottom: 2em;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .program-card {
+            background: #f9f9f9;
+            padding: 1.5em;
+            border-radius: 1em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Colori Sezioni Generali */
+        .card-1 { border-color: #8fd4f2; }
+        .card-2 { border-color: #1ac07c; }
+        .card-3 { border-color: #f8df60; }
+        .card-4 { border-color: #ffb350; }
+        .card-5 { border-color: #ffa5a0; }
+        .card-6 { border-color: #c378e5; }
+        
+        /* Colori Sezioni Dipartimentali */
+        .card-dei { border-color: #77dedd; }
+        .card-dmmm { border-color: #ff9aa3; }
+        .card-dicatech { border-color: #c5e1a5; }
+        .card-arcod { border-color: #a8d9ef; }
+
+        .program-card h4 {
+            margin-top: 0;
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+            color: #222;
+        }
+
+        .program-card p.summary {
+            color: #444;
+            font-size: 1em;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin: 0;
+        }
+
+        /* --- PULSANTI --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 0.8em 1.5em;
+            font-size: 1em;
+            background-color: #d92d28;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+            text-align: center;
+            border: 2px solid transparent; 
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b8211d;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #333;
+            border: 2px solid #333;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn-small {
+            padding: 0.5em 1em;
+            font-size: 0.9em;
+            margin-top: 1.5em;
+            align-self: flex-start;
+        }
+
+        /* Pulsanti Dipartimentali Custom */
+        .btn-dei { border-color: #77dedd; color: #333; }
+        .btn-dei:hover { background-color: #77dedd; color: #333; }
+
+        .btn-dmmm { border-color: #ff9aa3; color: #333; }
+        .btn-dmmm:hover { background-color: #ff9aa3; color: #333; }
+
+        .btn-dicatech { border-color: #c5e1a5; color: #333; }
+        .btn-dicatech:hover { background-color: #c5e1a5; color: #333; }
+
+        .btn-arcod { border-color: #a8d9ef; color: #333; }
+        .btn-arcod:hover { background-color: #a8d9ef; color: #333; }
+
+        /* --- SEZIONE INSTAGRAM --- */
+        .instagram-section {
+            background: linear-gradient(135deg, #fdfdfd, #f4f4f4);
+            border: 2px dashed #ccc;
+            border-radius: 1em;
+            padding: 2.5em 1.5em;
+            max-width: 800px;
+            margin: 3em auto 0;
+            text-align: center;
+        }
+
+        .instagram-section h3 {
+            font-size: 1.8em;
+            color: #d92d28;
+            margin-top: 0;
+            margin-bottom: 0.3em;
+        }
+
+        .instagram-section p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            border: none;
+        }
+
+        .btn-instagram:hover {
+            background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 4em 1.5em;
+            margin-top: 3em;
+        }
+
+        .footer-vote {
+            font-size: 1.8em;
+            color: #efdd61;
+            margin-bottom: 0.2em;
+            margin-top: 0;
+        }
+
+        .simpleLink {
+            color: inherit;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="campaign-banner-container grid-background">
+        <div class="campaign-banner">
+            <div class="color-boxes">
+                <div class="color-box box-blue"></div>
+                <div class="color-box box-green"></div>
+                <div class="color-box box-yellow"></div>
+                <div class="color-box box-orange"></div>
+                <div class="color-box box-pink"></div>
+                <div class="color-box box-purple"></div>
+            </div>
+            
+            <div class="slogan-box">
+                <div class="slogan-text">
+                    ESCI DALL'OMBRA,<br><span>SCEGLI IL SOLE!</span>
+                </div>
+                <img src="logoElezioni.svg" alt="UDU Politecnico" class="slogan-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="download-header">
+        <img src="logoElezioni.svg" alt="UDU Politecnico Logo" style="max-width: 90px; margin-bottom: 1em;">
+        <h1>Il Nostro Programma</h1>
+        <p>Idee chiare, obiettivi concreti. Scopri le nostre proposte per un Politecnico più equo, sostenibile e a misura di studente.</p>
+        
+        <a href="programma/UDU_Politecnico_programmaElettorale26.pdf" download class="btn" style="background-color: #d92d28; color: white; border: none;">
+            📄 Scarica il Programma Completo!
+        </a>
+    </section>
+
+    <main class="program-section">
+        <h2 class="section-title">I Nostri 6 Pilastri</h2>
+        
+        <div class="grid-2">
+            <article class="program-card card-1">
+                <h4>📘 1. Tasse Universitarie</h4>
+                <p class="summary">Vogliamo estendere la no-tax area fino a 30.000 euro di ISEE ed eliminare le penali per il mancato raggiungimento dei CFU e per gli studenti fuoricorso. Chiediamo di abbassare le penali per i ritardi nei pagamenti e di consentire l'iscrizione anche prima del pagamento della prima rata. È inoltre fondamentale prevedere agevolazioni temporali per gli studenti lavoratori e abbassare a 50 euro la tassa di ricognizione.</p>
+            </article>
+
+            <article class="program-card card-2">
+                <h4>📗 2. Spazi e Città Universitaria</h4>
+                <p class="summary">Chiediamo l'apertura delle biblioteche e aule studio dalle 8:00 a mezzanotte, inclusi i weekend, e l'istituzione di resting rooms per il riposo individuale. Per i trasporti, vogliamo la gratuità per gli universitari e corse notturne urbane ed extraurbane. Sul fronte abitativo, proponiamo di potenziare il bonus affitti comunale e applicare maggiormente il canone concordato tutelando la componente studentesca.</p>
+            </article>
+
+            <article class="program-card card-3">
+                <h4>📒 3. Didattica</h4>
+                <p class="summary">Proponiamo l'aumento da 8 a 10 degli appelli minimi garantiti, vietando categoricamente le sovrapposizioni e il "salto d'appello". Vogliamo eliminare le propedeuticità limitanti e garantire a tutti l'accesso gratuito ai software necessari e al materiale didattico tramite Teams. Chiediamo inoltre l'inserimento di esami a scelta fin dal primo anno.</p>
+            </article>
+
+            <article class="program-card card-4">
+                <h4>📙 4. Diritto allo studio Universitario</h4>
+                <p class="summary">Lottiamo per mantenere la copertura totale delle borse di studio anche al termine dei fondi PNRR e per includere esami parziali e moduli nel calcolo dei requisiti di merito. Vogliamo ridurre a 50 minuti il tempo di percorrenza per ottenere lo status di fuorisede e chiediamo un contributo affitto regionale per gli studenti con ISEE sotto i 35.000€ esclusi dalle borse di studio.</p>
+            </article>
+
+            <article class="program-card card-5">
+                <h4>📕 5. Tirocini e Post Lauream</h4>
+                <p class="summary">Esigiamo progetti formativi chiari con mansioni definite per evitare lo sfruttamento e la garanzia di coperture assicurative. I tirocini non devono sovrapporsi alla didattica obbligatoria e vogliamo rimborsi per trasporti e buoni pasto. Chiediamo inoltre la convalida delle attività lavorative coerenti come tirocinio e un supporto concreto per l'esame di Stato e i concorsi pubblici.</p>
+            </article>
+
+            <article class="program-card card-6">
+                <h4>📘 6. Servizi e Internazionalizzazione</h4>
+                <p class="summary">Puntiamo a potenziare il counseling psicologico e a distribuire gratuitamente erogatori d'acqua, oltre a materiale igienico-sanitario e contraccettivo a prezzi calmierati in ateneo. Sul fronte internazionale, vogliamo un sito web tradotto in più lingue, l'istituzione di uno sportello dedicato e aperto tutti i giorni, e una più rapida erogazione delle borse Erasmus.</p>
+            </article>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 1.5em;">Programmi Dipartimentali</h2>
+        <p style="text-align: center; color: #555; margin-bottom: 2em;">Le proposte specifiche per il tuo corso di studi. Scarica il PDF dedicato al tuo dipartimento.</p>
+
+        <div class="grid-2">
+            <article class="program-card card-dei">
+                <h4>💻 Dipartimento DEI</h4>
+                <p class="summary">Proponiamo di separare la verbalizzazione degli esami da 12 CFU a moduli indipendenti e di aggiornare i piani di studio introducendo tecnologie moderne. Chiediamo simulazioni d'esame, esoneri aperti a tutt3 per i corsi oltre i 6 CFU e l'uso di software open source o gratuiti. Vogliamo semplificare il cambio degli esami a scelta e potenziare il confronto tramite il Tutor Accademico.</p>
+                <a href="programma/DEI_ProgrammaUDUPolitecnico.pdf" download class="btn btn-small btn-outline btn-dei">⬇️ Scarica il programma per il DEI</a>
+            </article>
+
+            <article class="program-card card-dmmm">
+                <h4>⚙️ Dipartimento DMMM</h4>
+                <p class="summary">Vogliamo rendere le propedeuticità fortemente consigliate e non bloccanti, uniformare i programmi d'esame tra i docenti e garantire l'accesso gratuito ai software necessari senza limiti di tempo. Chiediamo tempistiche certe per gli esiti, simulazioni d'esame obbligatorie, il potenziamento dei laboratori informatici e l'estensione degli esami orali fuori sessione.</p>
+                <a href="programma/DMMM_ProgrammaUDUPolitecnico.pdf" download class="btn btn-small btn-outline btn-dmmm">⬇️ Scarica il programma per il DMMM</a>
+            </article>
+
+            <article class="program-card card-dicatech">
+                <h4>🏗️ Dipartimento DICATECh</h4>
+                <p class="summary">Pretendiamo un calendario esami senza sovrapposizioni pubblicato a inizio semestre e la trasformazione delle propedeuticità in attività solo consigliate. Vogliamo incrementare le visite nei cantieri per avvicinarci al mondo del lavoro, garantire l'accesso gratuito a software essenziali come Metashape e istituire un sistema di prenotazione per sfruttare le aule libere del dipartimento.</p>
+                <a href="programma/DICATECH_ProgrammaUDUPolitecnico.pdf" download class="btn btn-small btn-outline btn-dicatech">⬇️ Scarica il programma per il DICATECh</a>
+            </article>
+
+            <article class="program-card card-arcod">
+                <h4>📐 Dipartimento ARCOD</h4>
+                <p class="summary">Chiediamo aule adeguate con prese elettriche, potenziamento del Wi-Fi e spazi aperti prolungati per l'uso libero. Proponiamo un'area attrezzata per la modellistica con riciclo materiali, l'erogazione gratuita di licenze (Adobe, Rhino), il rimborso per gli spostamenti legati ai laboratori e un aumento delle sedute di laurea pari a quelle dei corsi di Ingegneria.</p>
+                <a href="programma/ARCOD_ProgrammaUDUPolitecnico.pdf" download class="btn btn-small btn-outline btn-arcod">⬇️ Scarica il programma per ARCOD</a>
+            </article>
+        </div>
+
+        <section class="instagram-section">
+            <h3>Conosci l3 nostr3 candidat3! 👋</h3>
+            <p>Scopri i volti di chi ha scelto di mettersi in gioco per il nostro Politecnico. Passa a trovarci sui social!</p>
+            <a href="https://www.instagram.com/udupoliba" target="_blank" class="btn btn-instagram">
+                📱 Seguici su @udupoliba
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2 class="footer-vote">Fai la differenza.</h2>
+        <p style="margin-bottom: 2em; color: #ddd; font-size: 1.2em;">Il <strong>20 e 21 Maggio</strong> sostieni il nostro programma.<br>Vota <strong>UDU Politecnico</strong>!</p>
+        <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap;">
+            <a href="../" class="btn btn-outline" style="border-color: #fff; color: #fff;">Torna a UDU Hub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
