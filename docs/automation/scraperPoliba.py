@@ -5,7 +5,7 @@ import ssl
 import sys # <--- Necessario per segnalare errori al Master Script
 
 def estrai_json_poliba():
-    url = "https://www.poliba.it/it/content/orari-delle-lezioni-20252026"
+    url = "https://www.poliba.it/it/orari-delle-lezioni"
     print(f"⏳ Sto scaricando la pagina: {url}")
     
     ctx = ssl.create_default_context()
@@ -22,7 +22,7 @@ def estrai_json_poliba():
             html = response.read().decode('utf-8')
             
         # La tua Regex è ottima, la manteniamo!
-        pattern = re.compile(r'const\s+data\s*=\s*(\{.*?\});\s*(?:console\.log|const\s+departmentSelect)', re.DOTALL)
+        pattern = re.compile(r'const\s+data\s*=\s*(\{.*?\});', re.DOTALL)
         match = pattern.search(html)
         
         if match:
