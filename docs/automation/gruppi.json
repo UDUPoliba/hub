@@ -1,6 +1,6 @@
 {
   "gruppi_wz": {
-    "CORSI COMUNI 26/27": {
+    "CORSI COMUNI": {
       "Ins.COMUNI ClasseA": "https://chat.whatsapp.com/H33E4gIt13D9gwzxBuQcX5",
       "Ins.COMUNI ClasseB": "https://chat.whatsapp.com/JFa82CqmOWy79pJrJ0IgKz",
       "Ins.COMUNI ClasseC": "https://chat.whatsapp.com/Cb6Myz03Mrb609IiHhZ9Kv",
@@ -13,7 +13,7 @@
       "Ins.COMUNI ClasseM": "https://chat.whatsapp.com/KHWfwpua0uhEehPCRIHZTY",
       "Ins.COMUNI ClasseN": "https://chat.whatsapp.com/Il3Kwb8jRVEHl9EXam5C3T"
     },
-    "Architettura": [
+    "LM Architettura": [
       { "name": "1° Anno", "link": "https://chat.whatsapp.com/DCgcxmvEhxFBW68mkOIFbU"},
       { "name": "2° Anno", "link": "https://chat.whatsapp.com/LfaFYeYJymV4DfygyvJ0Al" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/EbVeCKmdxJfKafIKZEQWmA" },
