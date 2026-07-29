@@ -157,6 +157,14 @@
             background: #111;
         }
 
+        .btn-banner{
+            background-color: #d41464;
+        }
+
+        .btn-banner:hover{
+            background-color: #ad1152;
+        }
+
         strong {
             color: #d92d28;
         }
@@ -179,8 +187,8 @@
 <div class="container">
 
 <!--BANNER TEMPORANEO -->
-    <div id="elezioniBanner" style="margin-bottom: 1.5em;">
-        <button onclick="window.location.href='graduatorie-ing'" style="background-color: #d41464; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+    <div id="avvisiBanner" style="margin-bottom: 1.5em;">
+        <button class="btn-banner" onclick="window.location.href='graduatorie-ing'">
             👉​Consulta le graduatorie 26/27!
         </button>
         <hr style="border: 0; border-bottom: 1px solid rgba(0,0,0,0.1); margin-top: 1.5em; margin-bottom: -1.5em;">
@@ -235,6 +243,7 @@
         backBtn: document.getElementById('backBtn'),
         pageArea: document.getElementById('pageArea'),
         mainHeader: document.getElementById('mainHeader'),
+        avvisiBanner: document.getElementById('avvisiBanner'),
     };
 
     function clear(node) {
@@ -244,6 +253,9 @@
     function showMainHeader(show) {
         if (!el.mainHeader) return;
         el.mainHeader.style.display = show ? '' : 'none';
+        if (el.avvisiBanner) {
+            el.avvisiBanner.style.display = show ? '' : 'none';
+        }
     }
 
     function showTopLogo(show) {
