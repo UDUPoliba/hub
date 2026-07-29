@@ -43,7 +43,7 @@ def aggiorna_orari_udu():
                 match_trovati = [
                     p for p in lista_corsi_poliba 
                     if p['name'] == nome_corso 
-                    and str(p['year']).startswith(f"{id_anno}°")
+                    and (str(p['year']).startswith(f"{id_anno}°") or str(p['year']).startswith(f"{id_anno}&#176;"))
                     and p.get('semester') == semestre_scelto
                 ]
 
