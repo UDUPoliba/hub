@@ -1,20 +1,20 @@
 {
   "gruppi_wz": {
-    "CORSI COMUNI": {
-      "Ins.COMUNI ClasseA": "https://chat.whatsapp.com/CJildVyRWcRI9oBfxikUO0",
-      "Ins.COMUNI ClasseB": "https://chat.whatsapp.com/I7PavEMNHiF2U2Gkw22nYg",
-      "Ins.COMUNI ClasseC": "https://chat.whatsapp.com/LZiD2SuaxrdDTEQG6xu49g",
-      "Ins.COMUNI ClasseD": "https://chat.whatsapp.com/KwhedGFmg8V41FkfwvHADE",
-      "Ins.COMUNI ClasseE": "https://chat.whatsapp.com/IXTBm28kRjmAPwYF3860a4",
-      "Ins.COMUNI ClasseG": "https://chat.whatsapp.com/LnCfOuzqmXWGkFw9uS2GRB",
-      "Ins.COMUNI ClasseH": "https://chat.whatsapp.com/LV8fNzpbtRG86hKzOHF4H2",
-      "Ins.COMUNI ClasseI": "https://chat.whatsapp.com/HiMPxiw7UB5CYNrb1piVH1",
-      "Ins.COMUNI ClasseL": "https://chat.whatsapp.com/FbMWG76rRUv5g7lre614EF",
-      "Ins.COMUNI ClasseM": "https://chat.whatsapp.com/D8GdMa4CLC9BrUp7RYk24V",
-      "Ins.COMUNI ClasseN": "https://chat.whatsapp.com/BodSiCfCs3g7MKLi2RWxc6"
+    "CORSI COMUNI 26/27": {
+      "Ins.COMUNI ClasseA": "https://chat.whatsapp.com/H33E4gIt13D9gwzxBuQcX5",
+      "Ins.COMUNI ClasseB": "https://chat.whatsapp.com/JFa82CqmOWy79pJrJ0IgKz",
+      "Ins.COMUNI ClasseC": "https://chat.whatsapp.com/Cb6Myz03Mrb609IiHhZ9Kv",
+      "Ins.COMUNI ClasseD": "https://chat.whatsapp.com/FufzUXwezNhEmH0k0n4VSM",
+      "Ins.COMUNI ClasseE": "https://chat.whatsapp.com/EJjixUTlsi1AoybL63Fyu7",
+      "Ins.COMUNI ClasseG": "https://chat.whatsapp.com/BkInUjzixrcG3Z4buBb5rm",
+      "Ins.COMUNI ClasseH": "https://chat.whatsapp.com/BuNamDNJLGW16D1uNXJo8S",
+      "Ins.COMUNI ClasseI": "https://chat.whatsapp.com/EuAazGdH4gQ7MNK9E8dtF4",
+      "Ins.COMUNI ClasseL": "https://chat.whatsapp.com/IAU0ZT9A2vQBd8nTo315J7",
+      "Ins.COMUNI ClasseM": "https://chat.whatsapp.com/KHWfwpua0uhEehPCRIHZTY",
+      "Ins.COMUNI ClasseN": "https://chat.whatsapp.com/Il3Kwb8jRVEHl9EXam5C3T"
     },
     "Architettura": [
-      { "name": "1° Anno", "link": ""},
+      { "name": "1° Anno", "link": "https://chat.whatsapp.com/DCgcxmvEhxFBW68mkOIFbU"},
       { "name": "2° Anno", "link": "https://chat.whatsapp.com/LfaFYeYJymV4DfygyvJ0Al" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/EbVeCKmdxJfKafIKZEQWmA" },
       { "name": "3° Corso A", "link": "https://chat.whatsapp.com/ElZWO1pTD24HAzt4vi1wsQ" },
@@ -32,8 +32,8 @@
       { "name": "FC", "link": "https://chat.whatsapp.com/BTn6604sN2DBTuy1XHCnN0" }
     ],
     "LT Ing. Meccanica": [
-      { "name": "1° AK", "link": ""},
-      { "name": "1° LZ", "link": ""},
+      { "name": "1° AK", "link": "https://chat.whatsapp.com/BkqS2CSJGp5INCV6qHfKBd"},
+      { "name": "1° LZ", "link": "https://chat.whatsapp.com/CVxw5V1wcRV8BJf9IiWaq5"},
       { "name": "2° AK", "link": "https://chat.whatsapp.com/Crk5AuxLBd98jxKcKIbJTM" },
       { "name": "2° LZ", "link": "https://chat.whatsapp.com/GUeddTOZYZt5SWcLUIlSfF" },
       { "name": "3° AK", "link": "https://chat.whatsapp.com/ERIWTbZkwAy0H66XqH6TCG" },
@@ -44,14 +44,14 @@
       { "name": "FC LZ", "link": "https://chat.whatsapp.com/Fzr8i97PjOSL8CkdTFDWgM" }
     ],
     "LT Ing. Edile": [
-      { "name": "1° Anno", "link": ""},
+      { "name": "1° Anno", "link": "https://chat.whatsapp.com/H6NmQMMgI3YAhhig7jZYy9"},
       { "name": "2° Anno", "link": "https://chat.whatsapp.com/BSc0SKtEucm6GKR3NgE35O" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/HYpk0YEl1NA2zG0W4TXW9z" },
       { "name": "FC (26/27)", "link": "https://chat.whatsapp.com/JK5pk0GLLIN7S7vmLUPnZN" },
       { "name": "FC", "link": "https://chat.whatsapp.com/JiObFlmQczz3SQkki27yD4" }
     ],
     "LT Ing. Elettronica e Tec. Internet": [
-      { "name": "1° Anno", "link": ""},
+      { "name": "1° Anno", "link": "https://chat.whatsapp.com/KOGGWKAD1aXL2x8bMIeJpq?s=cl&p=a&mlu=2"},
       { "name": "2° Anno", "link": "https://chat.whatsapp.com/F2OQGetkucM8QmMFZajHyL" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/IuKWJd324jBArW6S27fRBV" },
       { "name": "FC (26/27)", "link": "https://chat.whatsapp.com/Eq0TGrWCtzc0fSl9ZtugFv" },
@@ -59,8 +59,8 @@
       { "name": "FC (24/25)", "link": "https://chat.whatsapp.com/LD0O4QlFMd72B9jVNrE8oG" }
     ],
     "LT Ing. Sistemi Medicali": [
-      { "name": "1° AL", "link": ""},
-      { "name": "1° MZ", "link": ""},
+      { "name": "1° AL", "link": "https://chat.whatsapp.com/EKFi6oIx1dZ3Mpg9gdgb2t"},
+      { "name": "1° MZ", "link": "https://chat.whatsapp.com/BMMPm4p6HYg0AYTWzVeUvc"},
       { "name": "2° AL", "link": "https://chat.whatsapp.com/FwmmraW2SYe4Fl5f9nWaxk" },
       { "name": "2° MZ", "link": "https://chat.whatsapp.com/GC4QqAxoBX83JcQBkT9b3I" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/C6ccDwTj8yEFeK44sqGUmK" },
@@ -74,13 +74,13 @@
       { "name": "FC MZ", "link": "https://chat.whatsapp.com/Hp77binLxxUHbvSUJPvzNs" }
     ],
     "LT Ing. Civile & Ambientale": [
-      { "name": "Civile 1°", "link": ""},
+      { "name": "Civile 1°", "link": "https://chat.whatsapp.com/HCef5P6bufQ4E5chXoGxOm"},
       { "name": "Civile 2°", "link": "https://chat.whatsapp.com/H6rt4FfURK7LceuhRtiMIP" },
       { "name": "Civile 3°", "link": "https://chat.whatsapp.com/D7T9dH5Easn92LQU8J8EeE" },
       { "name": "Civile FC (26/27)", "link": "https://chat.whatsapp.com/LQ3O3ksPZ5G6CNeYAq9EIH" },
       { "name": "Civile FC (25/26)", "link": "https://chat.whatsapp.com/GB6xDgSZkpgAkSFEafLxNO" },
       { "name": "Civile FC (24/25)", "link": "https://chat.whatsapp.com/C4VoW0Xck5hCnq7yh0e5ib" },
-      { "name": "Ambientale 1°", "link": ""},
+      { "name": "Ambientale 1°", "link": "https://chat.whatsapp.com/DHowwX8SnSeHXGlh3zsPK3"},
       { "name": "Ambientale 2°", "link": "https://chat.whatsapp.com/CZPVL1HnPcN6FS7Zj1Uaag" },
       { "name": "Ambientale 3°", "link": "https://chat.whatsapp.com/EBsUVeYCasY6vocoDEFUE6" },
       { "name": "Ambientale FC (26/27)", "link": "https://chat.whatsapp.com/HFwEHsOKhZo7aquwGa99Px" },
@@ -88,18 +88,18 @@
       { "name": "Ambientale FC (24/25)", "link": "https://chat.whatsapp.com/CX2dSNatPA2HTW5YAyrwP0" }
     ],
     "LT Ing. Civile e Ambientale": [
-      { "name": "TA 26/27", "link": ""},
+      { "name": "TA 26/27", "link": "https://chat.whatsapp.com/JKrl0PP25Ey0omaABkfjpU"},
       { "name": "TA 25/26", "link": "https://chat.whatsapp.com/E6dkHXYJyMv4DYeiQL4aNe" }
     ],
     "LT Design": [
-      { "name": "Design 1°", "link": ""},
+      { "name": "Design 1°", "link": "https://chat.whatsapp.com/BB6Zc8ggPeI6DGcgennX1Y?s=cl&p=a&mlu=2"},
       { "name": "Design 2°", "link": "https://chat.whatsapp.com/HpSNocOTKqPHs42GMtj7JN" },
       { "name": "Design 3°", "link": "https://chat.whatsapp.com/FjXa45EOrIAClOTqQ744a4" },
       { "name": "Design 1FC", "link": "https://chat.whatsapp.com/Ht5mskFVifY4ilnxEKe53O" },
       { "name": "Design FC", "link": "https://chat.whatsapp.com/F56jsdRBIeE76pKdz1f9Qo" }
     ],
     "LT Ing. Energia Elettrica": [
-      { "name": "1° Anno", "link": ""},
+      { "name": "1° Anno", "link": "https://chat.whatsapp.com/IFz0FpA6xwU8nxbVCRukgi"},
       { "name": "2° Anno", "link": "https://chat.whatsapp.com/Bt8QMovTOtgCKyQw2Y1xUh" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/HBozPVfI1Di5pvGOWnVeyc" },
       { "name": "FC (26/27) Anno", "link": "https://chat.whatsapp.com/CwL3dMWMFLV48FjNeOUgXX" },
@@ -107,12 +107,12 @@
       { "name": "FC (24/25)", "link": "https://chat.whatsapp.com/IAIZ4wLxpvfLIojMTPUGiQ" }
     ],
     "LP Costr. & Gestione Ambientale & Territoriale": [
-      { "name": "1° Anno", "link": ""},
+      { "name": "1° Anno", "link": "https://chat.whatsapp.com/Imwuhj5RkfEGYxVPreUp1Z"},
       { "name": "2° Anno", "link": "https://chat.whatsapp.com/LTDe5DeSY8yBarI6F4XS5q" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/CjVdd72uwlz4kNAERfQ2zl" }
     ],
     "LT Ing. Industriale e Sistemi Navali": [
-      { "name": "1° Anno", "link": ""},
+      { "name": "1° Anno", "link": "https://chat.whatsapp.com/ETFUDGIN8mc2p5aXMAEaVR"},
       { "name": "2° Anno", "link": "https://chat.whatsapp.com/ClCO6iNu9d3KGpK7bRB27V" },
       { "name": "3° Anno", "link": "https://chat.whatsapp.com/Ix9hdl0yYdBLPTGhm42JhO" }
     ],
@@ -125,8 +125,8 @@
       { "name": "FC", "link": "https://chat.whatsapp.com/L42rKVsQlbUCgd7nYOu9Ul" }
     ],
     "LT Ing. Gestionale": [
-      { "name": "1° AK", "link": ""},
-      { "name": "1° LZ", "link": ""},
+      { "name": "1° AK", "link": "https://chat.whatsapp.com/JFPUDc6IeZ8Likk9dxBS5S"},
+      { "name": "1° LZ", "link": "https://chat.whatsapp.com/FkawrSAGrkn10PDctlNrjd"},
       { "name": "2° AK", "link": "https://chat.whatsapp.com/DCs3uqpEz63A9p31nxCJnh" },
       { "name": "2° LZ", "link": "https://chat.whatsapp.com/J9LZ0immAEXKPqT2ynJ9GA" },
       { "name": "3° AK", "link": "https://chat.whatsapp.com/BCFowpfRAhN6XnePE4nxQV" },
@@ -140,8 +140,8 @@
       { "name": "FC (24/25)", "link": "https://chat.whatsapp.com/F2X96CSXzSBFKbCyJwZLAi" }
     ],
     "LT Ing. Informatica e Automazione": [
-      { "name": "1° AL", "link": ""},
-      { "name": "1° MZ", "link": ""},
+      { "name": "1° AL", "link": "https://chat.whatsapp.com/LbY0eT89kjwCpXlNOHwIhg"},
+      { "name": "1° MZ", "link": "https://chat.whatsapp.com/BRf9w32xxXg08BRdjlgYaV"},
       { "name": "2° AL", "link": "https://chat.whatsapp.com/FL9glIGS40kDuBUXwNXovv" },
       { "name": "2° MZ", "link": "https://chat.whatsapp.com/ByniV3Q4htOEGiwfBV2Njq" },
       { "name": "3° AL", "link": "https://chat.whatsapp.com/DaQ7QCrzlsT48VAQtwqi4N" },
@@ -154,17 +154,17 @@
       { "name": "Sistemi e App. Info.", "link": "https://chat.whatsapp.com/LOEt3or0CI4IUUzD3ZINCg" }
     ],
     "LT Ing. Informatica e Automazione (TA)": [
-      { "name": "PTECH 26/27", "link": ""},
+      { "name": "PTECH 26/27", "link": "https://chat.whatsapp.com/D4oHUdZQw9dJ1PCI9uUUk2"},
       { "name": "PTECH 25/26", "link": "https://chat.whatsapp.com/LTsyKuZHDxAHmmz8rmuuPy" },
       { "name": "PTECH 24/25", "link": "https://chat.whatsapp.com/BYbhb8X3dqhG5bRvCwYiO9" },
       { "name": "PTECH 23/24", "link": "https://chat.whatsapp.com/FBflVS4ifjIAjYcwJSVwR9" }
     ],
     "LT Ing. Civile e Ambientale (TA)": [
-      { "name": "Civile e Ambientale (TA) 26/27", "link": ""},
+      { "name": "Civile e Ambientale (TA) 26/27", "link": "https://chat.whatsapp.com/JKrl0PP25Ey0omaABkfjpU"},
       { "name": "Civile e Ambientale (TA) 25/26", "link": "https://chat.whatsapp.com/E6dkHXYJyMv4DYeiQL4aNe" }
     ],
     "LT Ing. Sistemi Aerospaziali": [
-      { "name": "Sistemi Aerospaziali 1°", "link": ""},
+      { "name": "Sistemi Aerospaziali 1°", "link": "https://chat.whatsapp.com/IUyY1SJF7zh1FYMnIiYzrv"},
       { "name": "Sistemi Aerospaziali 2°", "link": "https://chat.whatsapp.com/HAndPkbbZ43Hum6KUjXbvM" },
       { "name": "Sistemi Aerospaziali 3°", "link": "https://chat.whatsapp.com/BVMFWBmr4ywIH2WkwnNjbF" },
       { "name": "Sistemi Aerospaziali FC", "link": "https://chat.whatsapp.com/KZk1NnkPeq5J8yQbqOXP6P" }
@@ -188,11 +188,11 @@
       { "name": "Cyberphysical FC", "link": "https://chat.whatsapp.com/EETTjOhoqS9LeJfjt4l3ND" }
     ],
     "LT Ing. della Creatività Digitale": [
-      { "name": "Creatività Digitale 1°", "link": ""},
+      { "name": "Creatività Digitale 1°", "link": "https://chat.whatsapp.com/BhDheqdbhqfGEihjd3UDCG"},
       { "name": "Creatività Digitale 2°", "link": "https://chat.whatsapp.com/Js6E1tJgsztDqy2Mo9Wz4h" }
     ],
     "LT Management Engineering for Innovation": [
-      { "name": "Management Engineering 1°", "link": ""}
+      { "name": "Management Engineering 1°", "link": "https://chat.whatsapp.com/DNhzBRZHsatA67tt3iri15"}
     ]
 
   }

@@ -1,6 +1,6 @@
 {
   "data": {
-    "CORSI COMUNI": {
+    "CORSI COMUNI 26/27": {
       "courses": [
         {
           "id": "Ins.COMUNI_Ins.COMUNI ClasseA",
@@ -192,11 +192,11 @@
               "groups": [
                 {
                   "name": "1° AL",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/LbY0eT89kjwCpXlNOHwIhg"
                 },
                 {
                   "name": "1° MZ",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/BRf9w32xxXg08BRdjlgYaV"
                 }
               ],
               "time_table": {
@@ -273,7 +273,7 @@
               "groups": [
                 {
                   "name": "1° Anno",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/KOGGWKAD1aXL2x8bMIeJpq?s=cl&p=a&mlu=2"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a09af8401eb7001f739066"
@@ -321,7 +321,7 @@
               "groups": [
                 {
                   "name": "1° Anno",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/IFz0FpA6xwU8nxbVCRukgi"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=679c83474528520019aac347"
@@ -369,11 +369,11 @@
               "groups": [
                 {
                   "name": "1° AL",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/EKFi6oIx1dZ3Mpg9gdgb2t"
                 },
                 {
                   "name": "1° MZ",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/BMMPm4p6HYg0AYTWzVeUvc"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a07d4a348409001a1a01e6"
@@ -448,7 +448,7 @@
               "groups": [
                 {
                   "name": "Creatività Digitale 1°",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/BhDheqdbhqfGEihjd3UDCG"
                 }
               ],
               "time_table": ""
@@ -765,7 +765,7 @@
               "groups": [
                 {
                   "name": "1° Anno",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/Imwuhj5RkfEGYxVPreUp1Z"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60de1a3752a001f612ad1"
@@ -801,7 +801,7 @@
               "groups": [
                 {
                   "name": "1° Anno",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/H6NmQMMgI3YAhhig7jZYy9"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a608b24528520019ab8c20"
@@ -845,11 +845,11 @@
               "groups": [
                 {
                   "name": "Civile 1°",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/HCef5P6bufQ4E5chXoGxOm"
                 },
                 {
                   "name": "Ambientale 1°",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/DHowwX8SnSeHXGlh3zsPK3"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a60a2d5142e1001e3df15e"
@@ -1002,11 +1002,11 @@
               "groups": [
                 {
                   "name": "1° AK",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/JFPUDc6IeZ8Likk9dxBS5S"
                 },
                 {
                   "name": "1° LZ",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/FkawrSAGrkn10PDctlNrjd"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a606e2d1571c00196441b6"
@@ -1078,11 +1078,11 @@
               "groups": [
                 {
                   "name": "1° AK",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/BkqS2CSJGp5INCV6qHfKBd"
                 },
                 {
                   "name": "1° LZ",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/CVxw5V1wcRV8BJf9IiWaq5"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67a5d836401eb7001f7432fc"
@@ -1136,7 +1136,28 @@
         {
           "id": "LT35_LT Management Engineering for Innovation",
           "name": "LT Management Engineering for Innovation",
-          "years": []
+          "years": [
+            {
+              "id": "1",
+              "groups": [
+                {
+                  "name": "Management Engineering 1°",
+                  "link": "https://chat.whatsapp.com/DNhzBRZHsatA67tt3iri15"
+                }
+              ],
+              "time_table": ""
+            },
+            {
+              "id": "2",
+              "groups": [],
+              "time_table": ""
+            },
+            {
+              "id": "3",
+              "groups": [],
+              "time_table": ""
+            }
+          ]
         }
       ],
       "drive": "https://drive.google.com/drive/folders/1B0zUr5d4QFZ0q-UcD6z4h5YcAeWSxL3G"
@@ -1152,7 +1173,7 @@
               "groups": [
                 {
                   "name": "Civile e Ambientale (TA) 26/27",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/JKrl0PP25Ey0omaABkfjpU"
                 },
                 {
                   "name": "Civile e Ambientale (TA) 25/26",
@@ -1166,7 +1187,7 @@
               "groups": [
                 {
                   "name": "Civile e Ambientale (TA) 26/27",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/JKrl0PP25Ey0omaABkfjpU"
                 },
                 {
                   "name": "Civile e Ambientale (TA) 25/26",
@@ -1180,7 +1201,7 @@
               "groups": [
                 {
                   "name": "Civile e Ambientale (TA) 26/27",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/JKrl0PP25Ey0omaABkfjpU"
                 },
                 {
                   "name": "Civile e Ambientale (TA) 25/26",
@@ -1200,7 +1221,7 @@
               "groups": [
                 {
                   "name": "PTECH 26/27",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/D4oHUdZQw9dJ1PCI9uUUk2"
                 },
                 {
                   "name": "PTECH 25/26",
@@ -1222,7 +1243,7 @@
               "groups": [
                 {
                   "name": "PTECH 26/27",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/D4oHUdZQw9dJ1PCI9uUUk2"
                 },
                 {
                   "name": "PTECH 25/26",
@@ -1244,7 +1265,7 @@
               "groups": [
                 {
                   "name": "PTECH 26/27",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/D4oHUdZQw9dJ1PCI9uUUk2"
                 },
                 {
                   "name": "PTECH 25/26",
@@ -1272,7 +1293,7 @@
               "groups": [
                 {
                   "name": "Sistemi Aerospaziali 1°",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/IUyY1SJF7zh1FYMnIiYzrv"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=67af45fd9b3ab7001a5b93e1"
@@ -1312,7 +1333,7 @@
               "groups": [
                 {
                   "name": "1° Anno",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/ETFUDGIN8mc2p5aXMAEaVR"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it:443/calendarioPubblico/linkCalendarioId=69e2285eea3d45001e9d0033"
@@ -1500,7 +1521,7 @@
               "groups": [
                 {
                   "name": "Design 1°",
-                  "link": ""
+                  "link": "https://chat.whatsapp.com/BB6Zc8ggPeI6DGcgennX1Y?s=cl&p=a&mlu=2"
                 }
               ],
               "time_table": "https://poliba.prod.up.cineca.it//calendarioPubblico/linkCalendarioId=69d5023307f85d0019a60b02"
