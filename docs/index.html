@@ -355,7 +355,7 @@
         deptKeys.sort((a, b) => a.localeCompare(b, 'it'));
 
         deptKeys.forEach((deptKey) => {
-            el.actions.appendChild(makeButton(deptKey, () => renderDeptActions(deptKey)));
+            el.actions.appendChild(makeButton(deptKey.toUpperCase(), () => renderDeptActions(deptKey)));
         });
     }
 
@@ -364,7 +364,7 @@
         state.mode = null;
         showMainHeader(false);
 
-        el.title.textContent = deptKey;
+        el.title.textContent = deptKey.toUpperCase();
         el.formArea.style.display = 'none';
         el.pageArea.style.display = 'none';
         clear(el.pageArea);
@@ -383,12 +383,9 @@
         }));
 
         // ORARI
-        const deptUpper = String(deptKey).trim().toUpperCase();
-        const isArcodDept = deptUpper === 'ARCOD';
-        
         // Cerca il semestre in info.json, se non lo trova mette "I" di default
         const semestreAttivo = state.data.semestre_attivo || 'I';
-        const orariLabel = isArcodDept ? 'ORARI' : `ORARI (${semestreAttivo} Semestre)`;
+        const orariLabel = `ORARI (${semestreAttivo} Semestre)`;
 
         el.actions.appendChild(makeButton(orariLabel, () => {
             state.mode = 'ORARI';
@@ -417,17 +414,12 @@
         // Nascondo tutti i pulsanti "azioni"
         clear(el.actions);
 
-        el.title.textContent = `${state.deptKey} · ${state.mode === 'ORARI' ? 'Orari' : 'Gruppi WZ'}`;
+        el.title.textContent = `${state.deptKey.toUpperCase()} · ${state.mode === 'ORARI' ? 'Orari' : 'Gruppi WZ'}`;
 
-        const deptUpper = String(state.deptKey).trim().toUpperCase();
-        const isArcod = deptUpper === 'ARCOD';
+        // Tutti i corsi, inclusi quelli ARCOD, ora chiedono l'anno
+        const needsYear = true; 
 
-        // Schema richiesto:
-        // - ORARI: solo ARCOD NON chiede l'anno (redirect diretto su time_table)
-        // - GRUPPI WZ: TUTTI i corsi chiedono l'anno
-        const needsYear = !(isArcod && state.mode === 'ORARI');
-
-        el.yearWrap.style.display = needsYear ? 'block' : 'none';
+        el.yearWrap.style.display = 'block';
 
         // Popola select corsi
         const dept = getDeptObj(state.deptKey);
@@ -483,12 +475,6 @@
             const courseId = el.course.value;
             state.selectedCourse = courses.find((c) => (c?.id ?? '') === courseId) || null;
 
-            if (!needsYear) {
-                // ORARI + ARCOD: non serve l'anno
-                state.selectedYearObj = null;
-                return;
-            }
-
             if (!state.selectedCourse) {
                 el.year.innerHTML = `<option value="">Seleziona Anno</option>`;
                 state.selectedYearObj = null;
@@ -514,7 +500,6 @@
         };
 
         el.year.onchange = () => {
-            if (!needsYear) return;
             el.yearWrap.style.display = 'block';
 
             const yearId = el.year.value;
@@ -538,15 +523,13 @@
 
             const courseId = el.course.value;
             const courseName = el.course.selectedOptions[0]?.textContent || '';
-            const yearId = needsYear
-                ? (state.selectedYearObj?.id ? String(state.selectedYearObj.id) : el.year.value)
-                : '';
+            const yearId = state.selectedYearObj?.id ? String(state.selectedYearObj.id) : el.year.value;
 
             if (!courseId) {
                 alert('Seleziona un corso.');
                 return;
             }
-            if (needsYear && !yearId) {
+            if (!yearId) {
                 alert('Seleziona un anno.');
                 return;
             }
@@ -555,13 +538,13 @@
             if (!state.selectedCourse) {
                 state.selectedCourse = courses.find((c) => (c?.id ?? '') === courseId) || null;
             }
-            if (needsYear && !state.selectedYearObj) {
+            if (!state.selectedYearObj) {
                 const yearsArr = Array.isArray(state.selectedCourse?.years) ? state.selectedCourse.years : [];
                 if (yearsArr.length === 1) {
                     state.selectedYearObj = yearsArr[0] || null;
                 }
             }
-            if (needsYear && !state.selectedYearObj) {
+            if (!state.selectedYearObj) {
                 const cObj = state.selectedCourse;
                 if (cObj && Array.isArray(cObj.years)) {
                     state.selectedYearObj = cObj.years.find((y) => String(y?.id ?? '') === String(yearId)) || null;
@@ -578,24 +561,12 @@
             };
 
             if (state.mode === 'ORARI') {
-                // ARCOD: orario a livello corso (nessuna scelta anno)
-                if (isArcod) {
-                    const tt = state.selectedCourse?.time_table;
-                    if (typeof tt === 'string' && tt.trim()) {
-                        // Passiamo la palla alla funzione renderOrariPage che gestirà il popup e l'interfaccia
-                        renderOrariPage({ courseId, courseName, year: "Unico", yearObj: { time_table: tt } });
-                        return;
-                    }
-                    alert('Link orari (time_table) non impostato per questo corso.');
-                    return;
-                }
-
-                // Tutti gli altri dipartimenti: orario a livello anno (yearObj.time_table)
+                // Tutti i dipartimenti, incluso ARCOD, passano di qui in modo standard
                 renderOrariPage(payload);
                 return;
             }
 
-            // GRUPPI WZ: sempre con anno selezionato
+            // GRUPPI WZ
             renderGruppiPage(payload);
         };
 
@@ -604,7 +575,6 @@
             renderDeptActions(state.deptKey);
         };
     }
-
     function renderOrariPage({ courseId, courseName, year, yearObj }) {
         showMainHeader(false);
         el.formArea.style.display = 'none';
