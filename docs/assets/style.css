@@ -99,10 +99,26 @@ button:hover {
 }
 
 .btn-teams {
-    background-color: #5B5FC7; /* Colore ufficiale Microsoft Teams */
+    background-color: #5B5FC7; 
 }
 .btn-teams:hover {
     background-color: #4647BA;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
+    color: white;
+    border: none;
+}
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.btn-banner {
+    background-color: #d41464;
+}
+.btn-banner:hover {
+    background-color: #ad1152;
 }
 
 .btn-link {
@@ -114,16 +130,6 @@ button:hover {
 }
 .btn-back:hover {
     background: #111;
-}
-
-.btn-instagram {
-    background: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
-    color: white;
-    border: none;
-}
-
-.btn-instagram:hover {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 strong {
