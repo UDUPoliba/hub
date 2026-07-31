@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../logo.svg">
+    <title>UDU Hub - Gruppi Matricole 2026/2027</title>
+    
+    <link rel="stylesheet" href="../corsi/style.css">
+</head>
+<body>
+
+<h1 id="mainHeader" style="text-align: center;">Gruppi Matricole 2026/2027<br><span style="font-size: 0.5em; font-weight: normal; color: #555;">by UDU ☀️</span></h1>
+
+<div class="container">
+
+    <div style="width: 100%;">
+        <a href="https://chat.whatsapp.com/B9rSZ97ivVZ3LKSP6vKfBX" style="text-decoration: none; width: 100%;" target="_blank">
+            <button type="button" class="btn-whatsapp">Generale Info Poliba</button>
+        </a>
+    </div>
+    
+    <!-- Div riservato a js -->
+    <div id="gruppiContainer" style="display:flex; flex-direction:column; width: 100%;"></div>
+
+    <hr style="width: 100%; border: none; border-top: 1px solid #ccc; margin-top: 1.5em; margin-bottom: 0.75em;">
+
+    <!-- Tasto per tornare indietro -->
+    <button type="button" class="btn-back" onclick="window.location.href='../index.html'">Torna a UDU Hub</button>
+
+    <img src="../logo.svg" class="logoUdu" alt="Logo UDU Hub" style="margin-top: 1.5em;"/>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("gruppiContainer");
+
+    // Sostituisci 'gruppi.json' con il percorso corretto se si trova in un'altra cartella
+    fetch('gruppiMat.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Errore nel caricamento del file JSON");
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Iteriamo su ogni dipartimento presente nel JSON
+            for (const [dipartimento, corsi] of Object.entries(data)) {
+                
+                // 1. Creiamo il titolo del dipartimento
+                const titoloDipartimento = document.createElement("h3");
+                titoloDipartimento.textContent = dipartimento;
+                titoloDipartimento.style.textAlign = "center";
+                titoloDipartimento.style.color = "#333";
+                titoloDipartimento.style.fontSize = "1.3em";
+                titoloDipartimento.style.margin = "1em 0 0.5em 0";
+                
+                container.appendChild(titoloDipartimento);
+
+                // 2. Creiamo un contenitore per i pulsanti di questo dipartimento
+                const listaCorsi = document.createElement("div");
+                listaCorsi.style.display = "flex";
+                listaCorsi.style.flexDirection = "column";
+                listaCorsi.style.gap = "0.75em";
+
+                // 3. Creiamo i pulsanti per ogni corso
+                corsi.forEach(corso => {
+                    const linkA = document.createElement("a");
+                    linkA.href = corso.link;
+                    linkA.style.textDecoration = "none";
+                    linkA.style.width = "100%";
+                    linkA.target = "_blank";
+
+                    const button = document.createElement("button");
+                    button.type = "button";
+                    // Utilizziamo la classe per il bottone verde di WhatsApp dal tuo CSS
+                    button.className = "btn-whatsapp"; 
+                    button.textContent = corso.nome;
+
+                    linkA.appendChild(button);
+                    listaCorsi.appendChild(linkA);
+                });
+
+                // Aggiungiamo la lista dei corsi sotto al titolo del dipartimento
+                container.appendChild(listaCorsi);
+            }
+        })
+        .catch(error => {
+            console.error("Errore:", error);
+            container.innerHTML = "<p style='text-align:center; color:red;'>Impossibile caricare i gruppi al momento.</p>";
+        });
+});
+</script>
+
+</body>
+</html>
