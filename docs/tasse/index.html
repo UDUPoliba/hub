@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/logo.svg">
+    <title>UDU Hub - Simulatore Tasse 2026/2027</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-bottom: 1.2em;
+            width: 100%;
+        }
+
+        .form-group label.title {
+            margin-bottom: 0.4em;
+            font-weight: bold;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0.8em;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .section-divider {
+            color: #d92d28;
+            font-weight: bold;
+            text-align: left;
+            font-size: 1.1em;
+            margin: 1.5em 0 0.5em 0;
+            border-bottom: 2px solid #efdd61;
+            padding-bottom: 0.2em;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            margin-top: 0.5em;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            width: auto;
+            margin: 4px 10px 0 0;
+            cursor: pointer;
+        }
+
+        .checkbox-container label {
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .rata-box {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding: 0.7em 0;
+        }
+
+        .rata-desc {
+            font-size: 0.8em;
+            color: #666;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* Stili migliorati per l'Analisi del Calcolo */
+        .analisi-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+            border-left: 5px solid #d92d28;
+            border-radius: 8px;
+            padding: 1.2em;
+            margin-bottom: 2em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        .analisi-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .analisi-row:last-child {
+            border-bottom: none;
+        }
+
+        .analisi-label {
+            font-size: 0.9em;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .analisi-value {
+            font-weight: bold;
+            font-size: 1.05em;
+            color: #333;
+        }
+
+        .analisi-value.highlight {
+            color: #d92d28;
+            font-size: 1.15em;
+        }
+
+        .analisi-value.success {
+            color: #10A350;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="mainHeader" style="text-align: center;">
+        Simulatore Tasse 25/26<br>
+        <span style="font-size: 0.5em; font-weight: normal; color: #555;">by UDU ☀️</span>
+    </h1>
+
+    <div class="container">
+
+        <div id="gruppiContainer" style="display:flex; flex-direction:column; width: 100%; align-items: stretch;">
+
+            <div class="section-divider" style="margin-top: 0;">Dati Generali</div>
+
+            <div class="form-group">
+                <label for="isee" class="title">Valore ISEE (lascia 0 se assente)</label>
+                <input type="number" id="isee" placeholder="Es. 21500" min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_corso" class="title">Tipo di Corso</label>
+                <select id="tipo_corso" onchange="aggiornaOpzioniAnno()">
+                    <option value="triennale">Laurea Triennale</option>
+                    <option value="magistrale">Laurea Magistrale</option>
+                    <option value="ciclo_unico">Ciclo Unico (5 anni)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="anno_corso" class="title">Anno di Iscrizione</label>
+                <select id="anno_corso" onchange="aggiornaForm()">
+                    <!-- Popolato dinamicamente via JS -->
+                </select>
+            </div>
+
+            <div class="section-divider">Requisiti e Merito</div>
+
+            <div class="checkbox-container" id="box_req_crediti">
+                <input type="checkbox" id="req_crediti">
+                <label for="req_crediti">
+                    <strong>Requisiti minimi:</strong> Ho conseguito 25 CFU tra agosto dell'anno scorso e agosto di
+                    quest'anno
+                </label>
+            </div>
+
+            <div class="form-group" id="box_voto_accesso" style="margin-top: 1em;">
+                <label for="voto_accesso" class="title">Voto di Accesso (Borsa per Merito)</label>
+                <select id="voto_accesso">
+                </select>
+            </div>
+
+            <div class="checkbox-container" id="box_merito_cfu" style="display:none; margin-top: 1em;">
+                <input type="checkbox" id="merito_cfu">
+                <label for="merito_cfu">
+                    <strong>Merito accademico:</strong> Media > 28 e soglia CFU di eccellenza raggiunta (Tabelle D/E/F)
+                </label>
+            </div>
+
+            <div class="section-divider">Esoneri Speciali</div>
+
+            <div class="form-group">
+                <label for="esonero_speciale" class="title">Casi Particolari e Invalidità</label>
+                <select id="esonero_speciale">
+                    <option value="nessuno">Nessuno</option>
+                    <option value="disabile66">Studente con disabilità >= 66% o L.104 (Esonero Totale)</option>
+                    <option value="disabile55">Studente con disabilità tra 55% e 65%</option>
+                    <option value="familiare66">Componente nucleo ISEE con disabilità >= 66%</option>
+                    <option value="orfano30k">Orfano genitore (solo se ISEE < 30.000)</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn-banner" onclick="calcola()" style="margin-top: 1.5em;">CALCOLA
+                TASSE</button>
+
+            <div id="risultato"
+                style="display: none; margin-top: 1.5em; background: #fff; padding: 1.5em; border-radius: 0.5em; color: #333; text-align: left; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+
+                <!-- Box Analisi Calcolo Migliorato -->
+                <h2 style="margin-top:0; color:#333; text-align:center; font-size: 1.1em; margin-bottom: 0.5em;">Analisi
+                    del Calcolo</h2>
+                <div id="dettaglio_analisi" class="analisi-card">
+                    <!-- Popolato dinamicamente da JS -->
+                </div>
+
+                <h2 style="margin-top:0; color:#d92d28; text-align:center; font-size: 1.3em;">Riepilogo Rate</h2>
+                <div id="dettaglio_rate" style="font-size: 0.95em; line-height: 1.4;"></div>
+
+                <div style="border-top: 2px solid #333; margin-top: 1em; padding-top: 0.8em; text-align: center;">
+                    <strong style="font-size: 1.3em; color: #333;">Totale Annuo: <span id="totale_annuo"
+                            style="color:#d92d28;">0.00</span> €</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <hr style="width: 100%; border: none; border-top: 1px solid #ccc; margin-top: 1.5em; margin-bottom: 0.75em;">
+        <button type="button" class="btn-back" onclick="window.location.href='../index.html'">Torna a UDU Hub</button>
+        <img src="../assets/logo.svg" class="logoUdu" alt="Logo UDU Hub" style="margin-top: 1.5em;" />
+    </div>
+
+    <script>
+        // Gestione dinamica degli anni (Distingue In Corso Fiscale vs Fuori Corso oltre il limite)
+        function aggiornaOpzioniAnno() {
+            const tipo = document.getElementById("tipo_corso").value;
+            const annoSelect = document.getElementById("anno_corso");
+            const annoPrecedente = annoSelect.value;
+
+            annoSelect.innerHTML = '';
+            let opzioni = [];
+
+            if (tipo === 'triennale') {
+                opzioni = [
+                    { val: '1', txt: '1° Anno (Immatricolazione)' },
+                    { val: '2', txt: '2° Anno' },
+                    { val: '3', txt: '3° Anno' },
+                    { val: '4', txt: '1° Anno F.C. (Ancora in fascia fiscale)' },
+                    { val: 'oltre', txt: '2° Anno F.C. o successivi (Penale)' }
+                ];
+            } else if (tipo === 'magistrale') {
+                opzioni = [
+                    { val: '1', txt: '1° Anno (Immatricolazione)' },
+                    { val: '2', txt: '2° Anno' },
+                    { val: '3', txt: '1° Anno F.C. (Ancora in fascia fiscale)' },
+                    { val: 'oltre', txt: '2° Anno F.C. o successivi (Penale)' }
+                ];
+            } else if (tipo === 'ciclo_unico') {
+                opzioni = [
+                    { val: '1', txt: '1° Anno (Immatricolazione)' },
+                    { val: '2', txt: '2° Anno' },
+                    { val: '3', txt: '3° Anno' },
+                    { val: '4', txt: '4° Anno' },
+                    { val: '5', txt: '5° Anno' },
+                    { val: '6', txt: '1° Anno F.C. (Ancora in fascia fiscale)' },
+                    { val: 'oltre', txt: '2° Anno F.C. o successivi (Penale)' }
+                ];
+            }
+
+            let match = false;
+            opzioni.forEach(opt => {
+                const option = document.createElement('option');
+                option.value = opt.val;
+                option.text = opt.txt;
+                annoSelect.appendChild(option);
+                if (opt.val === annoPrecedente) match = true;
+            });
+
+            annoSelect.value = match ? annoPrecedente : '1';
+            aggiornaForm();
+        }
+
+        function aggiornaForm() {
+            const anno = document.getElementById("anno_corso").value;
+            const tipo = document.getElementById("tipo_corso").value;
+            const boxVotoAccesso = document.getElementById("box_voto_accesso");
+            const selectVoto = document.getElementById("voto_accesso");
+            const boxMeritoCfu = document.getElementById("box_merito_cfu");
+            const boxReqCrediti = document.getElementById("box_req_crediti");
+            const checkReqCrediti = document.getElementById("req_crediti");
+
+            if (anno === "1") {
+                boxReqCrediti.style.display = "none";
+                checkReqCrediti.checked = true;
+
+                boxVotoAccesso.style.display = "flex";
+                selectVoto.innerHTML = '<option value="nessuno">Nessun voto massimo</option>';
+                if (tipo === "magistrale") {
+                    selectVoto.innerHTML += '<option value="110">Laurea L3: 110</option><option value="110L">Laurea L3: 110 e Lode</option>';
+                } else {
+                    selectVoto.innerHTML += '<option value="100">Maturità: 100</option><option value="100L">Maturità: 100 e Lode</option>';
+                }
+
+                boxMeritoCfu.style.display = "none";
+                document.getElementById("merito_cfu").checked = false;
+            } else {
+                boxReqCrediti.style.display = "flex";
+                boxVotoAccesso.style.display = "none";
+                selectVoto.value = "nessuno";
+
+                if (anno !== "oltre") {
+                    boxMeritoCfu.style.display = "flex";
+                } else {
+                    boxMeritoCfu.style.display = "none";
+                    document.getElementById("merito_cfu").checked = false;
+                }
+            }
+        }
+
+        function calcola() {
+            let iseeInput = document.getElementById("isee").value;
+            let isee = iseeInput ? parseFloat(iseeInput) : 999999;
+            const tipo = document.getElementById("tipo_corso").value;
+            const anno = document.getElementById("anno_corso").value;
+
+            const reqCrediti = document.getElementById("req_crediti").checked;
+            const inCorsoFiscale = (anno !== "oltre");
+            const requisitiSoddisfatti = (anno === "1") ? true : (inCorsoFiscale && reqCrediti);
+
+            const votoAccesso = document.getElementById("voto_accesso") ? document.getElementById("voto_accesso").value : "nessuno";
+            const meritoCfu = document.getElementById("merito_cfu").checked;
+            const esoneroSpeciale = document.getElementById("esonero_speciale").value;
+
+            const BOLLO = 16.00;
+            const MINIMO_CONTRIBUTO = 101.00;
+            const format = (n) => parseFloat(n).toFixed(2);
+
+            // Variabili per l'analisi del calcolo
+            let nomePenale = "Nessuna";
+            let nomeEsonero = "Nessuno";
+            let maxDecurtazione = 0;
+            let importoDecurtato = 0;
+
+            // 1. Calcolo Base (T)
+            let T = 0;
+            if (isee <= 26000) {
+                T = 0;
+            } else if (isee <= 29881) {
+                T = 1.01 * 0.14 * (isee - 26000);
+            } else if (isee < 90000) {
+                T = 1.01 * (686 / 30000) * isee;
+            } else {
+                T = 1.01 * 2100;
+            }
+
+            // 2. Applicazione Penalità
+            if (!requisitiSoddisfatti) {
+                T = (T * 1.06) + 200;
+                T = Math.min(T, 3000.00);
+                nomePenale = "Maggiorazione (6% + 200€)";
+            } else {
+                T = Math.min(T, 2121.00);
+            }
+
+            // 3. Tassa ADISU
+            let ADISU = 192.00;
+            if (isee <= 26000) ADISU = 144.00;
+            else if (isee <= 52000) ADISU = 168.00;
+
+            // 4. Esoneri e Merito
+            if (esoneroSpeciale === "disabile66") {
+                nomeEsonero = "Esonero Totale (Disabilità \u2265 66% o L.104)";
+                T = 0;
+            } else {
+                if (esoneroSpeciale === "disabile55") {
+                    let v = T * 0.5;
+                    if (v > maxDecurtazione) { maxDecurtazione = v; nomeEsonero = "Riduzione 50% (Disabilità 55-65%)"; }
+                }
+                if (esoneroSpeciale === "familiare66") {
+                    if (100 > maxDecurtazione) { maxDecurtazione = 100; nomeEsonero = "Riduzione (Familiare disabile \u2265 66%)"; }
+                }
+                if (esoneroSpeciale === "orfano30k" && isee < 30000) {
+                    if (50 > maxDecurtazione) { maxDecurtazione = 50; nomeEsonero = "Riduzione (Orfano con ISEE < 30.000)"; }
+                }
+
+                if (anno === "1") {
+                    if (tipo !== "magistrale") {
+                        if (votoAccesso === "100" && 200 > maxDecurtazione) { maxDecurtazione = 200; nomeEsonero = "Premio Merito (Maturità 100)"; }
+                        if (votoAccesso === "100L" && 250 > maxDecurtazione) { maxDecurtazione = 250; nomeEsonero = "Premio Merito (Maturità 100 e Lode)"; }
+                    } else {
+                        if (votoAccesso === "110" && 250 > maxDecurtazione) { maxDecurtazione = 250; nomeEsonero = "Premio Merito (Laurea L3 110)"; }
+                        if (votoAccesso === "110L" && 300 > maxDecurtazione) { maxDecurtazione = 300; nomeEsonero = "Premio Merito (Laurea L3 110 e Lode)"; }
+                    }
+                } else if (meritoCfu && inCorsoFiscale) {
+                    let v = Math.min(T * 0.5, 600);
+                    if (v > maxDecurtazione) { maxDecurtazione = v; nomeEsonero = "Premio Merito (Esami e CFU eccellenti)"; }
+                }
+
+                if (maxDecurtazione > 0) {
+                    importoDecurtato = maxDecurtazione;
+                    let tempT = T - maxDecurtazione;
+
+                    if (tempT < MINIMO_CONTRIBUTO && T >= MINIMO_CONTRIBUTO) {
+                        importoDecurtato = T - MINIMO_CONTRIBUTO;
+                        T = MINIMO_CONTRIBUTO;
+                    } else {
+                        T = Math.max(0, tempT);
+                    }
+                }
+            }
+
+            // Costruzione estetica della Card Analisi
+            let htmlAnalisi = `
+                <div class="analisi-row">
+                    <span class="analisi-label">Contributo Calcolato</span> 
+                    <span class="analisi-value highlight">${format(T)} €</span>
+                </div>
+                <div class="analisi-row">
+                    <span class="analisi-label">Tassa Regionale ADISU</span> 
+                    <span class="analisi-value">${format(ADISU)} €</span>
+                </div>
+                <div class="analisi-row">
+                    <span class="analisi-label">Penale</span> 
+                    <span class="analisi-value" style="color: ${!requisitiSoddisfatti ? '#d92d28' : '#333'};">${nomePenale}</span>
+                </div>
+            `;
+
+            if (importoDecurtato > 0 && esoneroSpeciale !== "disabile66") {
+                htmlAnalisi += `<div class="analisi-row"><span class="analisi-label">Esonero Applicato</span> <span class="analisi-value success">${nomeEsonero} <small>(-${format(importoDecurtato)} €)</small></span></div>`;
+            } else if (esoneroSpeciale === "disabile66") {
+                htmlAnalisi += `<div class="analisi-row"><span class="analisi-label">Esonero Applicato</span> <span class="analisi-value success">${nomeEsonero}</span></div>`;
+            } else {
+                htmlAnalisi += `<div class="analisi-row"><span class="analisi-label">Esonero Applicato</span> <span class="analisi-value" style="color:#888; font-weight:normal;">Nessuno</span></div>`;
+            }
+
+            document.getElementById("dettaglio_analisi").innerHTML = htmlAnalisi;
+
+            // 5. Composizione Dettagliata Rate con logica ADISU forzata a 120 base
+            let parzialeAdisuBase = 120.00;
+            let parzialeAdisuSaldo = ADISU - parzialeAdisuBase;
+
+            let parzialeContributo20 = 0.20 * T;
+            let parzialeContributo40 = 0.40 * T;
+
+            let r1 = BOLLO + parzialeAdisuBase;
+            let r2 = parzialeContributo20 + parzialeAdisuSaldo;
+            let r3 = parzialeContributo40;
+            let r4 = parzialeContributo40;
+
+            document.getElementById("dettaglio_rate").innerHTML = `
+                <div class="rata-box">
+                    <div><strong>1ª Rata</strong><span class="rata-desc">Bollo (${format(BOLLO)} €) + ADISU Base (${format(parzialeAdisuBase)} €)</span></div>
+                    <div>${format(r1)} €</div>
+                </div>
+                <div class="rata-box">
+                    <div><strong>2ª Rata</strong><span class="rata-desc">20% Contributo (${format(parzialeContributo20)} €) + Saldo ADISU (${format(parzialeAdisuSaldo)} €)</span></div>
+                    <div>${format(r2)} €</div>
+                </div>
+                <div class="rata-box">
+                    <div><strong>3ª Rata</strong><span class="rata-desc">40% Contributo (${format(parzialeContributo40)} €)</span></div>
+                    <div>${format(r3)} €</div>
+                </div>
+                <div class="rata-box" style="border-bottom:none;">
+                    <div><strong>4ª Rata</strong><span class="rata-desc">40% Contributo (${format(parzialeContributo40)} €)</span></div>
+                    <div>${format(r4)} €</div>
+                </div>
+            `;
+
+            document.getElementById("totale_annuo").innerText = format(r1 + r2 + r3 + r4);
+            document.getElementById("risultato").style.display = "block";
+        }
+
+        window.onload = function () {
+            aggiornaOpzioniAnno();
+        };
+    </script>
+</body>
+
+</html>
