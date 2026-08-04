@@ -32,6 +32,8 @@
             padding: 0.8em;
             border: 1px solid #ccc;
             border-radius: 6px;
+            background-color: #fff;
+            appearance: auto;
         }
 
         .section-divider {
@@ -78,7 +80,6 @@
             margin-top: 2px;
         }
 
-        /* Stili migliorati per l'Analisi del Calcolo */
         .analisi-card {
             background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
             border-left: 5px solid #d92d28;
@@ -122,6 +123,37 @@
         .analisi-value.success {
             color: #10A350;
         }
+
+        .link-regolamento {
+            font-size: 0.8em;
+            color: #555;
+            text-decoration: underline;
+            text-align: center;
+            display: block;
+            margin-bottom: 1.5em;
+            margin-top: -0.5em;
+        }
+
+        .link-regolamento:hover {
+            color: #d92d28;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 1.5em;
+        }
+
+        .btn-reset {
+            background-color: #f1f1f1;
+            color: #333;
+            border: 1px solid #ccc;
+            flex: 1;
+        }
+
+        .btn-reset:hover {
+            background-color: #e2e2e2;
+        }
     </style>
 </head>
 
@@ -132,9 +164,13 @@
         <span style="font-size: 0.5em; font-weight: normal; color: #555;">by UDU ☀️</span>
     </h1>
 
+    <!-- Link al regolamento ufficiale -->
+    <a href="https://www.poliba.it/sites/default/files/Tasse/regolamento_contribuzione_studentesca_politecnico_di_bari_25_26_0.pdf" target="_blank"
+        class="link-regolamento">Consulta il Regolamento Tasse Ufficiale</a>
+
     <div class="container">
 
-        <div id="gruppiContainer" style="display:flex; flex-direction:column; width: 100%; align-items: stretch;">
+        <form id="simulatoreForm" style="display:flex; flex-direction:column; width: 100%; align-items: stretch;">
 
             <div class="section-divider" style="margin-top: 0;">Dati Generali</div>
 
@@ -163,9 +199,8 @@
 
             <div class="checkbox-container" id="box_req_crediti">
                 <input type="checkbox" id="req_crediti">
-                <label for="req_crediti">
-                    <strong>Requisiti minimi:</strong> Ho conseguito 25 CFU tra agosto dell'anno scorso e agosto di
-                    quest'anno
+                <label for="req_crediti" id="lbl_req_crediti">
+                    <!-- Il testo si aggiorna dinamicamente in base all'anno (10 o 25 CFU) -->
                 </label>
             </div>
 
@@ -195,17 +230,17 @@
                 </select>
             </div>
 
-            <button type="button" class="btn-banner" onclick="calcola()" style="margin-top: 1.5em;">CALCOLA
-                TASSE</button>
+            <div class="btn-group">
+                <button type="button" class="btn-reset" onclick="resetForm()">RESET</button>
+                <button type="button" class="btn-banner" style="flex: 2;" onclick="calcola()">CALCOLA</button>
+            </div>
 
             <div id="risultato"
                 style="display: none; margin-top: 1.5em; background: #fff; padding: 1.5em; border-radius: 0.5em; color: #333; text-align: left; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
 
-                <!-- Box Analisi Calcolo Migliorato -->
                 <h2 style="margin-top:0; color:#333; text-align:center; font-size: 1.1em; margin-bottom: 0.5em;">Analisi
                     del Calcolo</h2>
                 <div id="dettaglio_analisi" class="analisi-card">
-                    <!-- Popolato dinamicamente da JS -->
                 </div>
 
                 <h2 style="margin-top:0; color:#d92d28; text-align:center; font-size: 1.3em;">Riepilogo Rate</h2>
@@ -217,7 +252,7 @@
                 </div>
             </div>
 
-        </div>
+        </form>
 
         <hr style="width: 100%; border: none; border-top: 1px solid #ccc; margin-top: 1.5em; margin-bottom: 0.75em;">
         <button type="button" class="btn-back" onclick="window.location.href='../index.html'">Torna a UDU Hub</button>
@@ -225,7 +260,36 @@
     </div>
 
     <script>
-        // Gestione dinamica degli anni (Distingue In Corso Fiscale vs Fuori Corso oltre il limite)
+        // ==========================================
+        // CONFIGURAZIONE CENTRALE (DA AGGIORNARE OGNI ANNO)
+        // ==========================================
+        const CONFIG = {
+            tasse: {
+                minimoContributo: 101.00,
+                bollo: 16.00,
+                tassaMaxBase: 2121.00, // (1+0.01) * 2100
+                moltiplicatore: 1.01,
+                valoreCostante: 2100.00
+            },
+            isee: {
+                noTaxArea: 26000.00,
+                fasciaMedia: 29881.00,
+                limiteMax: 90000.00
+            },
+            penalita: {
+                maggiorazioneFissa: 200.00,
+                maggiorazionePercentuale: 1.06,
+                tettoMassimoPenalizzato: 3000.00
+            },
+            adisu: {
+                base: 120.00,
+                soglia1: 26000.00, importo1: 144.00,
+                soglia2: 52000.00, importo2: 168.00,
+                importoMax: 192.00
+            }
+        };
+        // ==========================================
+
         function aggiornaOpzioniAnno() {
             const tipo = document.getElementById("tipo_corso").value;
             const annoSelect = document.getElementById("anno_corso");
@@ -277,12 +341,16 @@
         function aggiornaForm() {
             const anno = document.getElementById("anno_corso").value;
             const tipo = document.getElementById("tipo_corso").value;
+
             const boxVotoAccesso = document.getElementById("box_voto_accesso");
             const selectVoto = document.getElementById("voto_accesso");
             const boxMeritoCfu = document.getElementById("box_merito_cfu");
+
             const boxReqCrediti = document.getElementById("box_req_crediti");
             const checkReqCrediti = document.getElementById("req_crediti");
+            const lblReqCrediti = document.getElementById("lbl_req_crediti");
 
+            // Gestione Dinamica Etichetta CFU
             if (anno === "1") {
                 boxReqCrediti.style.display = "none";
                 checkReqCrediti.checked = true;
@@ -302,6 +370,13 @@
                 boxVotoAccesso.style.display = "none";
                 selectVoto.value = "nessuno";
 
+                // Testo Dinamico CFU in base all'anno 
+                if (anno === "2") {
+                    lblReqCrediti.innerHTML = "<strong>Requisiti minimi (2° Anno):</strong> Ho conseguito almeno 10 CFU entro il 10 agosto (esclusi soprannumerari).";
+                } else {
+                    lblReqCrediti.innerHTML = "<strong>Requisiti minimi (Anni successivi):</strong> Ho conseguito almeno 25 CFU tra agosto scorso e agosto di quest'anno (esclusi soprannumerari).";
+                }
+
                 if (anno !== "oltre") {
                     boxMeritoCfu.style.display = "flex";
                 } else {
@@ -311,9 +386,15 @@
             }
         }
 
+        function resetForm() {
+            document.getElementById("simulatoreForm").reset();
+            document.getElementById("risultato").style.display = "none";
+            aggiornaOpzioniAnno();
+        }
+
         function calcola() {
             let iseeInput = document.getElementById("isee").value;
-            let isee = iseeInput ? parseFloat(iseeInput) : 999999;
+            let isee = iseeInput ? parseFloat(iseeInput) : 9999999;
             const tipo = document.getElementById("tipo_corso").value;
             const anno = document.getElementById("anno_corso").value;
 
@@ -325,11 +406,8 @@
             const meritoCfu = document.getElementById("merito_cfu").checked;
             const esoneroSpeciale = document.getElementById("esonero_speciale").value;
 
-            const BOLLO = 16.00;
-            const MINIMO_CONTRIBUTO = 101.00;
             const format = (n) => parseFloat(n).toFixed(2);
 
-            // Variabili per l'analisi del calcolo
             let nomePenale = "Nessuna";
             let nomeEsonero = "Nessuno";
             let maxDecurtazione = 0;
@@ -337,29 +415,29 @@
 
             // 1. Calcolo Base (T)
             let T = 0;
-            if (isee <= 26000) {
+            if (isee <= CONFIG.isee.noTaxArea) {
                 T = 0;
-            } else if (isee <= 29881) {
-                T = 1.01 * 0.14 * (isee - 26000);
-            } else if (isee < 90000) {
-                T = 1.01 * (686 / 30000) * isee;
+            } else if (isee <= CONFIG.isee.fasciaMedia) {
+                T = CONFIG.tasse.moltiplicatore * 0.14 * (isee - CONFIG.isee.noTaxArea);
+            } else if (isee < CONFIG.isee.limiteMax) {
+                T = CONFIG.tasse.moltiplicatore * (686 / 30000) * isee;
             } else {
-                T = 1.01 * 2100;
+                T = CONFIG.tasse.tassaMaxBase;
             }
 
             // 2. Applicazione Penalità
             if (!requisitiSoddisfatti) {
-                T = (T * 1.06) + 200;
-                T = Math.min(T, 3000.00);
-                nomePenale = "Maggiorazione (6% + 200€)";
+                T = (T * CONFIG.penalita.maggiorazionePercentuale) + CONFIG.penalita.maggiorazioneFissa;
+                T = Math.min(T, CONFIG.penalita.tettoMassimoPenalizzato);
+                nomePenale = `Maggiorazione (6% + ${CONFIG.penalita.maggiorazioneFissa}€)`;
             } else {
-                T = Math.min(T, 2121.00);
+                T = Math.min(T, CONFIG.tasse.tassaMaxBase);
             }
 
             // 3. Tassa ADISU
-            let ADISU = 192.00;
-            if (isee <= 26000) ADISU = 144.00;
-            else if (isee <= 52000) ADISU = 168.00;
+            let ADISU = CONFIG.adisu.importoMax;
+            if (isee <= CONFIG.adisu.soglia1) ADISU = CONFIG.adisu.importo1;
+            else if (isee <= CONFIG.adisu.soglia2) ADISU = CONFIG.adisu.importo2;
 
             // 4. Esoneri e Merito
             if (esoneroSpeciale === "disabile66") {
@@ -394,9 +472,9 @@
                     importoDecurtato = maxDecurtazione;
                     let tempT = T - maxDecurtazione;
 
-                    if (tempT < MINIMO_CONTRIBUTO && T >= MINIMO_CONTRIBUTO) {
-                        importoDecurtato = T - MINIMO_CONTRIBUTO;
-                        T = MINIMO_CONTRIBUTO;
+                    if (tempT < CONFIG.tasse.minimoContributo && T >= CONFIG.tasse.minimoContributo) {
+                        importoDecurtato = T - CONFIG.tasse.minimoContributo;
+                        T = CONFIG.tasse.minimoContributo;
                     } else {
                         T = Math.max(0, tempT);
                     }
@@ -429,21 +507,21 @@
 
             document.getElementById("dettaglio_analisi").innerHTML = htmlAnalisi;
 
-            // 5. Composizione Dettagliata Rate con logica ADISU forzata a 120 base
-            let parzialeAdisuBase = 120.00;
+            // 5. Composizione Dettagliata Rate
+            let parzialeAdisuBase = CONFIG.adisu.base;
             let parzialeAdisuSaldo = ADISU - parzialeAdisuBase;
 
             let parzialeContributo20 = 0.20 * T;
             let parzialeContributo40 = 0.40 * T;
 
-            let r1 = BOLLO + parzialeAdisuBase;
+            let r1 = CONFIG.tasse.bollo + parzialeAdisuBase;
             let r2 = parzialeContributo20 + parzialeAdisuSaldo;
             let r3 = parzialeContributo40;
             let r4 = parzialeContributo40;
 
             document.getElementById("dettaglio_rate").innerHTML = `
                 <div class="rata-box">
-                    <div><strong>1ª Rata</strong><span class="rata-desc">Bollo (${format(BOLLO)} €) + ADISU Base (${format(parzialeAdisuBase)} €)</span></div>
+                    <div><strong>1ª Rata</strong><span class="rata-desc">Bollo (${format(CONFIG.tasse.bollo)} €) + ADISU Base (${format(parzialeAdisuBase)} €)</span></div>
                     <div>${format(r1)} €</div>
                 </div>
                 <div class="rata-box">
