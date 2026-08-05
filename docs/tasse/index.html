@@ -32,7 +32,7 @@
             padding: 0.8em;
             border: 1px solid #ccc;
             border-radius: 6px;
-            background-color: #fff;
+            background-color: #ffffff;
             appearance: auto;
         }
 
@@ -149,6 +149,9 @@
             color: #333;
             border: 1px solid #ccc;
             flex: 1;
+            border-radius: 0.5em;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         .btn-reset:hover {
@@ -160,13 +163,12 @@
 <body>
 
     <h1 id="mainHeader" style="text-align: center;">
-        Simulatore Tasse 25/26<br>
+        Simulatore Tasse 26/27<br>
         <span style="font-size: 0.5em; font-weight: normal; color: #555;">by UDU ☀️</span>
     </h1>
 
-    <!-- Link al regolamento ufficiale -->
-    <a href="https://www.poliba.it/sites/default/files/Tasse/regolamento_contribuzione_studentesca_politecnico_di_bari_25_26_0.pdf" target="_blank"
-        class="link-regolamento">Consulta il Regolamento Tasse Ufficiale</a>
+    <a href="https://titulus-poliba.cineca.it/albo/viewer?view=files%2F000708372-POBA000-ee71bb6e-2820-4491-906f-5f169c18eb49-001.pdf"
+        target="_blank" class="link-regolamento">Consulta il Regolamento Tasse Ufficiale</a>
 
     <div class="container">
 
@@ -191,7 +193,6 @@
             <div class="form-group">
                 <label for="anno_corso" class="title">Anno di Iscrizione</label>
                 <select id="anno_corso" onchange="aggiornaForm()">
-                    <!-- Popolato dinamicamente via JS -->
                 </select>
             </div>
 
@@ -199,9 +200,7 @@
 
             <div class="checkbox-container" id="box_req_crediti">
                 <input type="checkbox" id="req_crediti">
-                <label for="req_crediti" id="lbl_req_crediti">
-                    <!-- Il testo si aggiorna dinamicamente in base all'anno (10 o 25 CFU) -->
-                </label>
+                <label for="req_crediti" id="lbl_req_crediti"></label>
             </div>
 
             <div class="form-group" id="box_voto_accesso" style="margin-top: 1em;">
@@ -227,6 +226,7 @@
                     <option value="disabile55">Studente con disabilità tra 55% e 65%</option>
                     <option value="familiare66">Componente nucleo ISEE con disabilità >= 66%</option>
                     <option value="orfano30k">Orfano genitore (solo se ISEE < 30.000)</option>
+                    <option value="dsa">Studente con DSA (Tutela Fuori Corso)</option>
                 </select>
             </div>
 
@@ -261,15 +261,16 @@
 
     <script>
         // ==========================================
-        // CONFIGURAZIONE CENTRALE (DA AGGIORNARE OGNI ANNO)
+        // CONFIGURAZIONE CENTRALE - AGGIORNATA A.A. 2026/2027
         // ==========================================
         const CONFIG = {
             tasse: {
                 minimoContributo: 101.00,
                 bollo: 16.00,
-                tassaMaxBase: 2121.00, // (1+0.01) * 2100
-                moltiplicatore: 1.01,
-                valoreCostante: 2100.00
+                tassaMaxBase: 2257.60,      // Nuovo tetto massimo 26/27 (Art. 1)
+                moltiplicatore: 1.017,      // Nuovo moltiplicatore (1+0,017)
+                fattoreFasciaAlta: 693.00,  // Nuovo fattore (693 / 30000)
+                valoreMaxAssoluto: 2219.00  // Base per ISEE > 90k
             },
             isee: {
                 noTaxArea: 26000.00,
@@ -282,10 +283,13 @@
                 tettoMassimoPenalizzato: 3000.00
             },
             adisu: {
-                base: 120.00,
-                soglia1: 26000.00, importo1: 144.00,
-                soglia2: 52000.00, importo2: 168.00,
-                importoMax: 192.00
+                forzataBase: 120.00,        // Mantenuta fissa come richiesto dall'utente
+                soglia1: 26000.00, importo1: 146.00, // Nuovi importi 26/27
+                soglia2: 52000.00, importo2: 170.00,
+                importoMax: 195.00
+            },
+            esoneri: {
+                orfano: 150.00              // Nuovo sconto triplicato
             }
         };
         // ==========================================
@@ -304,14 +308,14 @@
                     { val: '2', txt: '2° Anno' },
                     { val: '3', txt: '3° Anno' },
                     { val: '4', txt: '1° Anno F.C. (Ancora in fascia fiscale)' },
-                    { val: 'oltre', txt: '2° Anno F.C. o successivi (Penale)' }
+                    { val: 'oltre', txt: '2° Anno F.C. o successivi' }
                 ];
             } else if (tipo === 'magistrale') {
                 opzioni = [
                     { val: '1', txt: '1° Anno (Immatricolazione)' },
                     { val: '2', txt: '2° Anno' },
                     { val: '3', txt: '1° Anno F.C. (Ancora in fascia fiscale)' },
-                    { val: 'oltre', txt: '2° Anno F.C. o successivi (Penale)' }
+                    { val: 'oltre', txt: '2° Anno F.C. o successivi' }
                 ];
             } else if (tipo === 'ciclo_unico') {
                 opzioni = [
@@ -321,7 +325,7 @@
                     { val: '4', txt: '4° Anno' },
                     { val: '5', txt: '5° Anno' },
                     { val: '6', txt: '1° Anno F.C. (Ancora in fascia fiscale)' },
-                    { val: 'oltre', txt: '2° Anno F.C. o successivi (Penale)' }
+                    { val: 'oltre', txt: '2° Anno F.C. o successivi' }
                 ];
             }
 
@@ -350,7 +354,6 @@
             const checkReqCrediti = document.getElementById("req_crediti");
             const lblReqCrediti = document.getElementById("lbl_req_crediti");
 
-            // Gestione Dinamica Etichetta CFU
             if (anno === "1") {
                 boxReqCrediti.style.display = "none";
                 checkReqCrediti.checked = true;
@@ -370,7 +373,6 @@
                 boxVotoAccesso.style.display = "none";
                 selectVoto.value = "nessuno";
 
-                // Testo Dinamico CFU in base all'anno 
                 if (anno === "2") {
                     lblReqCrediti.innerHTML = "<strong>Requisiti minimi (2° Anno):</strong> Ho conseguito almeno 10 CFU entro il 10 agosto (esclusi soprannumerari).";
                 } else {
@@ -420,21 +422,27 @@
             } else if (isee <= CONFIG.isee.fasciaMedia) {
                 T = CONFIG.tasse.moltiplicatore * 0.14 * (isee - CONFIG.isee.noTaxArea);
             } else if (isee < CONFIG.isee.limiteMax) {
-                T = CONFIG.tasse.moltiplicatore * (686 / 30000) * isee;
+                T = CONFIG.tasse.moltiplicatore * (CONFIG.tasse.fattoreFasciaAlta / 30000) * isee;
             } else {
-                T = CONFIG.tasse.tassaMaxBase;
+                T = CONFIG.tasse.moltiplicatore * CONFIG.tasse.valoreMaxAssoluto;
             }
 
-            // 2. Applicazione Penalità
+            // 2. Applicazione Penalità 
             if (!requisitiSoddisfatti) {
-                T = (T * CONFIG.penalita.maggiorazionePercentuale) + CONFIG.penalita.maggiorazioneFissa;
+                if (esoneroSpeciale === "dsa") {
+                    // Nuova regola DSA: Niente 6%, solo mora fissa di 200€
+                    T = T + CONFIG.penalita.maggiorazioneFissa;
+                    nomePenale = `Mora fissa DSA (${CONFIG.penalita.maggiorazioneFissa}€)`;
+                } else {
+                    T = (T * CONFIG.penalita.maggiorazionePercentuale) + CONFIG.penalita.maggiorazioneFissa;
+                    nomePenale = `Maggiorazione (6% + ${CONFIG.penalita.maggiorazioneFissa}€)`;
+                }
                 T = Math.min(T, CONFIG.penalita.tettoMassimoPenalizzato);
-                nomePenale = `Maggiorazione (6% + ${CONFIG.penalita.maggiorazioneFissa}€)`;
             } else {
                 T = Math.min(T, CONFIG.tasse.tassaMaxBase);
             }
 
-            // 3. Tassa ADISU
+            // 3. Tassa ADISU (Nuovi importi)
             let ADISU = CONFIG.adisu.importoMax;
             if (isee <= CONFIG.adisu.soglia1) ADISU = CONFIG.adisu.importo1;
             else if (isee <= CONFIG.adisu.soglia2) ADISU = CONFIG.adisu.importo2;
@@ -452,7 +460,10 @@
                     if (100 > maxDecurtazione) { maxDecurtazione = 100; nomeEsonero = "Riduzione (Familiare disabile \u2265 66%)"; }
                 }
                 if (esoneroSpeciale === "orfano30k" && isee < 30000) {
-                    if (50 > maxDecurtazione) { maxDecurtazione = 50; nomeEsonero = "Riduzione (Orfano con ISEE < 30.000)"; }
+                    if (CONFIG.esoneri.orfano > maxDecurtazione) {
+                        maxDecurtazione = CONFIG.esoneri.orfano;
+                        nomeEsonero = `Riduzione (Orfano con ISEE < 30.000)`;
+                    }
                 }
 
                 if (anno === "1") {
@@ -465,7 +476,7 @@
                     }
                 } else if (meritoCfu && inCorsoFiscale) {
                     let v = Math.min(T * 0.5, 600);
-                    if (v > maxDecurtazione) { maxDecurtazione = v; nomeEsonero = "Premio Merito (Esami e CFU eccellenti)"; }
+                    if (v > maxDecurtazione) { maxDecurtazione = v; nomeEsonero = "Premio Merito (Esami e CFU)"; }
                 }
 
                 if (maxDecurtazione > 0) {
@@ -492,7 +503,7 @@
                     <span class="analisi-value">${format(ADISU)} €</span>
                 </div>
                 <div class="analisi-row">
-                    <span class="analisi-label">Penale</span> 
+                    <span class="analisi-label">Penalizzazione</span> 
                     <span class="analisi-value" style="color: ${!requisitiSoddisfatti ? '#d92d28' : '#333'};">${nomePenale}</span>
                 </div>
             `;
@@ -508,7 +519,7 @@
             document.getElementById("dettaglio_analisi").innerHTML = htmlAnalisi;
 
             // 5. Composizione Dettagliata Rate
-            let parzialeAdisuBase = CONFIG.adisu.base;
+            let parzialeAdisuBase = CONFIG.adisu.forzataBase;
             let parzialeAdisuSaldo = ADISU - parzialeAdisuBase;
 
             let parzialeContributo20 = 0.20 * T;
