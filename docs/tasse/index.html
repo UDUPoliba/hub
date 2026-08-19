@@ -408,7 +408,11 @@
             const meritoCfu = document.getElementById("merito_cfu").checked;
             const esoneroSpeciale = document.getElementById("esonero_speciale").value;
 
-            const format = (n) => parseFloat(n).toFixed(2);
+            // NUOVO: Funzione per l'arrotondamento matematico a 2 decimali (previene i bug di JavaScript sui float)
+            const arrotonda = (n) => Math.round((n + Number.EPSILON) * 100) / 100;
+
+            // Il formatter ora usa il valore matematicamente arrotondato
+            const format = (n) => arrotonda(n).toFixed(2);
 
             let nomePenale = "Nessuna";
             let nomeEsonero = "Nessuno";
@@ -427,10 +431,11 @@
                 T = CONFIG.tasse.moltiplicatore * CONFIG.tasse.valoreMaxAssoluto;
             }
 
+            T = arrotonda(T); // Arrotonda subito dopo il calcolo percentuale
+
             // 2. Applicazione Penalità 
             if (!requisitiSoddisfatti) {
                 if (esoneroSpeciale === "dsa") {
-                    // Nuova regola DSA: Niente 6%, solo mora fissa di 200€
                     T = T + CONFIG.penalita.maggiorazioneFissa;
                     nomePenale = `Mora fissa DSA (${CONFIG.penalita.maggiorazioneFissa}€)`;
                 } else {
@@ -442,7 +447,9 @@
                 T = Math.min(T, CONFIG.tasse.tassaMaxBase);
             }
 
-            // 3. Tassa ADISU (Nuovi importi)
+            T = arrotonda(T); // Arrotonda dopo l'applicazione delle penalità
+
+            // 3. Tassa ADISU
             let ADISU = CONFIG.adisu.importoMax;
             if (isee <= CONFIG.adisu.soglia1) ADISU = CONFIG.adisu.importo1;
             else if (isee <= CONFIG.adisu.soglia2) ADISU = CONFIG.adisu.importo2;
@@ -480,11 +487,11 @@
                 }
 
                 if (maxDecurtazione > 0) {
-                    importoDecurtato = maxDecurtazione;
-                    let tempT = T - maxDecurtazione;
+                    importoDecurtato = arrotonda(maxDecurtazione);
+                    let tempT = arrotonda(T - importoDecurtato);
 
                     if (tempT < CONFIG.tasse.minimoContributo && T >= CONFIG.tasse.minimoContributo) {
-                        importoDecurtato = T - CONFIG.tasse.minimoContributo;
+                        importoDecurtato = arrotonda(T - CONFIG.tasse.minimoContributo);
                         T = CONFIG.tasse.minimoContributo;
                     } else {
                         T = Math.max(0, tempT);
@@ -492,21 +499,21 @@
                 }
             }
 
-            // Costruzione estetica della Card Analisi
+            // Costruzione estetica della Card Analisi (rimasta invariata, usa 'format()')
             let htmlAnalisi = `
-                <div class="analisi-row">
-                    <span class="analisi-label">Contributo Calcolato</span> 
-                    <span class="analisi-value highlight">${format(T)} €</span>
-                </div>
-                <div class="analisi-row">
-                    <span class="analisi-label">Tassa Regionale ADISU</span> 
-                    <span class="analisi-value">${format(ADISU)} €</span>
-                </div>
-                <div class="analisi-row">
-                    <span class="analisi-label">Penalizzazione</span> 
-                    <span class="analisi-value" style="color: ${!requisitiSoddisfatti ? '#d92d28' : '#333'};">${nomePenale}</span>
-                </div>
-            `;
+        <div class="analisi-row">
+            <span class="analisi-label">Contributo Calcolato</span> 
+            <span class="analisi-value highlight">${format(T)} €</span>
+        </div>
+        <div class="analisi-row">
+            <span class="analisi-label">Tassa Regionale ADISU</span> 
+            <span class="analisi-value">${format(ADISU)} €</span>
+        </div>
+        <div class="analisi-row">
+            <span class="analisi-label">Penalizzazione</span> 
+            <span class="analisi-value" style="color: ${!requisitiSoddisfatti ? '#d92d28' : '#333'};">${nomePenale}</span>
+        </div>
+    `;
 
             if (importoDecurtato > 0 && esoneroSpeciale !== "disabile66") {
                 htmlAnalisi += `<div class="analisi-row"><span class="analisi-label">Esonero Applicato</span> <span class="analisi-value success">${nomeEsonero} <small>(-${format(importoDecurtato)} €)</small></span></div>`;
@@ -518,38 +525,44 @@
 
             document.getElementById("dettaglio_analisi").innerHTML = htmlAnalisi;
 
-            // 5. Composizione Dettagliata Rate
-            let parzialeAdisuBase = CONFIG.adisu.forzataBase;
-            let parzialeAdisuSaldo = ADISU - parzialeAdisuBase;
+            // 5. Composizione Dettagliata Rate con Assorbimento Resto
+            let parzialeAdisuBase = arrotonda(CONFIG.adisu.forzataBase);
+            let parzialeAdisuSaldo = arrotonda(ADISU - parzialeAdisuBase);
 
-            let parzialeContributo20 = 0.20 * T;
-            let parzialeContributo40 = 0.40 * T;
+            // Arrotonda le prime due rate
+            let parzialeContributo20 = arrotonda(0.20 * T);
+            let parzialeContributo40 = arrotonda(0.40 * T);
 
-            let r1 = CONFIG.tasse.bollo + parzialeAdisuBase;
-            let r2 = parzialeContributo20 + parzialeAdisuSaldo;
+            // NUOVO: L'ultima rata viene calcolata per sottrazione per non perdere/guadagnare centesimi
+            let parzialeContributo40_finale = arrotonda(T - parzialeContributo20 - parzialeContributo40);
+
+            let r1 = arrotonda(CONFIG.tasse.bollo + parzialeAdisuBase);
+            let r2 = arrotonda(parzialeContributo20 + parzialeAdisuSaldo);
             let r3 = parzialeContributo40;
-            let r4 = parzialeContributo40;
+            let r4 = parzialeContributo40_finale;
 
             document.getElementById("dettaglio_rate").innerHTML = `
-                <div class="rata-box">
-                    <div><strong>1ª Rata</strong><span class="rata-desc">Bollo (${format(CONFIG.tasse.bollo)} €) + ADISU Base (${format(parzialeAdisuBase)} €)</span></div>
-                    <div>${format(r1)} €</div>
-                </div>
-                <div class="rata-box">
-                    <div><strong>2ª Rata</strong><span class="rata-desc">20% Contributo (${format(parzialeContributo20)} €) + Saldo ADISU (${format(parzialeAdisuSaldo)} €)</span></div>
-                    <div>${format(r2)} €</div>
-                </div>
-                <div class="rata-box">
-                    <div><strong>3ª Rata</strong><span class="rata-desc">40% Contributo (${format(parzialeContributo40)} €)</span></div>
-                    <div>${format(r3)} €</div>
-                </div>
-                <div class="rata-box" style="border-bottom:none;">
-                    <div><strong>4ª Rata</strong><span class="rata-desc">40% Contributo (${format(parzialeContributo40)} €)</span></div>
-                    <div>${format(r4)} €</div>
-                </div>
-            `;
+        <div class="rata-box">
+            <div><strong>1ª Rata</strong><span class="rata-desc">Bollo (${format(CONFIG.tasse.bollo)} €) + ADISU Base (${format(parzialeAdisuBase)} €)</span></div>
+            <div>${format(r1)} €</div>
+        </div>
+        <div class="rata-box">
+            <div><strong>2ª Rata</strong><span class="rata-desc">20% Contributo (${format(parzialeContributo20)} €) + Saldo ADISU (${format(parzialeAdisuSaldo)} €)</span></div>
+            <div>${format(r2)} €</div>
+        </div>
+        <div class="rata-box">
+            <div><strong>3ª Rata</strong><span class="rata-desc">40% Contributo (${format(parzialeContributo40)} €)</span></div>
+            <div>${format(r3)} €</div>
+        </div>
+        <div class="rata-box" style="border-bottom:none;">
+            <div><strong>4ª Rata</strong><span class="rata-desc">40% Contributo (${format(parzialeContributo40_finale)} €)</span></div>
+            <div>${format(r4)} €</div>
+        </div>
+    `;
 
-            document.getElementById("totale_annuo").innerText = format(r1 + r2 + r3 + r4);
+            // Il totale ora è matematicamente perfetto e corrisponderà alla somma delle rate visibili
+            let totaleAnnuo = arrotonda(r1 + r2 + r3 + r4);
+            document.getElementById("totale_annuo").innerText = format(totaleAnnuo);
             document.getElementById("risultato").style.display = "block";
         }
 
